@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration>
+    <!-- Appenders -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p: %c - %m%n" />
+        </layout>
+    </appender>
+
+    <logger name="kr.co.teaspoon.controller">
+        <level value="info" />
+    </logger>
+
+    <logger name="kr.co.teaspoon.dao">
+        <level value="info" />
+    </logger>
+
+    <logger name="kr.co.teaspoon.dto">
+        <level value="info" />
+    </logger>
+
+    <logger name="kr.co.teaspoon.service">
+        <level value="info" />
+    </logger>
+
+    <logger name="kr.co.teaspoon.util">
+        <level value="info" />
+    </logger>
+
+    <logger name="kr.co.teaspoon">
+        <level value="info" />
+    </logger>
+
+    <logger name="org.springframework.core">
+        <level value="info" />
+    </logger>
+    <logger name="org.springframework.beans">
+        <level value="info" />
+    </logger>
+    <logger name="org.springframework.context">
+        <level value="info" />
+    </logger>
+    <logger name="org.springframework.web">
+        <level value="info" />
+    </logger>
+
+    <root>
+        <priority value="warn"/>
+        <appender-ref ref="console"/>
+    </root>
+</log4j:configuration>
+<!--
+    콘솔 창에 띄워 지는 내용의 레벨 : level
+    TRACE > DEBUG > INFO > WARN > ERROR > FATAL
+-->
+        <!-- FATAL : 심각한 시스템 이상 내용 표시 -->
+        <!-- ERROR : 요청에 대한 문제 발생시 표시 -->
+        <!-- WARN : 처리는 가능하지만 경고성 메시지 발신 표시 -->
+        <!-- INFO : 정보성 메시지 표시 -->
+        <!-- DEBUG : 실행 내용에 대한 설명을 표시 -->
+        <!-- TRACE : 실행 내용이나 추적할 경로 등을 표시 -->

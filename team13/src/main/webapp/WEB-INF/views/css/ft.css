@@ -1,0 +1,36 @@
+@charset "utf-8";
+.footer_wrap {
+    background: #E5E5E5;
+    font-size: 0.8125em;
+    padding: 2.92308em 0;
+    text-align: center;
+    box-shadow: 0px -10px 30px #ccc;
+}
+
+.footer_wrap .add_bx span:before {
+    border-color: #aaa;
+}
+
+.footer_wrap .add_bx span:before {
+    content: '';
+    border-left: 1px solid #666;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    margin-top: -5px;
+}
+
+.footer_wrap .add_bx span {
+    padding: 0 10px;
+    position: relative;
+    color: #999;
+}
+
+.footer_wrap .add_bx span:first-child:before {
+    display: none;
+}
+
+.add_bx div{
+    display: block;
+}

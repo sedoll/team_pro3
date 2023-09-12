@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test">
+    <!-- if문 : type 속성이 t이면 입력된 title의 값이 keyword가 포함된 -->
+    <!-- sqlSession.selectList("test.ifex", type, keyword); -->
+    <select id="ifex" resultType="kr.co.teaspoon.dto.Board">
+        <![CDATA[
+        select * from test where seq >= 3
+        ]]>
+        <if test="type == 't'">
+            and (title like '%' || #{keyword} || '%')
+        </if>
+    </select>
+    <!-- type t 이면 select * from test where seq>=3 and title like '%' || #{keyword} || '%' -->
+    <!-- type t가 아니면 select * from test where seq>=3 -->
+    <!-- choose문 : type 속성이 T이면 입력된 title의 값이 keyword가 포함된, 아니면
+    title 또는 content 의 값이 keyword가 포함된
+    -->
+    <!-- sqlSession.selectList("test.chooseex", type, keyword) -->
+    <select id="chooseex" resultType="kr.co.teaspoon.dto.Board">
+        <![CDATA[
+            select * from test
+        ]]>
+        <choose>
+            <when test="type == 'T'">
+                where (title like '%' || #{keyword} || '%')
+            </when>
+            <otherwise>
+                where (title like '%' || #{keyword} || '%' OR content like '%' || #{keyword} || '%')
+            </otherwise>
+        </choose>
+    </select>
+    <!-- type 이 T이면 select * from test where (title like '%' || #{keyword} || '%') -->
+    <!-- type 이 T가 아니면, select * from test where (title like '%' || #{keyword} || '%' OR content like '%' || #{keyword} || '%') -->
+    <!-- where : sql 문장의 where를 여러 가지로 덧 붙일 경우 활용 -> no가 널값이 아닌 경우 조건 적용 -->
+    <!-- <where> 태그는 태그 안쪽에서 SQL이 생성될 때는 WHERE 구문이 붙고, 그렇지 않은 경우에는 생성되지 않습니다. -->
+    <select id="whereex" resultType="kr.co.teaspoon.dto.Board">
+        <![CDATA[
+        select * from test
+        ]]>
+        <where>
+            <if test="no != null">
+                no = #{no}
+            </if>
+        </where>
+        <!-- trim은 prefix, suffix, prefixOverrides, suffixOverrides 속성을 지정할 수 있습니다. -->
+        <trim prefix="and">
+            <![CDATA[
+                 rnum >= 5
+            ]]>
+        </trim>
+    </select>
+    <!-- no가 존재하는 경우는 select * from test where no=#{no} and rnum >=5 -->
+    <!-- no가 null인 경우는 select * from test WHERE rnum >= 5 -->
+    <!-- select * from test where title like '%검색어%' OR content like '%검색어%' -->
+    <!-- foreach를 배열이나 List를 이용하는 경우에는 item 속성만을 이용하면 되고, Map의 형태로 key와 value를 이용해야 할 때는 index와 item 속성을 둘 다 이용합니다. -->
+    <select id="trimex" resultType="kr.co.teaspoon.dto.Board">
+        <![CDATA[
+        select * from test
+        ]]>
+        <trim prefix="where (" suffix=")" prefixOverrides="OR">
+            <foreach item="val" index="key" collection="map">
+                <trim prefix="OR">
+                    <if test="key == 'T'.toString()">like '%' || #{val} || '%'</if>
+                    <if test="key == 'C'.toString()">content like '%' || #{val} || '%'</if>
+                </trim>
+            </foreach>
+        </trim>
+    </select>
+    <!-- 게시판 키워드 검색과 페이징을 처리하는 마이바티스 구문 -->
+    <!-- sqlSession.selectList("test.getListWithPaging", typeArr, keyword, pageNum, amount) -->
+    <select id="getListWithPaging" resultType="kr.co.teaspoon.dto.Board">
+        <![CDATA[
+        select * from test
+        ]]>
+        <where>
+            <trim prefixOverrides="OR">
+                <foreach item="type" collection="typeArr">
+                    <trim prefixOverrides="OR">
+                        <choose>
+                            <when test="type == 'T'.toString()">
+                                title LIKE '%' || #{keyword} || '%'
+                            </when>
+                            <when test="type == 'C'.toString()">
+                                content LIKE '%' || #{keyword} || '%'
+                            </when>
+                            <when test="type == 'W'.toString()">
+                                nickname LIKE '%' || #{keyword} || '%'
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </where>
+        <![CDATA[
+        ORDER BY regdate DESC LIMIT ((#{pageNum} - 1) * #{amount}), #{amount}
+        ]]>
+    </select>
+</mapper>

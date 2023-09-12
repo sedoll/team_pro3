@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+        <!-- applicationContext : 빈을 설정하는 파일로 외부 자원과 연동하는 부분을 설정 -->
+
+        <!-- 데이터베이스 설정 -->
+        <!-- spring-jdbc-5.3.20.jar 안의 드라이버매니저 연결 -->
+        <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+                <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+                <property name="url" value="jdbc:log4jdbc:mariadb://localhost:3306/teaspoon" />
+                <property name="username" value="root" />
+                <property name="password" value="1234" />
+        </bean>
+
+        <!-- sql을 대신할 my-batis 설정 : mybatis-spring-1.3.2.jar의 세션팩토리빈클래스 연결 -->
+        <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+                <property name="dataSource" ref="dataSource" />
+                <property name="configLocation" value="classpath:/mybatis-config.xml" />
+                <property name="mapperLocations" value="classpath:mappers/**/*Mapper.xml" />
+        </bean>
+
+        <!-- SqlSession 객체 주입 -->
+        <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">
+                <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory" />
+        </bean>
+
+        <!-- 트랜잭션 및 DB 패키지 방안 및 각 종 로깅과 보안 설정 -->
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+                <property name="dataSource" ref="dataSource"/>
+        </bean>
+
+        <!-- dao, service 빈 생성, 무조건 있어야 한다. -->
+        <context:annotation-config />
+        <bean id="sampleService" class="kr.co.teaspoon.service.SampleServiceImpl"/>
+        <bean id="sampleDAO" class="kr.co.teaspoon.dao.SampleDAOImpl"/>
+        <bean id="boardService" class="kr.co.teaspoon.service.BoardServiceImpl"/>
+        <bean id="boardDAO" class="kr.co.teaspoon.dao.BoardDAOImpl"/>
+        <bean id="boardTeaService" class="kr.co.teaspoon.service.BoardTeaServiceImpl"/>
+        <bean id="boardTeaDAO" class="kr.co.teaspoon.dao.BoardTeaDAOImpl"/>
+        <bean id="boardParService" class="kr.co.teaspoon.service.BoardParServiceImpl"/>
+        <bean id="boardParDAO" class="kr.co.teaspoon.dao.BoardParDAOImpl"/>
+        <bean id="memberService" class="kr.co.teaspoon.service.MemberServiceImpl"/>
+        <bean id="memberDAO" class="kr.co.teaspoon.dao.MemberDAOImpl"/>
+
+        <!-- @Transactional 어노테이션 처리 -->
+        <tx:annotation-driven transaction-manager="transactionManager" />
+
+        <!-- naver/daum/google 메일 서버 설정 -->
+
+</beans>

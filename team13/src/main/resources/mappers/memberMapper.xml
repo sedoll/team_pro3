@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+    <!-- 회원 목록 보기 -->
+    <select id="memberList" resultType="kr.co.teaspoon.dto.Member">
+        select * from member order by regdate desc
+    </select>
+
+    <!-- 회원 상세 정보 보기 -->
+    <select id="getMember" resultType="kr.co.teaspoon.dto.Member">
+        select * from member where id = #{id}
+    </select>
+
+    <!-- 회원 탈퇴 -->
+    <delete id="memberDelete">
+        delete from member where id = #{id}
+    </delete>
+
+    <!-- 회원 수정 -->
+    <update id="memberUpdate">
+        update member set pw=#{pw }, name=#{name }, email=#{email }, tel=#{tel }, addr1=#{addr1 }, addr2=#{addr2 }, postcode=#{postcode } where id = #{id }
+    </update>
+
+    <!-- 회원 가입 -->
+    <insert id="memberInsert">
+        insert into member values(#{id}, #{pw}, #{name}, #{email}, #{tel},
+        #{addr1}, #{addr2}, #{postcode}, DEFAULT, #{birth},
+        DEFAULT, DEFAULT, #{job})
+    </insert>
+
+    <!-- 로그인을 컨트롤에서 처리 -->
+    <select id="signIn" resultType="kr.co.teaspoon.dto.Member">
+        select * from member order by regdate desc
+    </select>
+
+    <!-- 로그인 : DAO 에서 처리 -->
+    <select id="loginCheck" resultType="kr.co.teaspoon.dto.Member">
+        select id, pw, name from member where id = #{id}
+    </select>
+
+    <!-- 로그인 : ajax로 처리 -->
+    <select id="login" resultType="kr.co.teaspoon.dto.Member">
+        select id, pw, name from member where id = #{id}
+    </select>
+
+
+</mapper>
