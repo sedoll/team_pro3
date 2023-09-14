@@ -130,3 +130,22 @@ CREATE TABLE board_par(
 	FOREIGN KEY(author) REFERENCES member(id) ON DELETE 		
 		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
 );
+
+-- 자주 묻는 질문 (FAQ) 테이블 생성
+
+CREATE TABLE faq (
+    fno int PRIMARY KEY AUTO_INCREMENT, -- faq 글 번호
+    question VARCHAR(1000) NOT NULL, -- 질문
+    answer VARCHAR(1000) NOT NULL -- 답변
+);
+
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문1', '자주 묻는 질문1 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문2', '자주 묻는 질문2 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문3', '자주 묻는 질문3 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문4', '자주 묻는 질문4 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문5', '자주 묻는 질문5 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문6', '자주 묻는 질문6 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문7', '자주 묻는 질문7 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문8', '자주 묻는 질문8 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문9', '자주 묻는 질문9 더미글입니다.');
+INSERT INTO faq(question, answer) VALUES('자주 묻는 질문10', '자주 묻는 질문10 더미글입니다.');
