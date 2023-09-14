@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="infoUni">
+    <!-- 자유게시판 목록 -->
+    <select id="infoList" resultType="kr.co.teaspoon.dto.Infomation">
+        select * from info_uni order by resdate desc
+    </select>
+    <!-- 글 상세보기 -->
+    <select id="infoDetail" resultType="kr.co.teaspoon.dto.Infomation">
+        select * from info_uni where bno=#{bno}
+    </select>
+    <!-- 글 수 카운트 -->
+    <select id="totalCount" resultType="integer" >
+        select count(*) from info_uni
+    </select>
+    <insert id="infoInsert">
+        insert into info_uni values (default, #{title}, #{content},'admin', default, 0, 0)
+    </insert>
+    <delete id="infoDelete">
+        delete from info_uni where bno=#{bno}
+    </delete>
+    <update id="infoEdit">
+        update info_uni set title=#{title}, content=#{content} where bno=#{bno}
+    </update>
+    <update id="countUp">
+        update info_uni set cnt=cnt+1 where bno=#{bno}
+    </update>
+</mapper>
