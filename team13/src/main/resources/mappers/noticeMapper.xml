@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="notice">
+<!-- 공지사항 목록 -->
+    <select id="noticeList" resultType="kr.co.teaspoon.dto.Notice">
+        select * from notice order by resdsate desc
+    </select>
+<!-- 글 상세보기 -->
+    <select id="noticeDetail" resultType="kr.co.teaspoon.dto.Notice">
+        select * from notice where no=#{no}
+    </select>
+<!-- 글 수 카운트 -->
+    <select id="totalCount" resultType="integer">
+        select count(*) from notice
+    </select>
+<!-- 공지사항 글 쓰기 -->
+    <insert id="noticeInsert">
+        insert into notice(title, content) values(#{title}, #{content})
+    </insert>
+<!-- 공지사항 글 삭제 -->
+    <delete id="noticeDelete">
+        delete from notice where no=#{no}
+    </delete>
+<!-- 공지사항 글 수정 -->
+    <update id="noticeEdit">
+        update notice set title=#{title}, content=#{content} where no=#{no}
+    </update>
+<!-- 조회수 증가 -->
+    <update id="countUp">
+        update notice set cnt=cnt+1 where no=#{no}
+    </update>
+</mapper>
