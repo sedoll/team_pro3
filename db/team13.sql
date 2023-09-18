@@ -133,11 +133,11 @@ CREATE TABLE board_par(
 
 -- 공지사항(notice) 테이블 생성
 create table notice(
-                       no int primary KEY AUTO_INCREMENT, -- notice 글 번호
-                       title varchar(200) not NULL,	-- 제목
-                       content varchar(1000), -- 내용
-                       resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
-                       cnt int DEFAULT 0 -- 조회수
+	no int primary KEY AUTO_INCREMENT, -- notice 글 번호
+	title varchar(200) not NULL,	-- 제목
+	content varchar(1000), -- 내용
+	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
+	cnt int DEFAULT 0 -- 조회수
 );
 
 -- 공지사항 더미글 추가 10건
@@ -236,4 +236,26 @@ CREATE TABLE fileinfo(
 
 CREATE TABLE guestbook (
 	articleno INT PRIMARY KEY AUTO_INCREMENT
-	
+
+-- qna
+CREATE TABLE qna(
+	bno INT PRIMARY KEY AUTO_INCREMENT, -- qna 글 번호
+	title VARCHAR(200) NOT NULL, -- 제목
+	content VARCHAR(1000), -- 내용
+	author VARCHAR(16), -- 작성자
+	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
+	cnt INT DEFAULT 0, -- 조회수
+	lev INT DEFAULT 0, -- 게시글 0, 답글 1 이상
+	par INT, -- 부모 게시글 번호
+	pw VARCHAR(330), -- 비밀글, 비밀번호
+	FOREIGN KEY(author) REFERENCES member(id) ON DELETE 		
+		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
+);
+
+-- 학교 정보
+CREATE TABLE school(
+	eo_code VARCHAR(10),
+	eo_name VARCHAR(100),
+	sc_code VARCHAR(50),
+	sc_name VARCHAR(100)
+	);

@@ -255,6 +255,7 @@
             <div class="page_wrap">
                 <h2 class="page_tit">게시글</h2>
                 <table class="tb1">
+
                     <thead>
                         <tr class="title">
                             <th colspan="5">${dto.title}</th>
@@ -326,7 +327,7 @@
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 후기가 없습니다.'
+                                emptyTable: '작성된 댓글(이)가 없습니다.'
                             }
                         });
                         $('#myTable').css({

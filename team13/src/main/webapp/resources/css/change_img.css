@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.contents { clear:both; }
+.contents::after { content:""; clear:both; display:block; width:100%; }
+.vs { clear:both; width:100%; min-height:400px; background-color: white;
+    position:relative; overflow: hidden;}
+
+.img_box { position:relative; width: 100%; height:90vh; overflow:hidden; }
+.img_box li { visibility:hidden; opacity:0;  transition-duration:0.7s;
+    transition-delay:0.1s;    width:100%; height:90vh;  }
+.img_box li .bg_box { width:100vw; height:90vh; background-repeat: no-repeat;
+    background-position:center center; background-size:cover; position:absolute;
+    left: 0; top: 0; z-index:5; }
+.img_box li.active .bg_box { z-index:6; }
+.img_box li .vs_tit { position:absolute; top:180px; left:100px; z-index:10;
+    font-weight: 300; font-size: 60px; line-height: 1.3; }
+.img_box li .vs_tit strong { font-weight: 500; }
+.img_box li.active { visibility: visible; opacity: 1; }
+
+.vs_tit {font-size: 60px; color: white;}
+.btn_box li .vs_btn {display: block; width: 12px; height: 12px; background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid white; position: absolute; top: 100px; left: 100px; z-index: 14; cursor: pointer;
+    border-radius: 50%;}
+.btn_box li.item2 .vs_btn {left: 132px;}
+.btn_box li.active .vs_btn {background-color: white; border: 2px solid #333;}
+.vs_ra {display: none;}
+
+.play_btn {display: block; width: 12px; height: 12px; position: absolute; top: 98px;
+    left: 164px; z-index: 14; cursor: pointer; color: white; border: 0; background-color: transparent;
+    font-weight: 900;}
+.play_btn:after { content:"||"; }
+.play_btn.active:after { content:"▶"; }

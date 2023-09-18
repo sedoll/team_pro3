@@ -33,9 +33,11 @@
                         <a href="${path2}/notice/list.do" class="navbar-item">
                             공지사항
                         </a>
+                        <hr class="navbar-divider">
                         <a href="${path2}/faq/list.do" class="navbar-item">
                             FAQ
                         </a>
+                        <hr class="navbar-divider">
                         <a href="${path2}/qna/list.do" class="navbar-item">
                             QnA
                         </a>
@@ -51,15 +53,13 @@
                         <a href="${path2}/board/list.do" class="navbar-item">
                             자유게시판
                         </a>
+                        <hr class="navbar-divider">
                         <a href="${path2}/boardTea/list.do" class="navbar-item">
                             선생님게시판
                         </a>
+                        <hr class="navbar-divider">
                         <a href="${path2}/boardPar/list.do" class="navbar-item">
                             학부모게시판
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Report an issue
                         </a>
                     </div>
                 </div>
@@ -81,6 +81,19 @@
                         <a href="${path2}/infoAct/list.do" class="navbar-item">
                             대외 활동 정보
                         </a>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        내자녀
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a href="${path2}/menu/list.do" class="navbar-item">
+                            식단표
+                        </a>
+                        <hr class="navbar-divider">
                     </div>
                 </div>
             </div>
