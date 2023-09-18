@@ -120,7 +120,7 @@
                         <tbody>
                             <tr>
                                 <td colspan="2">
-                                    <input type="text" name="title" id="title" class="indata" value="${dto.title}" placeholder="제목 입력" ${dto.title eq "댓글" ? 'readonly' : ''} autofocus required>
+                                    <input type="text" name="title" id="title" class="indata" value="${dto.title}" placeholder="제목 입력" autofocus required>
                                 </td>
                                 <input type="hidden" name="no" value="${dto.no}" readonly>
                             </tr>

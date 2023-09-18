@@ -277,7 +277,7 @@
                                     <a href="${path}/notice/delete.do?no=${dto.no}" class="inbtn delete_btn" >삭제</a>
                                 </c:if>
                             </td>
-                            <td>${dto.author}</td>
+                            <td>관리자</td>
                             <td>${dto.resdate}</td>
                             <td>조회수 : ${dto.cnt}</td>
                         </tr>

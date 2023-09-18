@@ -33,6 +33,8 @@ public class NoticeCtrl {
     public String getNoticeDetail(HttpServletRequest request, Model model) throws Exception {
         int no = Integer.parseInt(request.getParameter("no"));
         Notice dto = noticeService.noticeDetail(no);
+        System.out.println(dto.toString());
+        model.addAttribute("dto", dto);
         return "/notice/noticeDetail";
     }
 
