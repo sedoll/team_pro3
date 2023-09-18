@@ -53,6 +53,8 @@
         <bean id="boardParDAO" class="kr.co.teaspoon.dao.BoardParDAOImpl"/>
         <bean id="memberService" class="kr.co.teaspoon.service.MemberServiceImpl"/>
         <bean id="memberDAO" class="kr.co.teaspoon.dao.MemberDAOImpl"/>
+        <bean id="noticeService" class="kr.co.teaspoon.service.NoticeServiceImpl"/>
+        <bean id="noticeDAO" class="kr.co.teaspoon.dao.NoticeDAOImpl"/>
         <bean id="faqService" class="kr.co.teaspoon.service.FaqServiceImpl"/>
         <bean id="faqDAO" class="kr.co.teaspoon.dao.FaqDAOImpl"/>
         <bean id="infoActService" class="kr.co.teaspoon.service.InfoActServiceImpl"/>

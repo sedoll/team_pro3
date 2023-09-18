@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: jk347
+  Date: 2023-09-17
+  Time: 오전 1:38
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -9,7 +16,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>게시판 상세</title>
+    <title>공지사항 상세</title>
     <%@ include file="../include/head.jsp" %>
 
     <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
@@ -59,7 +66,7 @@
             line-height: 32px;
             padding: 12px 15px; /
             /*border: 1px solid #f5f5f5; !*/
-            box-sizing: border-box;
+        box-sizing: border-box;
             background-color: #eeeeee; /* 배경색 조정 */
             font-size: 22px;
             font-weight: 600;
@@ -77,7 +84,7 @@
             width: 6%;
             text-align: center;
         }.tb1 thead td:nth-child(2) {
-            text-align: left;
+             text-align: left;
              width: 14%;
          }
         .tb1 thead td:nth-child(3) {
@@ -220,13 +227,13 @@
 
         }
         textarea {
-             resize: none;
-             padding: 10px;
-             height: 80px;
-             border: 1px solid #ccc;
-             border-radius: 5px;
-             vertical-align: middle;
-         }
+            resize: none;
+            padding: 10px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            vertical-align: middle;
+        }
         #nologin_comment {
             width: 1200px;
             text-align: center;
@@ -243,7 +250,7 @@
     <section class="hero is-primary">
         <div class="hero-body">
             <p class="title">
-                자유게시판
+                공지사항
             </p>
             <p class="subtitle">
                 상세
@@ -253,7 +260,7 @@
     <div class="contents" id="contents">
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">게시글</h2>
+                <h2 class="page_tit">공지글</h2>
                 <table class="tb1">
                     <thead>
                         <tr class="title">
@@ -261,14 +268,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <c:if test="${dto.author eq sid && not empty sid}">
-                                <a href="${path}/board/edit.do?bno=${dto.bno}" class="inbtn">수정</a>
+                                <c:if test='${sid eq "admin"}'>
+                                    <a href="${path}/notice/edit.do?no=${dto.no}" class="inbtn">수정</a>
                                 </c:if>
                             </td>
                             <td>
-                                <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
-                                <a href="${path}/board/delete.do?bno=${dto.bno}" class="inbtn delete_btn" >삭제</a>
-                               </c:if>
+                                <c:if test='${sid eq "admin"}'>
+                                    <a href="${path}/notice/delete.do?no=${dto.no}" class="inbtn delete_btn" >삭제</a>
+                                </c:if>
                             </td>
                             <td>${dto.author}</td>
                             <td>${dto.resdate}</td>
@@ -286,76 +293,11 @@
                     </tbody>
 
                 </table>
-                <table class="tb2" id="myTable">
-                    <thead>
-                    <tr>
-                        <th class="item1">작성자</th>
-                        <th class="item2">댓글</th>
-                        <th class="item3">작성일</th>
-                        <th class="item4"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <c:forEach var="lev" items="${comment }">
-                        <tr>
-                            <td class="item1">${lev.author}</td>
-                            <td class="item2">${lev.content}</td>
-                            <td class="item3">${lev.resdate}</td>
-                            <td class="item4">
-                                <c:if test="${sid eq lev.author || sid eq 'admin'}">
-                                    <a href="${path}/board/edit.do?bno=${lev.bno}" class="inbtn">수정</a>
-                                    <a href="${path}/board/delete.do?bno=${lev.bno}" class="inbtn delete_btn"> 삭제 </a>
-                                </c:if>
-                            </td>
-                        </tr>
-                    </c:forEach>
-                    </tbody>
-                </table>
-                <script>
-                    $(document).ready( function () {
-                        $('#myTable').DataTable({
-                            // sorting 화살표 제거
-                            "targets": 'no-sort',
-                            "bSort": false,
-
-                            // 3번째 컬럼을 기준으로 내림차순 정렬
-                            order: [[3, 'asc']],
-                            pageLength : 5,
-                            searching: false, //검색 제거
-                            lengthChange: false, // show entries 제거
-                            info: false,
-
-                            language: {
-                                emptyTable: '작성된 후기가 없습니다.'
-                            }
-                        });
-                        $('#myTable').css({
-                            'border':'none',
-                        });
-
-                    } );
-                </script>
-                <form action="${path}/board/commentInsert.do" id="login_frm" class="frm" method="post">
-                    <table class="tb3">
-                        <tbody>
-                        <tr>
-                            <c:if test="${not empty sid}">
-                                <th>${sid}</th>
-                                <th><textarea name="content" id="content" cols="100" rows="5" placeholder="리뷰 작성" required ></textarea></th>
-                                <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
-                                <input type="hidden" name="bno" value="${dto.bno}" readonly>
-                                <input type="hidden" name="id" value="${sid}" readonly>
-                            </c:if>
-                        </tr>
-                        </tbody>
-                    </table>
-                </form>
             </div>
         </section>
     </div>
     <footer class="ft" id="ft">
         <%@ include file="../include/footer.jsp" %>
     </footer>
-</div>
 </body>
 </html>
