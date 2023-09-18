@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+#page2 {background-color: white;}
+#page2 .page_wrap {width: 100%;}
+
+.slide_box {clear: both; width:calc(100vw - 350px); height: 400px; margin-left: 350px;
+    -ms-overflow-style: none; scrollbar-width: none;} /*float:right 보다는 margin-left를 이용하자*/
+.slide_box::-webkit-scrollbar {display: none;}
+
+.page_com{text-align: center; padding-bottom: 30px; padding-top: 30px;}
+.card_lst {width: 4000px;}
+
+.card_lst > li {width: 320px; height: 400px;  float: left; margin-right: 50px; box-shadow: 5px 5px 30px #888; 
+    border-radius: 6px; overflow: hidden;}
+.card_lst > li:first-child {margin-left: 30px;}
+.card_lst li a {display: block; width: 320px; height: 220px;}
+.card_lst li .thumb_box {width: 320px; height: 220px; background-repeat: no-repeat; 
+    background-position: center center; background-size: cover;}
+
+.thumb_tit { padding-left: 0; height: 42px; box-sizing: border-box; font-size: 14px; color: #333; padding: 2rem; text-overflow: ellipsis; 
+    overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
+
+.ico_box {height: 30px; clear: both; margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px;}
+.ico {display: block; width: 35px; height: 30px; background-image: url("../img/icon_all_resize.png");
+    background-repeat: no-repeat; float: left; margin-left: 14px;} /*전체 아이콘*/
+.thumb_date {float: right; margin-right: 14px; line-height: 2em;}
+
+.cate_tit {padding-left: 32px; font-size: 36px; line-height: 1.6em; 
+    padding-top: 24px; padding-bottom: 24px;}
+.cate_lst li { border-top: 1px solid #333; margin-left: 14px; margin-right: 14px; 
+    padding-top: 32px; height: 90px;}
+.cate_tit li a {display: block;}
+.bd_content {width: auto; padding-right: 24px;}
+.bd_date {padding-top: 18px;}
+
+.sl-btn-box .btn {display: block; width: 48px; height: 48px; font-size: 32px; 
+    color: white; background-color: #333; text-align: center; line-height: 48px;
+font-weight: 700; cursor: pointer; position: absolute; margin-top: 200px;}
+.sl-btn-box .btn.next { top:100px; }
+.sl-btn-box .btn.prev { top:148px; }
