@@ -56,6 +56,8 @@ g
 k
 ;src/main/java/kr/co/teaspoon/service/SampleServiceImpl.java,d\0\d0f9be077685c6315021c4f12bafcaa2c32cec27
 ^
+.src/main/webapp/WEB-INF/applicationContext.xml,0\9\098550351661f776bec95040b2d50042c4599987
+^
 .src/main/webapp/WEB-INF/dispatcher-servlet.xml,5\6\5610820762bc3ec47cc9dbd7324c057405172b6d
 [
 +src/main/webapp/WEB-INF/spring-security.xml,1\c\1c32f00779ff5236a44927df8f30826d3fbdc472

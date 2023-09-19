@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="qna">
+    <!-- 공지사항 목록 -->
+    <select id="qnaList" resultType="kr.co.teaspoon.dto.Qna">
+        select * from qna where lev = 0 order by resdate
+    </select>
+    <!-- 글 상세보기 -->
+    <select id="qnaDetail" resultType="kr.co.teaspoon.dto.Qna">
+        select * from qna where bno=#{bno}
+    </select>
+    <!-- 글 수 카운트 -->
+    <select id="totalCount" resultType="integer" >
+        select count(*) from qna
+    </select>
+    <insert id="qnaInsert">
+        INSERT INTO qna(title, content, author, pw) VALUES(#{title}, #{content}, #{author}, #{pw})
+    </insert>
+    <delete id="qnaDelete">
+        delete from qna where bno=#{bno}
+    </delete>
+    <!-- qna 게시판 수정 -->
+    <update id="qnaEdit">
+        update qna set title=#{title}, content=#{content} where bno=#{bno}
+    </update>
+    <!-- 조회수 증가 -->
+    <update id="countUp">
+        update qna set cnt=cnt+1 where bno=#{bno}
+    </update>
+    <!-- 댓글 입력 -->
+    <insert id="commentInsert">
+        insert into qna(title, content, author, lev, par) values ('댓글', #{content}, #{author}, 1, #{bno})
+    </insert>
+    <!-- 댓글 목록 출력 -->
+    <select id="commentList" resultType="kr.co.teaspoon.dto.Qna">
+        select * from qna where par = #{bno} and lev = 1 order by resdate desc
+    </select>
+    <!-- 모든 댓글 삭제 -->
+    <delete id="commentDeleteAll">
+        delete from qna where par=#{bno}
+    </delete>
+</mapper>

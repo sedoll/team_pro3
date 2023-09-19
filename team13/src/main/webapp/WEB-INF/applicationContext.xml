@@ -53,6 +53,8 @@
         <bean id="boardParDAO" class="kr.co.teaspoon.dao.BoardParDAOImpl"/>
         <bean id="memberService" class="kr.co.teaspoon.service.MemberServiceImpl"/>
         <bean id="memberDAO" class="kr.co.teaspoon.dao.MemberDAOImpl"/>
+        <bean id="noticeService" class="kr.co.teaspoon.service.NoticeServiceImpl"/>
+        <bean id="noticeDAO" class="kr.co.teaspoon.dao.NoticeDAOImpl"/>
         <bean id="faqService" class="kr.co.teaspoon.service.FaqServiceImpl"/>
         <bean id="faqDAO" class="kr.co.teaspoon.dao.FaqDAOImpl"/>
         <bean id="infoActService" class="kr.co.teaspoon.service.InfoActServiceImpl"/>
@@ -61,6 +63,11 @@
         <bean id="infoStuDAO" class="kr.co.teaspoon.dao.InfoStuDAOImpl"/>
         <bean id="infoUniService" class="kr.co.teaspoon.service.InfoUniServiceImpl"/>
         <bean id="infoUniDAO" class="kr.co.teaspoon.dao.InfoUniDAOImpl"/>
+        <bean id="menuServiceImpl" class="kr.co.teaspoon.service.MenuServiceImpl"/>
+        <bean id="menuServiceImpl2" class="kr.co.teaspoon.service.MenuServiceImpl2"/>
+        <bean id="menuDAO" class="kr.co.teaspoon.dao.MenuDAOImpl"/>
+        <bean id="qnaService" class="kr.co.teaspoon.service.QnaServiceImpl"/>
+        <bean id="qnaDAO" class="kr.co.teaspoon.dao.QnaDAOImpl"/>
 
         <!-- @Transactional 어노테이션 처리 -->
         <tx:annotation-driven transaction-manager="transactionManager" />
