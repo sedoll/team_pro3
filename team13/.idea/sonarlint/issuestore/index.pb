@@ -1,10 +1,6 @@
 
-i
-9src/main/java/kr/co/teaspoon/controller/BoardTeaCtrl.java,0\6\06da01874eac2c8a5f99214f90dcc3ba2322f3b2
 e
 5src/main/java/kr/co/teaspoon/controller/HomeCtrl.java,3\d\3d32752bb5f6606ea1eda3755702b5d5069fec82
-g
-7src/main/java/kr/co/teaspoon/controller/MemberCtrl.java,7\5\752e85d3a9945b652e15c2bd334301f0becb40ac
 m
 =src/main/java/kr/co/teaspoon/controller/SampleController.java,b\7\b7656c4ef4b3cf0d3b4dd0ea978204738d9c5432
 h
@@ -13,8 +9,6 @@ h
 .src/main/java/kr/co/teaspoon/dao/BoardDAO.java,a\e\ae3c804a9d31472ec51699674e5c43518a9a4111
 b
 2src/main/java/kr/co/teaspoon/dao/BoardDAOImpl.java,2\3\2390b70514795027356767dcac34ea60dc9a64b3
-e
-5src/main/java/kr/co/teaspoon/dao/BoardParDAOImpl.java,1\d\1defb1257add5eb2984e825107eec65e8d158701
 e
 5src/main/java/kr/co/teaspoon/dao/BoardTeaDAOImpl.java,8\d\8da5a01bd0fe67188efdeada264b402eb0d343cc
 _
@@ -75,10 +69,6 @@ d
 +src/main/java/kr/co/teaspoon/util/Week.java,7\c\7c77d56bdd820c1a79cb52e50a50641d158d330e
 ]
 -src/main/java/kr/co/teaspoon/api/MenuKey.java,1\b\1bc6a5363131fcc99891f9372cce97d9a0222b60
-W
-'src/main/webapp/WEB-INF/views/index.jsp,3\0\305b3bb8194d08e1e32b17ac5f1d53c1cf0118c1
-`
-0src/main/webapp/WEB-INF/views/include/header.jsp,c\3\c35e09d64fc9049d4505526bd169a1b649160aae
 e
 5src/main/java/kr/co/teaspoon/controller/MenuCtrl.java,9\7\97f459fc2b5334543e581ee8d5fb29b1edb18bd8
 _

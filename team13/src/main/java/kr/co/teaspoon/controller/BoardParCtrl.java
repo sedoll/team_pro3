@@ -27,7 +27,8 @@ public class BoardParCtrl {
 
     @GetMapping("list.do")		// board/list.do
     public String getBoardList(HttpServletResponse response, Model model) throws Exception {
-        if(session.getAttribute("sid") != null &&("admin".equals(session.getAttribute("sid")) || session.getAttribute("job").equals("1"))) {
+        System.out.println(session.getAttribute("job"));
+        if(session.getAttribute("sid") != null &&("admin".equals(session.getAttribute("sid")) || 1 == (Integer) session.getAttribute("job"))) {
             List<Board> boardList = boardService.boardList();
             model.addAttribute("boardList", boardList);
             return "/boardPar/boardList";
@@ -63,7 +64,8 @@ public class BoardParCtrl {
         dto.setContent(request.getParameter("content"));
         dto.setAuthor((String) session.getAttribute("sid"));
         boardService.boardInsert(dto);
-        return "redirect:list.do";
+        return "" +
+                "";
     }
 
     @PostMapping("commentInsert.do")

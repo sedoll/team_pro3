@@ -1,6 +1,8 @@
 package kr.co.teaspoon.service;
 
 import kr.co.teaspoon.dao.MemberDAO;
+import kr.co.teaspoon.dto.BoardlistVO;
+import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -67,5 +69,147 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public Member login(String id) throws Exception {
         return memberDAO.login(id);
+    }
+
+
+
+
+
+
+    /*내가 쓴 글*/
+    @Override
+    public List<BoardlistVO> getWriteList(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList(id);
+        if(list!=null) {
+            System.out.println("list");
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+
+    /*자유게시판*/@Override
+    public List<BoardlistVO> getWriteList1(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList1(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+
+
+    /*선생님게시판*/
+    @Override
+    public List<BoardlistVO> getWriteList2(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList2(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+
+    /*학부모 게시판*/
+    @Override
+    public List<BoardlistVO> getWriteList3(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList3(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+
+    @Override
+    public List<BoardlistVO> getWriteList4(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList4(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<BoardlistVO> getWriteList5(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList5(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<BoardlistVO> getWriteList6(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList6(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<BoardlistVO> getWriteList7(String id) {
+        List<BoardlistVO> list = memberDAO.getWriteList7(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment1(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment1(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment2(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment2(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment3(String id) {
+        List<CommentlistVO> list =memberDAO.getWriteComment3(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment4(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment4(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment5(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment5(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment6(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment6(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
+    }
+    @Override
+    public List<CommentlistVO> getWriteComment7(String id) {
+        List<CommentlistVO> list = memberDAO.getWriteComment7(id);
+        if(list!=null) {
+            System.out.println(list);
+        }
+        return list;
     }
 }

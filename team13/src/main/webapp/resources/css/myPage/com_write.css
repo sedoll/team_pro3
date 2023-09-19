@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+.content {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    margin-left : 37px;
+}
+
+.font{
+    text-algin : left;
+    margin-left : 20px;
+    margin-bottom : 15px;
+}
+#check11, #check12,#check13,#check14,#check15,#check16,#check17,
+#check21, #check22,#check23,#check24,#check25,#check26,#check27 {
+    width: 264px;
+    height: 48px;
+    margin : 0 auto;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid skyblue;
+    color: skyblue;
+    padding: 5px;
+    border-radius: 5px;
+    align-self: center;
+}
+#check11:hover, #check12:hover,#check13:hover,#check14:hover,#check15:hover,#check16:hover,#check17:hover,
+#check21:hover, #check22:hover,#check23:hover,#check24:hover,#check25:hover,#check26:hover,#check27:hover  {
+    color: white;
+    background-color: skyblue;
+}
+.origin{
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: #efefef;
+
+}
+table{
+    width : 500px;
+    margin : 20px;
+    margin-bottom: 30px;
+    text-align : center;
+    border-top: 1px solid #c2c2d6;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+table > thead > th > th {
+    background-color : #f7f7f7;
+}
+table > tbody > tr > td{
+    padding : 5px;
+    height : 50px;
+    border-bottom: 1px solid #eeeeee;
+    border-collapse: collapse;
+    font-size : 0.9em;
+}
+input {
+    font-family: 'Noto Sans KR', sans-serif;
+    outline: 0;
+    display: block;
+    width : 250px;
+    height: 40px;
+    font-size: 1em;
+    border : 1px solid #efefef;
+    border-radius : 5px;
+}
+#same{
+    margin-left : 220px;
+}
+.error11,.error12,.error13,.error14,.error15,.error16,.error17,
+.error21,.error22,.error23,.error24,.error25,.error26,.error27{
+    font-size: 0.9em;
+    color : red;
+    padding-left: 190px;
+    margin-top: 10px;
+    text-align : left;
+}
+
+<!-- 댓글 작성글 선택 -->
+
+#ud_tab {
+    max-width: 600px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    height: 300px;
+}
+
+#ud_tab input[type="radio"] {
+    display: none;
+}
+#ud_tab label {
+    display: block;
+    float: left;
+    width: 150px;
+    color: #000000;
+    font-size: 20px;
+    padding: 3%;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background: #ffffff;
+}
+#ud_tab .ud_content {
+    background: #fff;
+    width: 100%;
+    display: none;
+    padding: 5%;
+    float: left;
+}
+
+#ud_tab [id^="tab"]:checked + label {
+    border-bottom :  3px solid  skyblue;
+    background:  #ffffff;
+    color:  #000000;
+}
+#tab1:checked ~ #ud_tab-content1,
+#tab2:checked ~ #ud_tab-content2 {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-top: 1px solid #c2c2d6;
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #c2c2d6;
+    padding: 10px;
+    height : 50px;
+}
