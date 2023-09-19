@@ -70,6 +70,8 @@
         <bean id="qnaDAO" class="kr.co.teaspoon.dao.QnaDAOImpl"/>
         <bean id="fileService" class="kr.co.teaspoon.service.FileServiceImpl"/>
         <bean id="fileDAO" class="kr.co.teaspoon.dao.FileDAOImpl"/>
+        <bean id="gradeService" class="kr.co.teaspoon.service.GradeServiceImpl"/>
+        <bean id="gradeDAO" class="kr.co.teaspoon.dao.GradeDAOImpl"/>
 
         <!-- @Transactional 어노테이션 처리 -->
         <tx:annotation-driven transaction-manager="transactionManager" />

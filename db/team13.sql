@@ -28,7 +28,7 @@ CREATE TABLE member(
 	birth DATE, -- 생일
 	pt INT DEFAULT 0, -- 포인트
 	visited INT DEFAULT 0,
-	job INT NOT NULL -- 직업 학생: 1, 선생님: 2
+	job INT NOT NULL -- 직업 학생: 3, 선생님: 2, 부모님: 1
 );
 
 -- 관리자
@@ -42,6 +42,12 @@ INSERT INTO member VALUES(
 'hong', '1234', '홍길동', 'hong@edu.com', '010-2222-3333', 
 	'경기 성남시 분당구 대왕판교로 477', '102호', '13480', DEFAULT, '1980-04-22',
 	DEFAULT, DEFAULT, 1);
+	
+	INSERT INTO member VALUES(
+'hong12', '1234', '홍길동>', 'hong@edu.com', '010-2222-3333', 
+	'경기 성남시 분당구 대왕판교로 477', '102호', '13480', DEFAULT, '1980-04-22',
+	DEFAULT, DEFAULT, 1);
+	
 	INSERT INTO member VALUES(
 'kang', '1234', '강감찬', 'kang@edu.com', '010-1212-1212', 
 	'경기 성남시 분당구 대왕판교로 477', '102호', '13480', DEFAULT, '1975-04-22',
@@ -131,46 +137,8 @@ CREATE TABLE board_par(
 		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
 );
 
--- 공지사항(notice) 테이블 생성
-create table notice(
-	no int primary KEY AUTO_INCREMENT, -- notice 글 번호
-	title varchar(200) not NULL,	-- 제목
-	content varchar(1000), -- 내용
-	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
-	cnt int DEFAULT 0 -- 조회수
-);
 
--- 공지사항 더미글 추가 10건
-
-INSERT INTO notice(title, content) VALUES ('공지사항1', '공지사항1 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항2', '공지사항2 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항3', '공지사항3 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항4', '공지사항4 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항5', '공지사항5 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항6', '공지사항6 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항7', '공지사항7 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항8', '공지사항8 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항9', '공지사항9 더미글입니다.');
-INSERT INTO notice(title, content) VALUES ('공지사항10', '공지사항10 더미글입니다.');
-
--- 자주 묻는 질문 (FAQ) 테이블 생성
-
-CREATE TABLE faq (
-    fno int PRIMARY KEY AUTO_INCREMENT, -- faq 글 번호
-    question VARCHAR(1000) NOT NULL, -- 질문
-    answer VARCHAR(1000) NOT NULL -- 답변
-);
-
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문1', '자주 묻는 질문1 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문2', '자주 묻는 질문2 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문3', '자주 묻는 질문3 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문4', '자주 묻는 질문4 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문5', '자주 묻는 질문5 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문6', '자주 묻는 질문6 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문7', '자주 묻는 질문7 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문8', '자주 묻는 질문8 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문9', '자주 묻는 질문9 더미글입니다.');
-INSERT INTO faq(question, answer) VALUES('자주 묻는 질문10', '자주 묻는 질문10 더미글입니다.');
+DROP TABLE free;
 
 -- 파일 업로드 하는 게시판
 CREATE TABLE free(
@@ -235,46 +203,5 @@ CREATE TABLE fileinfo(
 )
 
 CREATE TABLE guestbook (
-	articleno INT PRIMARY KEY AUTO_INCREMENT
-
--- qna
-CREATE TABLE qna(
-	bno INT PRIMARY KEY AUTO_INCREMENT, -- qna 글 번호
-	title VARCHAR(200) NOT NULL, -- 제목
-	content VARCHAR(1000), -- 내용
-	author VARCHAR(16), -- 작성자
-	resdate TIMESTAMP DEFAULT CURRENT_TIMESTAMP(), -- 작성일
-	cnt INT DEFAULT 0, -- 조회수
-	lev INT DEFAULT 0, -- 게시글 0, 답글 1 이상
-	par INT, -- 부모 게시글 번호
-	pw VARCHAR(330), -- 비밀글, 비밀번호
-	FOREIGN KEY(author) REFERENCES member(id) ON DELETE 		
-		CASCADE -- 작성자를 member id를 이용해 외래키로 사용
-);
-
--- 학교 정보
-CREATE TABLE school(
-	eo_code VARCHAR(10),
-	eo_name VARCHAR(100),
-	sc_code VARCHAR(50),
-	sc_name VARCHAR(100)
-	);
-
--- 자료실 db
-CREATE TABLE fileobj (
-	no int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	postno INT NOT NULL,
-	savefolder VARCHAR(400),
-	originfile VARCHAR(400),
-	savefile VARCHAR(800),
-	filesize LONG,
-	uploaddate VARCHAR(100)
-);
-
-CREATE TABLE fileboard (
-	postno int NOT NULL AUTO_INCREMENT PRIMARY KEY,	-- 글 번호
-	title VARCHAR(100) not null,   -- 글제목
-	content VARCHAR(1500) not null,    -- 글내용
-	regdate DATETIME DEFAULT CURRENT_TIMESTAMP(),   -- 작성일
-	visited INT DEFAULT 0   -- 조회수
-);
+	articleno INT PRIMARY KEY AUTO_INCREMENT);
+	
