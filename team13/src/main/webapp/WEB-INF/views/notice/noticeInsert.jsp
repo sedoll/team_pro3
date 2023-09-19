@@ -24,15 +24,7 @@
 
     <!-- 플러그인 연결-->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <!-- 스타일 초기화 -->
-    <link rel="stylesheet" href="../css/reset.css">
-    <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="../css/font.css">
-
-    <!-- css 모듈화 -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/hd.css">
-    <link rel="stylesheet" href="../css/ft.css">
+    <script type="text/javascript" src="${path }/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -68,6 +60,9 @@
                             <th style="background-color:#dcdcdc">글 내용</th>
                             <td>
                                 <textarea name="content" id="content" class="textarea" placeholder="내용 입력" rows="8" cols="100" maxlength="900" required></textarea>
+                                <script>
+                                    CKEDITOR.replace('content',	{filebrowserUploadUrl:'${path}/infoUni/imageUpload.do'});
+                                </script>
                             </td>
                         </tr>
                         <tr>

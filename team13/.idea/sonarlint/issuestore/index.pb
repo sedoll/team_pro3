@@ -75,10 +75,6 @@ _
 /src/main/webapp/WEB-INF/views/menu/menuList.jsp,4\f\4f40af62e820fa0bf1ab9606ebcb26720d8e40c2
 e
 5src/main/webapp/WEB-INF/views/notice/noticeDetail.jsp,e\4\e48a6fc01a14a2157d87234a530194699b3ffaa9
-e
-5src/main/webapp/WEB-INF/views/notice/noticeInsert.jsp,b\d\bd024ca35dcd39223d7c2ae348007a578d2783a8
-c
-3src/main/webapp/WEB-INF/views/notice/noticeEdit.jsp,3\8\38c574da4edc9a723acef2c6b2a12fe59e700cf3
 a
 1src/main/webapp/WEB-INF/views/board/boardEdit.jsp,e\2\e2d1119d13eaa87346fe353d17d05159177828cc
 c

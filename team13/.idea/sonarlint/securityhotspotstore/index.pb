@@ -79,7 +79,3 @@ a
 1src/main/webapp/WEB-INF/views/board/boardEdit.jsp,e\2\e2d1119d13eaa87346fe353d17d05159177828cc
 c
 3src/main/webapp/WEB-INF/views/board/boardInsert.jsp,0\7\0796eec800271a050bc8fe599acadd24ef4f0728
-e
-5src/main/webapp/WEB-INF/views/notice/noticeInsert.jsp,b\d\bd024ca35dcd39223d7c2ae348007a578d2783a8
-c
-3src/main/webapp/WEB-INF/views/notice/noticeEdit.jsp,3\8\38c574da4edc9a723acef2c6b2a12fe59e700cf3
