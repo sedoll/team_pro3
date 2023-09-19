@@ -32,7 +32,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless">
                     <strong>커뮤니티</strong>
@@ -60,7 +59,6 @@
                     </a>
                 </div>
             </div>
-
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless">
                     <strong>고객센터</strong>
@@ -111,7 +109,53 @@
                         <a href="${path2}/member/logout.do" class="button is-link is-rounded">
                             <strong>로그아웃</strong>
                         </a>
-                    </c:if>
+                    </div>
+                </div>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        내자녀
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a href="${path2}/menu/list.do" class="navbar-item">
+                            식단표
+                        </a>
+                        <hr class="navbar-divider">
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div>
+                        <c:if test="${not empty sid}">
+                            ${sid} 회원님 환영합니다.
+                        </c:if>
+                    </div>
+                    <div class="buttons">
+                        <c:if test="${not empty sid}"> <%-- 로그인한 경우 --%>
+                            <a href="${path2}/member/mypage.do" class="button is-primary">
+                                <strong>MyPage</strong>
+                            </a>
+                            <a href="${path2}/member/logout.do" class="button is-light">
+                                LogOut
+                            </a>
+                        </c:if>
+                        <c:if test="${empty sid}"> <%-- 로그인을 안 한 경우 --%>
+                            <a href="${path2}/member/term.do" class="button is-primary">
+                                <strong>Sign up</strong>
+                            </a>
+                            <a href="${path2}/member/login.do" class="button is-light">
+                                Log in
+                            </a>
+                        </c:if>
+                        <c:if test="${sid.equals('admin')}"> <%-- 관리자인 경우 --%>
+                            <a href="${path2}/admin/adminMain.do" class="button is-light">
+                                Admin Page
+                            </a>
+                        </c:if>
+                    </div>
                 </div>
             </div>
         </div>

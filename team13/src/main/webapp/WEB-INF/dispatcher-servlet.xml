@@ -30,18 +30,25 @@
 
     <!-- 멀티파트 리졸버 설정 -->
     <beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-        <beans:property name="maxUploadSize" value="10485760" />
+        <!--        <beans:property name="maxUploadSize" value="10485760" /> &lt;!&ndash; 사이즈 지정 10MB &ndash;&gt;-->
+        <beans:property name="defaultEncoding" value="UTF-8"/> <!-- 기본 인코딩 -->
+        <beans:property name="maxUploadSize" value="52428800"/> <!-- 파일 사이즈 : 50MB -->
+        <beans:property name="maxInMemorySize" value="1048576"/> <!-- 메모리 사이즈 : 1MB -->
     </beans:bean>
 
     <!-- 멀티파트 업로드 디렉토리 지정 -->
     <beans:bean id="uploadPath" class="java.lang.String">
+        <!-- 환경에 맞게 수정 필요!!!!!!!!!!!!!!-->
         <beans:constructor-arg value="D:\team_pro3\team13\src\main\webapp\resources\upload" />
     </beans:bean>
 
     <!-- 기본 메인 패키지 및 컨트롤러 패키지 설정 -->
     <context:component-scan base-package="kr.co.teaspoon.controller" />
     <annotation-driven />
-
+    <beans:bean id="fileDownLoadView" class="kr.co.teaspoon.controller.FileDownLoadView"/>
+    <beans:bean id="fileViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver">
+        <beans:property name="order" value="0" />
+    </beans:bean>
     <!-- 인터셉터 : 글쓰기와 같은 회원권한을 가진 경우는 반드시 로그인 페이지를 거쳐서 시도할 것  -->
     <!-- <beans:bean id="sampleIntercepter" class="kr.co.teaspoon.util.SampleInterceptor" />
     <beans:bean id="adminIntercepter" class="kr.co.teaspoon.util.AdminInterceptor" />
