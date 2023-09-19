@@ -2,8 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%--<c:set var="path1" value="${pageContext.request.contextPath }"/>--%>
-<c:set var="path1" value="<%=request.getContextPath() %>"/>
+<c:set var="path13" value="<%=request.getContextPath() %>"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,11 +27,11 @@
 
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../../include/head.jsp"></jsp:include>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/baseLayout.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/sidebar.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/validateUser.css"/>
-    <link href="${path1}/resources/css/myPage/com_write.css" rel="stylesheet">
-    <script type="text/javascript" src="${path1}/resources/js/com_write.js" charset="UTF-8"></script>
+    <link rel="stylesheet" href="${path13}/resources/css/myPage/baseLayout.css"/>
+    <link rel="stylesheet" href="${path13}/resources/css/myPage/sidebar.css"/>
+    <link rel="stylesheet" href="${path13}/resources/css/myPage/validateUser.css"/>
+    <link href="${path13}/resources/css/myPage/com_write.css" rel="stylesheet">
+    <script type="text/javascript" src="${path13}/resources/js/com_write.js" charset="UTF-8"></script>
 
     <title>작성글</title>
 
@@ -76,7 +75,7 @@
                                 <tr class="boardlist1">
                                     <td>${boardlist.num}</td>
                                     <td><a class="path"
-                                           href="${path1}/board/detail.do?bno=${boardlist.num}">${boardlist.subject}</a>
+                                           href="${path13}/board/detail.do?bno=${boardlist.num}">${boardlist.subject}</a>
                                     </td>
                                     <td>${boardlist.write_date}</td>
                                 </tr>
@@ -102,7 +101,7 @@
                                     <tr class="boardlist2">
                                         <td>${boardtealist.num}</td>
                                         <td><a class="path"
-                                               href="${path1}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a>
+                                               href="${path13}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a>
                                         </td>
                                         <td>${boardtealist.write_date}</td>
                                     </tr>
@@ -128,7 +127,7 @@
                                     <tr class="boardlist3">
                                         <td>${boardparlist.num}</td>
                                         <td><a class="path"
-                                               href="${path1}/boardPar/detail.do?bno=${boardparlist.num}">${boardparlist.subject}</a>
+                                               href="${path13}/boardPar/detail.do?bno=${boardparlist.num}">${boardparlist.subject}</a>
                                         </td>
                                         <td>${boardparlist.write_date}</td>
                                     </tr>
@@ -155,7 +154,7 @@
                                     <td>${boardfreelist.num}</td>
 
                                     <td><a class="path"
-                                           href="${path1}/boardPar/detail.do?bno=${boardparlist.num}">${boardfreelist.subject}</a>
+                                           href="${path13}/boardPar/detail.do?bno=${boardparlist.num}">${boardfreelist.subject}</a>
                                     </td>
                                     <td>${boardfreelist.write_date}</td>
                                 </tr>
@@ -185,7 +184,7 @@
                                         <tr class = "commentlist">
                                             <td>${board_comlist.content}</td>
                                             <td>${board_comlist.write_date}</td>
-                                            <td><button type="button" class ="origin" onclick="location.href='${path1}/board/detail.do?bno=${board_comlist.num}'">원문보기</button></td>
+                                            <td><button type="button" class ="origin" onclick="location.href='${path13}/board/detail.do?bno=${board_comlist.num}'">원문보기</button></td>
                                         </tr>
 
                                     </c:forEach>
@@ -206,7 +205,7 @@
                                         <c:forEach items="${boardtealist }" var="boardtealist">
                                             <tr class = "boardlist2">
                                                 <td>${boardtealist.num}</td>
-                                                <td><a class="path" href="${path1}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a></td>
+                                                <td><a class="path" href="${path13}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a></td>
                                                 <td>${boardtealist.write_date}</td>
                                             </tr>
                                         </c:forEach>
@@ -226,7 +225,7 @@
                                         <c:forEach items="${boardparlist }" var="boardparlist">
                                             <tr class = "boardlist3">
                                                 <td>${boardparlist.num}</td>
-                                                <td><a class="path" href="${path1}/boardPar/detail.do?bno=${boardlist.num}">${boardparlist.subject}</a></td>
+                                                <td><a class="path" href="${path13}/boardPar/detail.do?bno=${boardlist.num}">${boardparlist.subject}</a></td>
                                                 <td>${boardparlist.write_date}</td>
                                             </tr>
                                         </c:forEach>

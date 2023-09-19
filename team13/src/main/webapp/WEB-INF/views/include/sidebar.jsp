@@ -2,19 +2,19 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<c:set var="path1" value="${pageContext.request.contextPath }"/>
+<c:set var="path4" value="${pageContext.request.contextPath }"/>
 
 <nav>
     <div class="sidebar">
         <div class="header">티스푼</div>
         <ul>
             <li>
-                <a href="${path1}/member/update.do?id=${sid }" >
+                <a href="${path4}/member/update.do?id=${sid }" >
                     개인정보 수정
                 </a>
             </li>
             <li>
-                <a href="${path1}/member/writtenList.do" >
+                <a href="${path4}/member/writtenList.do" >
                     작성글
                 </a>
             </li>

@@ -51,6 +51,7 @@ public class MemberCtrl {
             out.flush();
             session.setAttribute("sid", id);
             session.setAttribute("job", mem.getJob());
+            System.out.println(mem.getJob());
             return "/index";
         } else { // 로그인 실패
             response.setContentType("text/html; charset=UTF-8");
@@ -104,8 +105,6 @@ public class MemberCtrl {
     public String getJoin(HttpServletRequest request, HttpServletResponse response, Model model) throws Exception {
         String job = request.getParameter("job");
         model.addAttribute("job", job);
-
-
         return "/member/join";
     }
 
@@ -135,13 +134,10 @@ public class MemberCtrl {
         String pw = pwEncoder.encode(ppw);
         member.setPw(pw);
         memberService.memberInsert(member);
+        model.addAttribute("msg", "완료되었습니다.");
+        model.addAttribute("url", "/");
+        return "/include/redirect";
 
-        response.setContentType("text/html; charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        out.println("<script>alert('회원가입이 완료되었습니다.');</script>");
-        out.flush();
-
-        return "/team13_war";
     }
 
     // 마이페이지 메인
