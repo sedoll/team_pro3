@@ -73,8 +73,6 @@ e
 5src/main/java/kr/co/teaspoon/controller/MenuCtrl.java,9\7\97f459fc2b5334543e581ee8d5fb29b1edb18bd8
 _
 /src/main/webapp/WEB-INF/views/menu/menuList.jsp,4\f\4f40af62e820fa0bf1ab9606ebcb26720d8e40c2
-e
-5src/main/webapp/WEB-INF/views/notice/noticeDetail.jsp,e\4\e48a6fc01a14a2157d87234a530194699b3ffaa9
 a
 1src/main/webapp/WEB-INF/views/board/boardEdit.jsp,e\2\e2d1119d13eaa87346fe353d17d05159177828cc
 c
