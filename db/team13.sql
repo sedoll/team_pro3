@@ -259,3 +259,22 @@ CREATE TABLE school(
 	sc_code VARCHAR(50),
 	sc_name VARCHAR(100)
 	);
+
+-- 자료실 db
+CREATE TABLE fileobj (
+	no int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	postno INT NOT NULL,
+	savefolder VARCHAR(400),
+	originfile VARCHAR(400),
+	savefile VARCHAR(800),
+	filesize LONG,
+	uploaddate VARCHAR(100)
+);
+
+CREATE TABLE fileboard (
+	postno int NOT NULL AUTO_INCREMENT PRIMARY KEY,	-- 글 번호
+	title VARCHAR(100) not null,   -- 글제목
+	content VARCHAR(1500) not null,    -- 글내용
+	regdate DATETIME DEFAULT CURRENT_TIMESTAMP(),   -- 작성일
+	visited INT DEFAULT 0   -- 조회수
+);
