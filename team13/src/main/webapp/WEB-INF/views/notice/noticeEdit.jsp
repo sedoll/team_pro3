@@ -96,6 +96,7 @@
             font-size:16px;
         }
     </style>
+    <script type="text/javascript" src="${path }/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="wrap">
@@ -125,7 +126,12 @@
                                 <input type="hidden" name="no" value="${dto.no}" readonly>
                             </tr>
                             <tr>
-                                <td colspan="2"><textarea name="content" id="content" class="" cols="50" rows="15" maxlength="100" placeholder="내용 입력" required>${dto.content}</textarea></td>
+                                <td colspan="2">
+                                    <textarea name="content" id="content" class="" cols="50" rows="15" maxlength="100" placeholder="내용 입력" required>${dto.content}</textarea>
+                                    <script>
+                                        CKEDITOR.replace('content',	{filebrowserUploadUrl:'${path }/free/imageUpload.do'});
+                                    </script>
+                                </td>
                                 <input type="hidden" name="lev" id="lev" value="0">
                             </tr>
                             <tr>
