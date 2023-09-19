@@ -3,15 +3,15 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%--<c:set var="path1" value="${pageContext.request.contextPath }"/>--%>
-<c:set var="path1" value="<%=request.getContextPath() %>" />
+<c:set var="path10" value="<%=request.getContextPath() %>" />
 
 <html>
 <head>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../../include/head.jsp"></jsp:include>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/baseLayout.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/sidebar.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/validateUser.css"/>
+    <link rel="stylesheet" href="${path10}/resources/css/myPage/baseLayout.css"/>
+    <link rel="stylesheet" href="${path10}/resources/css/myPage/sidebar.css"/>
+    <link rel="stylesheet" href="${path10}/resources/css/myPage/validateUser.css"/>
 
 
 </head>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
                 <div class="button-box">
-                    <button id="return" onclick="location.href='${path1 }/member/mypage.do'" >취소하기</button>
+                    <button id="return" onclick="location.href='${path10 }/member/mypage.do'" >취소하기</button>
                     <button id="withdraw" >탈퇴하기</button>
                 </div>
             </form>
@@ -84,7 +84,7 @@
            // var pw = { pw:$("#pw").val() }
 
             $.ajax({
-                url:"${path1 }/member/pwCheck.do",
+                url:"${path10 }/member/pwCheck.do",
                 type:"post",
                 dataType:"json",
                 //data:params,
@@ -100,7 +100,7 @@
                         $("#pw").focus();
                     } else if(pwPass==true){
                         alert("탈퇴 안내 페이지로 이동합니다.")
-                        window.location.href = "${path1}/member/withdrawForm.do?id=${sessionScope.sid}";
+                        window.location.href = "${path10}/member/withdrawForm.do?id=${sessionScope.sid}";
                     }
                 }
             });

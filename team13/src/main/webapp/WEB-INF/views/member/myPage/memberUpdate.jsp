@@ -2,8 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path2" value="${pageContext.request.contextPath }"/>
-<%--<c:set var="path2" value="<%=request.getContextPath() %>" />--%>
+<c:set var="path11" value="${pageContext.request.contextPath }"/>
+<%--<c:set var="path11" value="<%=request.getContextPath() %>" />--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +13,10 @@
     <title>회원 정보 보기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../../include/head.jsp"></jsp:include>
-    <link rel="stylesheet" href="${path2}/resources/css/myPage/baseLayout.css"/>
-    <link rel="stylesheet" href="${path2}/resources/css/myPage/sidebar.css"/>
-    <link rel="stylesheet" href="${path2}/resources/css/myPage/validateUser.css"/>
-    <link rel="stylesheet" href="${path2}/resources/css/font.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/myPage/baseLayout.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/myPage/sidebar.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/myPage/validateUser.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/font.css"/>
 </head>
 <body>
 
@@ -50,7 +50,7 @@
             <div class="row column text-center">
                 <div class="container">
                     <hr>
-                    <form action="${path2 }/member/update.do" method="post" onsubmit="return updateCheck(this)">
+                    <form action="${path11 }/member/update.do" method="post" onsubmit="return updateCheck(this)">
                         <div class="table_form_wrap">
                             <table class="table_form">
                                 <tbody>
@@ -103,13 +103,13 @@
                                         <input type="submit" class="button btn-writer" value="수정">
                                         <input type="reset" class="button btn-primary" value="취소">
                                         <c:if test="${sid!='admin' }">
-                                            <a href="${path1 }/member/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
+                                            <a href="${path11 }/member/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
                                         </c:if>
                                         <c:if test="${sid =='admin' }">
-                                            <a href="${path1 }/member/delete.do?id=${member.id }" class="button is-primary">회원 강퇴</a>
+                                            <a href="${path11 }/member/delete.do?id=${member.id }" class="button is-primary">회원 강퇴</a>
                                         </c:if>
                                         <c:if test="${sid== 'admin' }">
-                                            <a href="${path1 }/member/list.do" class="button is-primary">회원 목록</a>
+                                            <a href="${path11 }/member/list.do" class="button is-primary">회원 목록</a>
                                         </c:if>
                                     </td>
                                 </tr>
