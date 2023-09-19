@@ -74,7 +74,7 @@
     $(document).ready(function() {
         $("#withdraw").click(function(e) {
             e.preventDefault();
-            window.location.href = "/member/withdraw";
+            window.location.href = "/member/myPage/withdraw";
         });
         $("#verify_confirm").click(function(e){
             e.preventDefault();

@@ -2,17 +2,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<c:set var="path1" value="${pageContext.request.contextPath }"/>
+<c:set var="path15" value="${pageContext.request.contextPath }"/>
 <html>
 <head>
     <title>회원 탈퇴 안내</title>
 
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../../include/head.jsp"></jsp:include>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/baseLayout.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/sidebar.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/validateUser.css"/>
-    <link rel="stylesheet" href="${path1}/resources/css/myPage/withdraw.css"/>
+    <link rel="stylesheet" href="${path15}/resources/css/myPage/baseLayout.css"/>
+    <link rel="stylesheet" href="${path15}/resources/css/myPage/sidebar.css"/>
+    <link rel="stylesheet" href="${path15}/resources/css/myPage/validateUser.css"/>
+    <link rel="stylesheet" href="${path15}/resources/css/myPage/withdraw.css"/>
 </head>
 <body>
 <!-- 헤더 부분 인클루드 -->
@@ -60,7 +60,7 @@
             <input type="checkbox" id="withdraw_agre" class="normal" hidden/>
             <img
                     class="agree-checkbox"
-                    src="${path1}/resources/img/myPage_unchecked.png"
+                    src="${path15}/resources/img/myPage_unchecked.png"
                     width="20"
                     height="20"
             />
@@ -68,7 +68,7 @@
         </label>
         <div class="btn-container">
             <button class="cancel">취소하기</button>
-            <button class="delete" onclick="location.href='${path1}/member/withdraw.do?id=${member.id}' " >탈퇴하기</button>
+            <button class="delete" onclick="location.href='${path15}/member/withdraw.do?id=${member.id}' " >탈퇴하기</button>
         </div>
     </div>
 
@@ -83,7 +83,7 @@
 <script>
     $(document).ready(function () {
         $(".cancel").click(function () {
-            window.location.href = "${path1}/member/mypage.do";
+            window.location.href = "${path15}/member/mypage.do";
         });
 
         $(".confirm").attr("disabled", true); //ok
@@ -108,7 +108,7 @@
                 .children("img")
                 .attr(
                     "src",
-                    chked ? "${path1}/resources/img/myPage_checked.png" : "${path1}/resources/img/myPage_unchecked.png"
+                    chked ? "${path15}/resources/img/myPage_checked.png" : "${path15}/resources/img/myPage_unchecked.png"
                 );
             validate(input_failed, chked);
         });
