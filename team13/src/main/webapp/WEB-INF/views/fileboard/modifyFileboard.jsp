@@ -147,7 +147,7 @@
                            type:"post",    //요청 전송방식
                            dataType:"json",
                            data:tar,
-                           sucess:function(){
+                           success:function(){
                              console.log("파일 삭제 성공");
                              $("#filelink1").remove();
                                $(".remove_btn1").remove()
@@ -169,7 +169,7 @@
                             type:"post",    //요청 전송방식
                             dataType:"json",
                             data:tar,
-                            sucess:function(){
+                            success:function(){
                                 console.log("파일 삭제 성공");
                                 $("#filelink2").remove();
                                 $(".remove_btn2").remove()
@@ -191,7 +191,7 @@
                             type:"post",    //요청 전송방식
                             dataType:"json",
                             data:tar,
-                            sucess:function(){
+                            success:function(){
                                 console.log("파일 삭제 성공");
                                 $("#filelink3").remove();
                                 $(".remove_btn3").remove()

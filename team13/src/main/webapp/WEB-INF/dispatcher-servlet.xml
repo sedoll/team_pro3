@@ -38,7 +38,7 @@
 
     <!-- 멀티파트 업로드 디렉토리 지정 -->
     <beans:bean id="uploadPath" class="java.lang.String">
-        <!--  환경에 맞게 경로 수정 필요!!!!  -->
+        <!-- 환경에 맞게 수정 필요!!!!!!!!!!!!!!-->
         <beans:constructor-arg value="D:\team_pro3\team13\src\main\webapp\resources\upload" />
     </beans:bean>
 
