@@ -91,15 +91,15 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <input type="submit" class="button btn-writer" value="회원정보수정">
+                                    <input type="submit" class="button btn-writer" value="수정">
                                     <input type="reset" class="button btn-primary" value="취소">
-                                    <c:if test="${sid=='admin' }">
-                                        <a href="${path }/member/delete.do?id=${member.id }" class="button is-primary">직권 강퇴</a>
-                                    </c:if>
                                     <c:if test="${sid!='admin' }">
                                         <a href="${path }/member/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
                                     </c:if>
-                                    <c:if test="${sid=='admin' }">
+                                    <c:if test="${sid =='admin' }">
+                                        <a href="${path }/member/delete.do?id=${member.id }" class="button is-primary">회원 강퇴</a>
+                                    </c:if>
+                                    <c:if test="${sid== 'admin' }">
                                         <a href="${path }/member/list.do" class="button is-primary">회원 목록</a>
                                     </c:if>
                                 </td>

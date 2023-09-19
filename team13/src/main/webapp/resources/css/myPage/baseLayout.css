@@ -1,0 +1,39 @@
+.mypage-banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 370px;
+}
+
+.mypage-base {
+    display: flex;
+    gap: 70px;
+    width: 1050px;
+    padding: 50px 0px 80px;
+    margin: 0px auto;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.mypage-base .mypage-content {
+    width: 820px;
+}
+
+.mypage-base .mypage-content .page-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 27px;
+}
+
+.mypage-base .mypage-content .page-header h2 {
+    font-size: 24px;
+}
+
+.mypage-base .mypage-content .page-header span {
+    padding-left: 11px;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
