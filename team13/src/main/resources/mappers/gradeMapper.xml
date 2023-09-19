@@ -9,7 +9,7 @@
     </select>
     <!-- 성적 상세보기 -->
     <select id="gradeDetail" resultType="kr.co.teaspoon.dto.Grade">
-        select * from grade where sname=#{sname}
+        select * from grade where sname=#{sname} limit 1
     </select>
     <!-- 성적 입력 -->
     <insert id="gradeInsert">
