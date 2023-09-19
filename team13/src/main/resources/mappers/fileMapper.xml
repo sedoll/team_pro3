@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fileboard">
+	<!-- 파일 목록 -->
+	<select id="fileList" resultType="kr.co.teaspoon.dto.FileDTO">
+		select * from fileobj order by uploaddate desc, no asc
+	</select>
+	<!-- 파일 목록 -->
+	<select id="fileGroupList" resultType="kr.co.teaspoon.dto.FileDTO">
+		select * from fileobj where postno=#{postNo}
+	</select>
+	<!-- 파일 상세보기 -->
+	<select id="fileDetail" resultType="kr.co.teaspoon.dto.FileDTO">
+		select * from fileobj where no=#{no}
+	</select>
+	<!-- 파일 수 카운트 -->
+	<select id="totalFileCount" resultType="integer" >
+		select count(*) from fileobj
+	</select>
+	<!-- 파일 추가 -->
+	<insert id="fileInsert">
+		insert into fileobj values (default, #{postNo}, #{saveFolder}, #{originFile}, #{saveFile}, #{fileSize}, #{uploadDate})
+	</insert>
+	<!-- 글번호가 같은 파일 제거 -->
+	<delete id="fileDelete">
+		delete from fileobj where postno=#{postNo}
+	</delete>
+	<!-- 하나의 파일만 제거 -->
+	<delete id="fileObjDelete">
+		delete from fileobj where no=#{no}
+	</delete>
+	<!-- 파일 자료 수정하기 -->
+<!--	<update id="fileUpdate">-->
+<!--		update fileobj set saveFolder=#{saveFolder}, originFile=#{originFile}, saveFile=#{saveFile}, fileSize=#{fileSize}, uploadDate=#{uploadDate} where postno=#{postNo}-->
+<!--	</update>-->
+	<update id="fileboardUpdate">
+		update fileboard set title=#{title}, content=#{content} where postno=#{postNo}
+	</update>
+	<insert id="fileUpdate">
+		<choose>
+			<when test="originFile != null and originFile.trim() != ''">
+				insert into fileobj values (default, #{postNo}, #{saveFolder}, #{originFile}, #{saveFile}, #{fileSize}, #{uploadDate})
+			</when>
+			<otherwise>
+				-- 조건문 에러 발생 회피하기위해 의미없는 쿼리문 설정함.
+				select 1
+			</otherwise>
+		</choose>
+	</insert>
+
+
+
+
+
+	<!-- 파일 자료실 목록 -->
+	<select id="fileboardList" resultType="kr.co.teaspoon.dto.FileBoard">
+		select * from fileboard order by postno desc
+	</select>
+	<!-- 파일 자료 상세보기 -->
+	<select id="fileboardDetail" resultType="kr.co.teaspoon.dto.FileBoard">
+		select * from fileboard where postno=#{postNo}
+	</select>
+	<!-- 파일 자료 상세보기 -->
+	<select id="latestFileboard" resultType="kr.co.teaspoon.dto.FileBoard">
+		select * from fileboard order by postno desc limit 0,1
+	</select>
+	<!-- 파일 자료 추가 -->
+	<insert id="fileboardInsert">
+		insert into fileboard values (default, #{title}, #{content}, default, default)
+	</insert>
+	<!-- 파일 자료 수정하기 -->
+	<update id="fileboardEdit">
+		update fileboard set title=#{title}, content=#{content} where postno=#{postNo}
+	</update>
+	<!-- 파일 자료 삭제 -->
+	<delete id="fileboardDelete">
+		delete from fileboard where postno=#{postno}
+	</delete>
+	<!-- 파일 자료 상세보기시 읽은 횟수 증가 -->
+	<update id="countUp">
+		update fileboard set visited=visited+1 where postno=#{postNo}
+	</update>
+</mapper>

@@ -61,6 +61,10 @@
                         <a href="${path2}/boardPar/list.do" class="navbar-item">
                             학부모게시판
                         </a>
+                        <hr class="navbar-divider">
+                        <a href="${path2}/file/filelist1.do" class="navbar-item">
+                            자료실
+                        </a>
                     </div>
                 </div>
 
