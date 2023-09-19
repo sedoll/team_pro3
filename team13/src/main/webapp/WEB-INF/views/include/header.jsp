@@ -123,8 +123,8 @@
                             </a>
                         </c:if>
                         <c:if test="${sid.equals('admin')}"> <%-- 관리자인 경우 --%>
-                            <a href="${path2}/member/list.do" class="button is-light">
-                                MemberList
+                            <a href="${path2}/admin/adminMain.do" class="button is-light">
+                                Admin Page
                             </a>
                         </c:if>
                     </div>

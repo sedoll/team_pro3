@@ -41,4 +41,8 @@
     <delete id="commentDeleteAll">
         delete from board where par=#{bno}
     </delete>
+    <!-- 모든 댓글 목록 -->
+    <select id="allCommentList" resultType="kr.co.teaspoon.dto.Board">
+        select * from board where lev = 1 order by resdate desc
+    </select>
 </mapper>
