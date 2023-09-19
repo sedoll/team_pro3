@@ -61,6 +61,10 @@
                         <a href="${path2}/boardPar/list.do" class="navbar-item">
                             학부모게시판
                         </a>
+                        <hr class="navbar-divider">
+                        <a href="${path2}/file/filelist1.do" class="navbar-item">
+                            자료실
+                        </a>
                     </div>
                 </div>
 
@@ -123,8 +127,8 @@
                             </a>
                         </c:if>
                         <c:if test="${sid.equals('admin')}"> <%-- 관리자인 경우 --%>
-                            <a href="${path2}/member/list.do" class="button is-light">
-                                MemberList
+                            <a href="${path2}/admin/adminMain.do" class="button is-light">
+                                Admin Page
                             </a>
                         </c:if>
                     </div>

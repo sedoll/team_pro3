@@ -13,4 +13,6 @@ public interface BoardDAO {
     public void commentInsert(Board dto) throws Exception;
     public List<Board> commentList(int bno) throws Exception;
     public void commentDeleteAll(int bno) throws Exception;
+    public List<Board> allCommentList() throws Exception;
+
 }
