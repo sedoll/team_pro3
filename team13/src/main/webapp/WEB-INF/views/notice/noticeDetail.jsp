@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jk347
-  Date: 2023-09-17
-  Time: 오전 1:38
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -66,7 +59,7 @@
             line-height: 32px;
             padding: 12px 15px; /
             /*border: 1px solid #f5f5f5; !*/
-        box-sizing: border-box;
+            box-sizing: border-box;
             background-color: #eeeeee; /* 배경색 조정 */
             font-size: 22px;
             font-weight: 600;
@@ -84,7 +77,7 @@
             width: 6%;
             text-align: center;
         }.tb1 thead td:nth-child(2) {
-             text-align: left;
+            text-align: left;
              width: 14%;
          }
         .tb1 thead td:nth-child(3) {
@@ -227,13 +220,13 @@
 
         }
         textarea {
-            resize: none;
-            padding: 10px;
-            height: 80px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            vertical-align: middle;
-        }
+             resize: none;
+             padding: 10px;
+             height: 80px;
+             border: 1px solid #ccc;
+             border-radius: 5px;
+             vertical-align: middle;
+         }
         #nologin_comment {
             width: 1200px;
             text-align: center;
@@ -260,7 +253,6 @@
     <div class="contents" id="contents">
         <section class="page" id="page1">
             <div class="page_wrap">
-                <h2 class="page_tit">공지글</h2>
                 <table class="tb1">
                     <thead>
                         <tr class="title">
@@ -268,14 +260,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <c:if test='${sid eq "admin"}'>
-                                    <a href="${path}/notice/edit.do?no=${dto.no}" class="inbtn">수정</a>
+                                <c:if test="${not empty sid && sid eq 'admin'}">
+                                <a href="${path}/notice/edit.do?no=${dto.no}" class="inbtn">수정</a>
                                 </c:if>
                             </td>
                             <td>
-                                <c:if test='${sid eq "admin"}'>
-                                    <a href="${path}/notice/delete.do?no=${dto.no}" class="inbtn delete_btn" >삭제</a>
-                                </c:if>
+                                <c:if test="${not empty sid && sid eq 'admin'}">
+                                <a href="${path}/notice/delete.do?no=${dto.no}" class="inbtn delete_btn" >삭제</a>
+                               </c:if>
                             </td>
                             <td>관리자</td>
                             <td>${dto.resdate}</td>
@@ -299,5 +291,6 @@
     <footer class="ft" id="ft">
         <%@ include file="../include/footer.jsp" %>
     </footer>
+</div>
 </body>
 </html>
