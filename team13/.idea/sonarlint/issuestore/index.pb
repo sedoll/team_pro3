@@ -51,8 +51,6 @@ g
 7src/main/java/kr/co/teaspoon/service/SampleService.java,8\f\8fd27d8265fc4eaca5d8bd4cbe40b305252cbc71
 k
 ;src/main/java/kr/co/teaspoon/service/SampleServiceImpl.java,d\0\d0f9be077685c6315021c4f12bafcaa2c32cec27
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
 O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 ^
@@ -119,8 +117,6 @@ e
 5src/main/java/kr/co/teaspoon/service/MenuService.java,f\b\fb310ca383c78692c6af653f22453f38b771e502
 m
 =src/main/java/kr/co/teaspoon/controller/SampleController.java,b\7\b7656c4ef4b3cf0d3b4dd0ea978204738d9c5432
-f
-6src/main/java/kr/co/teaspoon/controller/BoardCtrl.java,3\e\3e9e81ff61d590bcb0c45a61e89feb2104e01711
 f
 6src/main/java/kr/co/teaspoon/controller/AdminCtrl.java,3\1\3107823900a2421a2aeaca81c74ed4aa8fd97a58
 ]
