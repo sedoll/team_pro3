@@ -18,8 +18,8 @@ public class GradeServiceImpl implements GradeService{
     }
 
     @Override
-    public Grade gradeDetail(String sname) throws Exception {
-        return gradeDAO.gradeDetail(sname);
+    public Grade gradeDetail(int no) throws Exception {
+        return gradeDAO.gradeDetail(no);
     }
 
     @Override

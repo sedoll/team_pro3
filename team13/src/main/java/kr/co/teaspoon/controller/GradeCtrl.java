@@ -43,8 +43,8 @@ public class GradeCtrl {
 
     @GetMapping("gradedetail.do")	//info/detail.do?bno=1
     public String gradeDetail(HttpServletRequest request, Model model) throws Exception {
-        String sname = request.getParameter("sname");
-        Grade grade = gradeService.gradeDetail(sname);
+        int no = Integer.parseInt(request.getParameter("no"));
+        Grade grade = gradeService.gradeDetail(no);
         model.addAttribute("grade", grade);
         return "/grade/gradeDetail";
     }
@@ -79,24 +79,24 @@ public class GradeCtrl {
     }
 
     @GetMapping("gradeedit.do")
-    public String editForm(HttpServletRequest request, Model model) throws Exception {
-        String sname = request.getParameter("sname");
-        Grade grade = gradeService.gradeDetail(sname);
+    public String updateForm(HttpServletRequest request, Model model) throws Exception {
+        int no = Integer.parseInt(request.getParameter("no"));
+        Grade grade = gradeService.gradeDetail(no);
         model.addAttribute("grade", grade);
         return "/grade/gradeEdit";
     }
 
     @PostMapping("gradeedit.do")
     public String gradeEdit(HttpServletRequest request, Model model) throws Exception {
-        String sname = request.getParameter("sname");
+        int no = Integer.parseInt(request.getParameter("no"));
         Grade grade = new Grade();
-        grade.setSname(sname);
+        grade.setExam(request.getParameter("exam"));
         grade.setKor(Integer.parseInt(request.getParameter("kor")));
         grade.setMath(Integer.parseInt(request.getParameter("math")));
         grade.setEng(Integer.parseInt(request.getParameter("eng")));
         grade.setSocial(Integer.parseInt(request.getParameter("social")));
         grade.setScience(Integer.parseInt(request.getParameter("science")));
-        grade.setExam(request.getParameter("exam"));
+        grade.setNo(no);
         gradeService.gradeEdit(grade);
         return "redirect:gradelist.do";
     }

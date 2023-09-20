@@ -18,6 +18,7 @@
     <resources mapping="/qna/**" location="/WEB-INF/views/qna" />
     <resources mapping="/css/**" location="/WEB-INF/views/css" />
     <resources mapping="/img/**" location="/WEB-INF/views/img" />
+    <resources mapping="/grade/**" location="/WEB-INF/views/grade" />
 
     <!-- 컨트롤러에서 던진 URL : /notice/noticeList -->
     <!-- 실제 존재하는 URL : /WEB-INF/views/notice/noticeList.jsp -->
