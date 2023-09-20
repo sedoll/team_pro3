@@ -97,6 +97,11 @@
                         <a href="${path2}/menu/list.do" class="navbar-item">
                             식단표
                         </a>
+                        <c:if test="${not empty sid}">
+                        <a href="${path2}/grade/list.do" class="navbar-item">
+                            성적표
+                        </a>
+                        </c:if>
                         <hr class="navbar-divider">
                     </div>
                 </div>
