@@ -1,38 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: jk347
-  Date: 2023-09-17
-  Time: 오전 2:00
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path" value="<%=request.getContextPath() %>" />
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항 입력</title>
-    <%@ include file="../include/head.jsp" %>
-
-    <!-- 스타일 초기화 : reset.css 또는 normalize.css -->
-    <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
-
-    <!-- 플러그인 연결-->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <!-- 스타일 초기화 -->
-    <link rel="stylesheet" href="../css/reset.css">
-    <!-- 웹 폰트 -->
-    <link rel="stylesheet" href="../css/font.css">
-
-    <!-- css 모듈화 -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/hd.css">
-    <link rel="stylesheet" href="../css/ft.css">
+    <title>공지사항 글쓰기</title>
+    <!-- 헤드 부분 인클루드 -->
+    <jsp:include page="../include/head.jsp"></jsp:include>
+    <!-- <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script> -->
+    <script type="text/javascript" src="${path }/resources/ckeditor/ckeditor.js"></script>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -46,7 +28,7 @@
                         공지사항
                     </p>
                     <p class="subtitle">
-                        작성
+                        글쓰기
                     </p>
                 </div>
             </li>
@@ -55,25 +37,27 @@
     <div class="content" id="contents">
         <div class="row column text-center">
             <div class="container">
-                <form action="${path}/notice/insert.do" method="post">
+                <form action="${path }/notice/insert.do" method="post">
                     <table id="table1">
                         <tbody>
                         <tr>
                             <th style="background-color:#dcdcdc">글 제목</th>
                             <td>
-                                <input type="text" name="title" id="title" class="input" placeholder="제목 입력" maxlength="98" autofocus required>
+                                <input type="text" name="title" id="title" class="input" placeholder="제목 입력" maxlength="98" required>
                             </td>
                         </tr>
                         <tr>
                             <th style="background-color:#dcdcdc">글 내용</th>
                             <td>
-                                <textarea name="content" id="content" class="textarea" placeholder="내용 입력" rows="8" cols="100" maxlength="900" required></textarea>
+                                <textarea name="content" id="content" class="textarea" placeholder="내용 입력" rows="8" cols="100" maxlength="1400" required></textarea>
+                                <script>
+                                    CKEDITOR.replace('content',	{filebrowserUploadUrl:'${path}/notice/imageUpload.do'});
+                                </script>
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <input type="submit" class="submit button is-primary" value="글 등록" >
-                                <input type="reset" value="취소" class="button is-primary" onclick="window.history.back();">
                                 <a class="button" href="${path }/notice/list.do">글 목록</a>
                             </td>
                         </tr>
@@ -83,9 +67,8 @@
             </div>
         </div>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../include/footer.jsp" %>
-    </footer>
+    <!-- 푸터 부분 인클루드 -->
+    <jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
 </body>
 </html>

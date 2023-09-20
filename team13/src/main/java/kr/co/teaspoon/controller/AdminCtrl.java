@@ -170,7 +170,28 @@ public class AdminCtrl {
         }
     }
 
-
+        @GetMapping("boardReportList.do")
+        public String getBoardReportList(HttpServletRequest request,Model model) throws Exception {
+            String category = (String) request.getParameter("category");
+            List<Board> boardList = boardService.boardReportList();
+            model.addAttribute("categoryKor", "자유");
+            model.addAttribute("category", category); //한글 사용시 에러 나므로 영문값도 전달
+            model.addAttribute("boardCate", "board");
+            model.addAttribute("boardList", boardList);
+            return "/admin/boardReportList";
+        }
+    @GetMapping("boardReportDelete.do")
+    public String boardReportDelete(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        String category = (String) request.getParameter("category");
+        if (category.equals("free")) {
+            boardService.boardDelete(bno);
+            boardService.commentDeleteAll(bno);
+            return "redirect:boardReportList.do?category=free";
+        } else {
+            return "/admin/adminMain";
+        }
+    }
 
 }
 */

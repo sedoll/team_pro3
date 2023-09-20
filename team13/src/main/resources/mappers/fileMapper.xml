@@ -3,8 +3,15 @@
 <mapper namespace="fileboard">
 	<!-- 파일 목록 -->
 	<select id="fileList" resultType="kr.co.teaspoon.dto.FileDTO">
-		select * from fileobj order by uploaddate desc, no asc
-	</select>
+		<choose>
+			<when test="originFile != null and originFile.trim() != ''">
+				insert into fileobj values (default, #{postNo}, #{saveFolder}, #{originFile}, #{saveFile}, #{fileSize}, #{uploadDate})
+			</when>
+			<otherwise>
+				-- 조건문 에러 발생 회피하기위해 의미없는 쿼리문 설정함.
+				select 1
+			</otherwise>
+		</choose>	</select>
 	<!-- 파일 목록 -->
 	<select id="fileGroupList" resultType="kr.co.teaspoon.dto.FileDTO">
 		select * from fileobj where postno=#{postNo}

@@ -13,4 +13,7 @@ public class Board {
     private int cnt;
     private int lev;
     private int par;
+    private String reason;
+    private String report_date;
+    private int report_count;
 }
