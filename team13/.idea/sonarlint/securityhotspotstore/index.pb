@@ -1,4 +1,10 @@
 
+f
+6src/main/java/kr/co/teaspoon/controller/BoardCtrl.java,3\e\3e9e81ff61d590bcb0c45a61e89feb2104e01711
+i
+9src/main/java/kr/co/teaspoon/controller/BoardParCtrl.java,a\c\acef1d9a9d09f565262a3daed71d0c655833fd3a
+i
+9src/main/java/kr/co/teaspoon/controller/BoardTeaCtrl.java,0\6\06da01874eac2c8a5f99214f90dcc3ba2322f3b2
 e
 5src/main/java/kr/co/teaspoon/controller/HomeCtrl.java,3\d\3d32752bb5f6606ea1eda3755702b5d5069fec82
 h
@@ -7,6 +13,8 @@ h
 .src/main/java/kr/co/teaspoon/dao/BoardDAO.java,a\e\ae3c804a9d31472ec51699674e5c43518a9a4111
 b
 2src/main/java/kr/co/teaspoon/dao/BoardDAOImpl.java,2\3\2390b70514795027356767dcac34ea60dc9a64b3
+e
+5src/main/java/kr/co/teaspoon/dao/BoardParDAOImpl.java,1\d\1defb1257add5eb2984e825107eec65e8d158701
 e
 5src/main/java/kr/co/teaspoon/dao/BoardTeaDAOImpl.java,8\d\8da5a01bd0fe67188efdeada264b402eb0d343cc
 _
@@ -43,6 +51,8 @@ g
 7src/main/java/kr/co/teaspoon/service/SampleService.java,8\f\8fd27d8265fc4eaca5d8bd4cbe40b305252cbc71
 k
 ;src/main/java/kr/co/teaspoon/service/SampleServiceImpl.java,d\0\d0f9be077685c6315021c4f12bafcaa2c32cec27
+^
+.src/main/webapp/WEB-INF/dispatcher-servlet.xml,5\6\5610820762bc3ec47cc9dbd7324c057405172b6d
 [
 +src/main/webapp/WEB-INF/spring-security.xml,1\c\1c32f00779ff5236a44927df8f30826d3fbdc472
 O

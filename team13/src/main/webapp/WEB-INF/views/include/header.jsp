@@ -33,11 +33,9 @@
                         <a href="${path2}/notice/list.do" class="navbar-item">
                             공지사항
                         </a>
-                        <hr class="navbar-divider">
                         <a href="${path2}/faq/list.do" class="navbar-item">
                             FAQ
                         </a>
-                        <hr class="navbar-divider">
                         <a href="${path2}/qna/list.do" class="navbar-item">
                             QnA
                         </a>
@@ -53,17 +51,15 @@
                         <a href="${path2}/board/list.do" class="navbar-item">
                             자유게시판
                         </a>
-                        <hr class="navbar-divider">
                         <a href="${path2}/boardTea/list.do" class="navbar-item">
                             선생님게시판
                         </a>
-                        <hr class="navbar-divider">
                         <a href="${path2}/boardPar/list.do" class="navbar-item">
                             학부모게시판
                         </a>
                         <hr class="navbar-divider">
-                        <a href="${path2}/file/filelist1.do" class="navbar-item">
-                            자료실
+                        <a class="navbar-item">
+                            Report an issue
                         </a>
                     </div>
                 </div>
@@ -87,7 +83,6 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         내자녀
@@ -132,8 +127,8 @@
                             </a>
                         </c:if>
                         <c:if test="${sid.equals('admin')}"> <%-- 관리자인 경우 --%>
-                            <a href="${path2}/admin/adminMain.do" class="button is-light">
-                                Admin Page
+                            <a href="${path2}/member/list.do" class="button is-light">
+                                MemberList
                             </a>
                         </c:if>
                     </div>

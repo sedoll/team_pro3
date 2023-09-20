@@ -68,5 +68,4 @@
         ORDER BY
             r.report_date DESC;
     </select>
-
 </mapper>

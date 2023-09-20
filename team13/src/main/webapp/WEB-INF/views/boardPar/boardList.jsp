@@ -30,7 +30,7 @@
 <div class="content" id="content">
     <div class="row column text-center">
         <div class="container">
-            <table id="myTable">
+            <table>
                 <thead>
                 <tr>
                     <th width="80">No</th>
@@ -53,38 +53,11 @@
                 </c:forEach>
                 </tbody>
             </table>
+            <%-- <c:if test='${sid eq "admin"}'>  --%>
             <div class="button-group">
-                <a class="button is-primary" href="${path}/boardPar/insert.do">글쓰기</a>
+                <a class="button" href="${path}/boardPar/insert.do">글쓰기</a>
             </div>
-            <script>
-                $(document).ready( function () {
-                    $('#myTable').DataTable({
-                        pageLength : 10,
-                        order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
-                        info: false,
-                        dom: 't<f>p',
-                        language: {
-                            emptyTable: '등록된 글이 없습니다.'
-                        }
-
-                    });
-                } );
-                $(document).ready(function() {
-                    $('.dataTables_paginate').css({
-                        'textAlign':'left',
-                        'float': 'none',
-                        'margin-top':'10px',
-                    });
-                    $('.dataTables_filter').css({
-                        'float': 'left',
-                        'margin-top':'14px',
-                        'margin-right':'280px'
-                    });
-                    $('#myTable_paginate').css({
-                        'margin-right':'120px'
-                    });
-                });
-            </script>
+            <%-- </c:if> --%>
         </div>
 
     </div>
