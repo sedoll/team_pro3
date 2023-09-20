@@ -45,4 +45,28 @@
     <select id="allCommentList" resultType="kr.co.teaspoon.dto.Board">
         select * from board where lev = 1 order by resdate desc
     </select>
+
+<!--    신고 기능 테스트 reportBoard-->
+    <insert id="reportBoard">
+        insert into report values (default, #{board_bno}, #{reporter}, #{reason}, default)
+    </insert>
+    <select id="checkReported" resultType="integer" >
+        SELECT COUNT(*) FROM report WHERE board_bno = #{board_bno} AND reporter = #{reporter}
+    </select>
+    <select id="boardReportList" resultType="kr.co.teaspoon.dto.Board">
+        SELECT
+            b.*,
+            r.reason,
+            r.report_date,
+            sub.report_count
+        FROM
+            (SELECT board_bno, COUNT(board_bno) as report_count FROM report GROUP BY board_bno) AS sub
+                JOIN
+            report r ON sub.board_bno = r.board_bno
+                JOIN
+            board b ON r.board_bno = b.bno
+        ORDER BY
+            r.report_date DESC;
+    </select>
+
 </mapper>

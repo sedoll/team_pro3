@@ -22,6 +22,12 @@
                 </p>
                 <ul class="menu-list">
                     <li>
+                        <p>신고 관리</p>
+                        <ul>
+                            <li><a href="${path}/admin/boardReportList.do?category=free">자유게시판 신고</a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <p>게시글 관리</p>
                         <ul>
                             <li><a href="${path}/admin/boardList.do?category=free">자유게시판 게시글 관리</a></li>
