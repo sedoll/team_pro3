@@ -41,10 +41,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${gradeList }" var="grade" varStatus="status">
+                <c:forEach items="${gradeList}" var="grade" varStatus="status">
                     <tr>
                         <td>${grade.no}</td>
-                        <td>${grade.sname }</td>
+                        <td>${grade.sname}</td>
                         <td>${grade.pid}</td>
                         <td>${grade.tname}</td>
                         <td>
@@ -52,10 +52,10 @@
                             <fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd" />
                         </td>
                         <td colspan="2">
-                            <c:if test="${sid == grade.pid || job == 2}">
-                                <a href="${path}/grade/gradedetail.do?sname=${grade.sname}" class="button is-small">성적 상세보기</a>
+                            <c:if test="${sid == grade.pid || job == 2 || job == 0}">
+                                <a href="${path}/grade/gradedetail.do?no=${grade.no}" class="button is-small">성적 상세보기</a>
                             </c:if>
-                            <c:if test="${job == 2}">
+                            <c:if test="${job == 2  || job == 0}">
                                 <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-small">성적 삭제</a>
                             </c:if>
                         </td>
@@ -63,7 +63,7 @@
                 </c:forEach>
                 </tbody>
             </table>
-            <c:if test='${job == 2}'>
+            <c:if test='${job == 2 || job == 0}'>
             <div class="button-group">
                 <a class="button" href="${path}/grade/gradeinsert.do">글쓰기</a>
             </div>

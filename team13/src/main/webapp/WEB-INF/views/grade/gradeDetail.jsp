@@ -99,8 +99,8 @@
                         <table class="tb2" style="margin-left: 540px">
                             <tr>
                                 <td colspan="2">
-                                    <c:if test="${job == 2}">
-                                    <a href="${path}/grade/gradeedit.do?sname=${grade.sname}" class="button">성적 수정</a>
+                                    <c:if test="${job == 2 || job == 0}">
+                                    <a href="${path}/grade/gradeedit.do?no=${grade.no}" class="button">성적 수정</a>
                                     </c:if>
                                     <a href="/team13_war/" class="button">메인화면</a>
                                 </td>

@@ -43,42 +43,44 @@
     <!-- 헤더 부분 인클루드 -->
         <div class="row column text-center">
             <div class="container">
-                <form action="${path }/grade/gradeedit.do" method="post">
+                <form action="${path}/grade/gradeedit.do?no=${grade.no}" method="post">
                     <div class="table_form_wrap">
                         <table class="table_form">
                             <tbody>
                             <tr>
-                                <th><label for="exam">시험 종류</label></th>
-                                <td><input type="text" name="exam" id="exam" class="input" value="${grade.exam }" required>
+                                <th>시험 종류</th>
+                                <td><input type="text" name="exam" id="exam" class="input" value="${grade.exam}"></td>
                             </tr>
                             <tr>
-                                <th><label for="kor">국어</label></th>
-                                <td><input type="text" name="kor" id="kor" class="input"  value="${grade.kor }" required></td>
+                                <th>국어</th>
+                                <td><input type="text" name="kor" id="kor" class="input"  value="${grade.kor}"></td>
                             </tr>
                             <tr>
-                                <th><label for="eng">영어</label></th>
-                                <td><input type="text" name="eng" id="eng"  class="input" value="${grade.eng }" required></td>
+                                <th>수학</th>
+                                <td><input type="text" name="math" id="math"  class="input" value="${grade.math}"></td>
                             </tr>
                             <tr>
-                                <th><label for="math">수학</label></th>
-                                <td><input type="text" name="math" id="math" class="input" value="${grade.math }" required>
+                                <th>영어</th>
+                                <td><input type="text" name="eng" id="eng" class="input" value="${grade.eng}"></td>
                             </tr>
                             <tr>
-                                <th><label for="social">사회</label></th>
-                                <td><input type="text" name="social" id="social" class="input" value="${grade.social }" required>
+                                <th>사회</th>
+                                <td><input type="text" name="social" id="social" class="input" value="${grade.social}"></td>
                             </tr>
                             <tr>
-                                <th><label for="science" >과학</label></th>
-                                <td><input type="text" name="science" id="science" class="input" value="${grade.science }" required>
+                                <th>과학</th>
+                                <td><input type="text" name="science" id="science" class="input" value="${grade.science}"></td>
                             </tr>
+                            </tbody>
+                            <tfoot>
                             <tr>
-                                <td colspan="4">
-                                    <input type="submit" class="button is-link" value="수정">
-                                    <a href="${path }/grade/gradedelete.do?no=${grade.no }" class="button is-primary">성적 삭제</a>
+                                <td colspan="1">
+                                    <input type="submit" class="button" value="등록하기">
+                                    <a href="${path }/grade/gradedelete.do?no=${grade.no}" class="button is-primary">성적 삭제</a>
                                     <a href="${path }/grade/gradelist.do" class="button is-primary">회원 목록</a>
                                 </td>
                             </tr>
-                            </tbody>
+                            </tfoot>
                         </table>
                     </div>
                 </form>

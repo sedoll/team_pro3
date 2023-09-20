@@ -18,8 +18,8 @@ public class GradeDAOImpl implements GradeDAO{
     }
 
     @Override
-    public Grade gradeDetail(String sname) throws Exception {
-        return sqlSession.selectOne("grade.gradeDetail", sname);
+    public Grade gradeDetail(int no) throws Exception {
+        return sqlSession.selectOne("grade.gradeDetail", no);
     }
 
     @Override
