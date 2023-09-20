@@ -27,7 +27,7 @@ public class BoardTeaCtrl {
 
     @GetMapping("list.do")		// board/list.do
     public String getBoardList(HttpServletResponse response, Model model) throws Exception {
-        if(session.getAttribute("sid") != null &&("admin".equals(session.getAttribute("sid")) || 2 == (Integer) session.getAttribute("job"))) {
+        if(session.getAttribute("sid") != null &&("admin".equals(session.getAttribute("sid")) || session.getAttribute("job").equals("2"))) {
             List<Board> boardList = boardService.boardList();
             model.addAttribute("boardList", boardList);
             return "/boardTea/boardList";

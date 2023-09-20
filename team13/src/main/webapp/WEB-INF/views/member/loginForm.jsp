@@ -10,10 +10,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Neumorphic Login - Free Bulma template</title>
+    <title>로그인</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/neumorphic-login.css">
+    <jsp:include page="../include/head.jsp"></jsp:include>
     <style>
         .login{
             margin: 0 auto;
@@ -29,9 +30,11 @@
             padding-right: 50px;
         }
     </style>
+
 </head>
 
 <body>
+<jsp:include page="../include/header.jsp"></jsp:include>
 <section class="hero is-fullheight">
     <div class="hero-body has-text-centered">
         <div class="login box is-rounded">
@@ -56,7 +59,10 @@
             <nav class="level">
                 <div class="level-item has-text-centered">
                     <div>
-                        <a href="../member/term.do">회원가입</a>
+                        <a href="../member/term.do">회원가입</a> /
+
+                        <a href="${path}/member/pw_find.do">비밀번호 찾기</a>
+
                     </div>
                 </div>
             </nav>

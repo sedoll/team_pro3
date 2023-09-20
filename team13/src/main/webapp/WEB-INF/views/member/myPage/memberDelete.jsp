@@ -81,7 +81,7 @@
             let pw = $("input[name=pw]").val();
 
             //var params = { id:$("#id").val(), pw:$("#pw").val() }
-           // var pw = { pw:$("#pw").val() }
+            // var pw = { pw:$("#pw").val() }
 
             $.ajax({
                 url:"${path10 }/member/pwCheck.do",
@@ -110,15 +110,15 @@
         });
 
         //확인버튼
-       /* $("#verify_confirm").click(function(e){
-            e.preventDefault();
-            let pw = $("input[name=pw]");
+        /* $("#verify_confirm").click(function(e){
+             e.preventDefault();
+             let pw = $("input[name=pw]");
 
-            if($.trim(pw.val()) === "") {
-                alert("비밀번호를 입력해주세요"); //ok
-                pw.focus();
-            } else $(".check-pw-form").submit();
-        });*/
+             if($.trim(pw.val()) === "") {
+                 alert("비밀번호를 입력해주세요"); //ok
+                 pw.focus();
+             } else $(".check-pw-form").submit();
+         });*/
     });
 </script>
 </body>

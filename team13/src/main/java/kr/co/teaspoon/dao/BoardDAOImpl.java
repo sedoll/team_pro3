@@ -52,9 +52,4 @@ public class BoardDAOImpl implements BoardDAO {
     public void commentDeleteAll(int bno) throws Exception {
         sqlSession.delete("board.commentDeleteAll", bno);
     }
-
-    @Override
-    public List<Board> allCommentList() throws Exception {
-        return sqlSession.selectList("board.allCommentList");
-    }
 }
