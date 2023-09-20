@@ -278,17 +278,17 @@
                         </div>
                         <div class="register_info">
                             <label>학부모님 아이디</label>
-                            <input type="text" name="pid" id="pid" class="indata" placeholder="학생의 학부모님 성함을 입력하세요"/>
+                            <input type="text" name="pid" id="pid" class="indata" placeholder="학생의 학부모님 성함을 입력하세요" required/>
                         </div>
 
                         <div class="register_info">
                             <label>시험 종류</label>
-                            <input type="text" name="exam" id="exam" class="indata" placeholder="ex)1학기 중간고사" />
+                            <input type="text" name="exam" id="exam" class="indata" placeholder="ex)1학기 중간고사" required/>
                         </div>
 
                         <div class="register_info">
                             <label>국어</label>
-                            <input type="text" name="kor" id="kor" class="indata" placeholder="국어 점수 입력" />
+                            <input type="text" name="kor" id="kor" class="indata" placeholder="국어 점수 입력"  required/>
                         </div>
 
                         <div class="register_info">
@@ -298,22 +298,22 @@
 
                         <div class="register_info">
                             <label>수학</label>
-                            <input type="text" name="math" id="math" class="indata" placeholder="수학 점수 입력" />
+                            <input type="text" name="math" id="math" class="indata" placeholder="수학 점수 입력"  required/>
                         </div>
 
                         <div class="register_info">
                             <label>사회</label>
-                            <input type="text" name="social" id="social" class="indata" placeholder="사회 점수 입력" />
+                            <input type="text" name="social" id="social" class="indata" placeholder="사회 점수 입력"  required/>
                         </div>
 
                         <div class="register_info">
                             <label>과학</label>
-                            <input type="text" name="science" id="science" placeholder="과학 점수 입력" class="indata" />
+                            <input type="text" name="science" id="science" placeholder="과학 점수 입력" class="indata"  required/>
                         </div>
 
                         <div class="register_info">
                             <label>담당 선생님 성함</label>
-                            <input type="text" name="tname" id="tname" value="${member.name}" class="indata"/>
+                            <input type="text" name="tname" id="tname" value="${member.name}" class="indata"  required/>
                         </div>
 
 

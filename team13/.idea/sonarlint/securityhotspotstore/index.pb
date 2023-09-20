@@ -89,8 +89,6 @@ g
 7src/main/java/kr/co/teaspoon/controller/NoticeCtrl.java,c\e\ce38dc8b2bfb3a10ded52031d099657e23cc5209
 b
 2src/main/webapp/WEB-INF/views/infoUni/infoEdit.jsp,2\4\24d4f982b5905becf00ed349bae76c7e9d998604
-h
-8src/main/java/kr/co/teaspoon/controller/InfoActCtrl.java,7\2\72740624c3ac0dc39e401e9272d5785fbd0a6acc
 e
 5src/main/webapp/WEB-INF/views/notice/noticeInsert.jsp,b\d\bd024ca35dcd39223d7c2ae348007a578d2783a8
 c

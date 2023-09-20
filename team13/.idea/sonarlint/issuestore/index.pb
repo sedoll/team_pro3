@@ -101,8 +101,6 @@ m
 =src/main/java/kr/co/teaspoon/controller/FileDownLoadView.java,f\a\fa430f29da02669e7a138b6d90634182e8e36319
 c
 3src/main/webapp/WEB-INF/views/notice/noticeEdit.jsp,3\8\38c574da4edc9a723acef2c6b2a12fe59e700cf3
-h
-8src/main/java/kr/co/teaspoon/controller/InfoActCtrl.java,7\2\72740624c3ac0dc39e401e9272d5785fbd0a6acc
 j
 :src/main/java/kr/co/teaspoon/service/MenuServiceImpl2.java,7\c\7cf17fd2c3ada5f1caf90c7293e3885c8152c022
 i
