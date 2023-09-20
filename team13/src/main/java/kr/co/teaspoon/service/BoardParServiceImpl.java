@@ -2,6 +2,7 @@ package kr.co.teaspoon.service;
 
 import kr.co.teaspoon.dao.BoardParDAOImpl;
 import kr.co.teaspoon.dto.Board;
+import kr.co.teaspoon.dto.Report;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,5 +61,18 @@ public class BoardParServiceImpl implements BoardService{
     @Override
     public List<Board> allCommentList() throws Exception {
         return boardDAO.allCommentList();
+    }
+    @Override
+    public void reportBoard(Report report) throws Exception {
+        boardDAO.reportBoard(report);
+    }
+
+    @Override
+    public int checkReported(Report report) throws Exception {
+        return boardDAO.checkReported(report);
+    }
+    @Override
+    public List<Board> boardReportList() throws Exception {
+        return boardDAO.boardReportList();
     }
 }

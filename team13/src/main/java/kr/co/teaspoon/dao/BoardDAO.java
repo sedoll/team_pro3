@@ -1,6 +1,7 @@
 package kr.co.teaspoon.dao;
 
 import kr.co.teaspoon.dto.Board;
+import kr.co.teaspoon.dto.Report;
 
 import java.util.List;
 
@@ -14,5 +15,7 @@ public interface BoardDAO {
     public List<Board> commentList(int bno) throws Exception;
     public void commentDeleteAll(int bno) throws Exception;
     public List<Board> allCommentList() throws Exception;
-
+    void reportBoard(Report report) throws Exception;
+    int checkReported(Report report) throws Exception;
+    public List<Board> boardReportList() throws Exception;
 }
