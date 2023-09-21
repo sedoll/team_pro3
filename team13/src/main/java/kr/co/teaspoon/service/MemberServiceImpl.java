@@ -10,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class MemberServiceImpl implements MemberService{
@@ -72,9 +73,40 @@ public class MemberServiceImpl implements MemberService{
         return memberDAO.login(id);
     }
 
+    /*비밀번호 찾기 할때 */
+    @Override
+    public Member selectMember(String email) throws Exception {
+        System.out.println(email);
+        Member member = memberDAO.selectMember(email);
+        if(member != null) {
+            System.out.println("전화번호 : " + member.getTel());
+            StringBuffer str = new StringBuffer(member.getTel());
+            str.insert(0, "0");
+
+            String phone = str.substring(0);
+            if(phone.substring(0,2).equals("00")) {
+                phone = phone.substring(1);
+            }
+            member.setTel(phone);
+
+            System.out.println("전화번호는 : " + member.getTel());
+        }
+        System.out.println(member);
+        return member;
+    }
 
 
+    @Override
+    public int pwUpdate(Member member) throws Exception {
+        int result = memberDAO.pwUpdate(member);
 
+        return result;
+    }
+
+    @Override
+    public void updateAuthStatus ( Map<String, Integer> map) throws Exception{
+        memberDAO.updateAuthStatus(map);
+    }
 
 
     /*내가 쓴 글*/
@@ -212,21 +244,6 @@ public class MemberServiceImpl implements MemberService{
             System.out.println(list);
         }
         return list;
-    }
-
-    @Override
-    public List<Board> myReportList(String id) throws Exception {
-        return memberDAO.myReportList(id);
-    }
-
-    @Override
-    public void boardReportCancel(int bno) throws Exception {
-        memberDAO.boardReportCancel(bno);
-    }
-
-    @Override
-    public void teaReportCancel(int bno) throws Exception {
-        memberDAO.teaReportCancel(bno);
     }
 
     @Override
