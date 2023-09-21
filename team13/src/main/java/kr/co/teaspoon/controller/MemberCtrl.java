@@ -1,28 +1,22 @@
 package kr.co.teaspoon.controller;
 
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.BoardlistVO;
 import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
 import kr.co.teaspoon.service.MemberService;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
-import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Random;
 
 @Controller
 @RequestMapping("/member/*")
@@ -32,9 +26,6 @@ public class MemberCtrl {
 
     @Autowired
     HttpSession session; // 세션 생성
-
-    @Autowired
-    JavaMailSender mailSender;
 
     // spring security 이용
     private BCryptPasswordEncoder pwEncoder = new BCryptPasswordEncoder();
@@ -73,7 +64,7 @@ public class MemberCtrl {
 
     // 로그아웃
     @GetMapping("logout.do")
-    public String logout(HttpServletResponse response, Model model) throws Exception {
+    public String logout(HttpServletResponse response,Model model) throws Exception {
         session.invalidate();
 
         //ScriptAlertUtils.alert(response,"로그아웃 되었습니다");
@@ -353,134 +344,37 @@ public class MemberCtrl {
         }*/
 
         return "/member/myPage/memberWritten2";
+
     }
 
-
-    @RequestMapping(value = "/pw_find.do", method = RequestMethod.GET)
-    public String pw_find() {
-        return "/member/pw_find";
+    //신고한 게시글 목록
+    @GetMapping("myReportList.do")
+    public String myReportList(HttpServletResponse response, HttpServletRequest request, Model model) throws Exception {
+        String id = (String) session.getAttribute("sid");
+        List<Board> boardList = memberService.myReportList(id);
+        model.addAttribute("boardList", boardList);
+        System.out.println(boardList.toString());
+        return "/member/myPage/myReportList";
     }
+    @GetMapping("myReportCancel.do")
+    public String myReportCancel(HttpServletRequest request, Model model) throws Exception {
+        String id = request.getParameter("id");
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        String category = request.getParameter("category");
 
-    //메일 보내기
-    @RequestMapping(value = "/pw_auth.do")
-    public ModelAndView pw_auth(HttpSession session, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String email = (String) request.getParameter("email");
-        String name = (String) request.getParameter("name");
-
-        Member mem = memberService.selectMember(email);
-        System.out.println(mem);
-
-        if (mem != null) {
-            Random r = new Random();
-            int num = r.nextInt(999999); // 랜덤난수설정
-
-            if (mem.getName().equals(name)) {
-                session.setAttribute("email", mem.getEmail());
-
-                String setfrom = "spospotv@naver.com"; // naver
-                String tomail = email; //받는사람
-                String title = "[티스푼] 비밀번호변경 인증 이메일 입니다";
-                String content = System.getProperty("line.separator") + "안녕하세요 회원님" + System.getProperty("line.separator")
-                        + "비밀번호찾기(변경) 인증번호는 " + num + " 입니다." + System.getProperty("line.separator"); //
-
-                try {
-                    MimeMessage message = mailSender.createMimeMessage();
-                    MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "utf-8");
-
-                    messageHelper.setFrom(setfrom);
-                    messageHelper.setTo(tomail);
-                    messageHelper.setSubject(title);
-                    messageHelper.setText(content);
-
-                    mailSender.send(message);
-                } catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
-
-                ModelAndView mv = new ModelAndView();
-                mv.setViewName("/member/pw_auth");
-                mv.addObject("num", num);
-                return mv;
-            } else {
-                ModelAndView mv = new ModelAndView();
-                mv.setViewName("/member/pw_find");
-                return mv;
-            }
+        if (category.equals("board")) {
+            memberService.boardReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else if (category.equals("boardTea")) {
+            memberService.teaReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else if (category.equals("boardPar")) {
+            memberService.parReportCancel(bno);
+            return "redirect:myReportList.do";
         } else {
-            ModelAndView mv = new ModelAndView();
-            mv.setViewName("/member/pw_find");
-            return mv;
+            return "redirect:myReportList.do";
         }
 
-    }
-
-    //이메일 인증번호 확인
-    @RequestMapping(value = "/pw_set.do", method = RequestMethod.POST)
-    public String pw_set(@RequestParam(value = "email_injeung") String email_injeung,
-                         @RequestParam(value = "num") String num, Model model, HttpServletResponse response) throws Exception {
-
-       if (email_injeung.equals(num)) {
-            response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            out.println("<script>alert('인증번호가 일치합니다.');</script>");
-            out.flush();
-            return "/member/pw_new";
-
-        } else {
-            response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            out.println("<script>alert('인증번호가 다릅니다. 다시 입력해주세요.');</script>");
-            out.flush();
-            return "/member/pw_auth";
-
-        }
-
-    }
-
-    //비밀번호 재설정
-    @RequestMapping(value = "/pw_new.do", method = RequestMethod.POST)
-    public String pw_new(Member member, HttpSession session, HttpServletResponse response, Model model) throws Exception {
-        System.out.println("session email : " + session.getAttribute("email"));
-        System.out.println("pw : " + member.getPw());
-
-        String ppw = member.getPw();
-        String pw = pwEncoder.encode(ppw);
-        member.setPw(pw);
-
-        int result = memberService.pwUpdate(member);
-
-        if (result == 1) {
-            response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            out.println("<script>alert('비밀번호가 재설정 되었습니다.');</script>");
-            out.flush();
-
-            return "/member/loginForm";
-
-        } else {
-            System.out.println("pw_update" + result);
-            response.setContentType("text/html; charset=UTF-8");
-            PrintWriter out = response.getWriter();
-            out.println("<script>alert('비밀번호가 다릅니다. 다시 입력해주세요.');</script>");
-            out.flush();
-
-
-            return "/member/pw_new";
-        }
-    }
-
-
-
-    @GetMapping("/signUpConfirm.me")
-    public ModelAndView signUpConfirm(@RequestParam HashMap<String, Integer> map, ModelAndView mav) throws Exception {
-        //email, authKey 가 일치할경우 authStatus 업데이트
-        System.out.println("connection  email :" + map.get("email"));
-        System.out.println("connection  authkey :" + map.get("authkey"));
-        memberService.updateAuthStatus(map);
-        System.out.println("connection  email2 :" + map.get("email"));
-        mav.addObject("display", "/member/loginForm");
-        mav.setViewName("/member/loginForm");
-        return mav;
     }
 
 }

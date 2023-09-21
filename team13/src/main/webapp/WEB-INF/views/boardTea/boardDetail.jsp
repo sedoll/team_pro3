@@ -286,7 +286,9 @@
                     </tr>
                     <c:if test="${not empty sid}">
                         <tr >
-                            <td colspan="5"style="text-align: right" ><button class="button is-danger is-hovered" onclick="openReportPopup()">게시글 신고</button></td>
+                            <td colspan="5"style="text-align: right" >
+                                <button class="button is-danger is-hovered" onclick="openReportPopup()">
+                                    <img src="${path1}/resources/img/report.png" alt="!" style="height: 20px; margin-right: 6px">신고</button></td>
                         </tr>
                     </c:if>
                     </tbody>
@@ -343,7 +345,7 @@
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 후기가 없습니다.'
+                                emptyTable: '작성된 댓글(이)가 없습니다.'
                             }
                         });
                         $('#myTable').css({
