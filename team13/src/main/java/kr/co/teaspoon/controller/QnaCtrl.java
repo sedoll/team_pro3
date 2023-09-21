@@ -95,7 +95,7 @@ public class QnaCtrl {
             qna.setPw(pw);
         }
         qnaService.qnaInsert(qna);
-        return "redirect:/";
+        return "redirect:list.do";
     }
 
     @PostMapping("commentInsert.do")
