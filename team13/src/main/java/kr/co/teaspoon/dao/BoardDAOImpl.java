@@ -73,4 +73,9 @@ public class BoardDAOImpl implements BoardDAO {
     public List<Board> boardReportList() throws Exception {
         return sqlSession.selectList("board.boardReportList");
     }
+
+    @Override
+    public List<Board> recentReportList() throws Exception {
+        return sqlSession.selectList("board.recentReportList");
+    }
 }

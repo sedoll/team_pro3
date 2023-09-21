@@ -3,15 +3,8 @@
 <mapper namespace="fileboard">
 	<!-- 파일 목록 -->
 	<select id="fileList" resultType="kr.co.teaspoon.dto.FileDTO">
-		<choose>
-			<when test="originFile != null and originFile.trim() != ''">
-				insert into fileobj values (default, #{postNo}, #{saveFolder}, #{originFile}, #{saveFile}, #{fileSize}, #{uploadDate})
-			</when>
-			<otherwise>
-				-- 조건문 에러 발생 회피하기위해 의미없는 쿼리문 설정함.
-				select 1
-			</otherwise>
-		</choose>	</select>
+		select * from fileobj order by uploaddate desc, no asc
+	</select>
 	<!-- 파일 목록 -->
 	<select id="fileGroupList" resultType="kr.co.teaspoon.dto.FileDTO">
 		select * from fileobj where postno=#{postNo}
@@ -26,7 +19,15 @@
 	</select>
 	<!-- 파일 추가 -->
 	<insert id="fileInsert">
+		<choose>
+		<when test="originFile != null and originFile.trim() != ''">
 		insert into fileobj values (default, #{postNo}, #{saveFolder}, #{originFile}, #{saveFile}, #{fileSize}, #{uploadDate})
+		</when>
+			<otherwise>
+				-- 조건문 에러 발생 회피하기위해 의미없는 쿼리문 설정함.
+				select 1
+			</otherwise>
+		</choose>
 	</insert>
 	<!-- 글번호가 같은 파일 제거 -->
 	<delete id="fileDelete">
@@ -37,9 +38,9 @@
 		delete from fileobj where no=#{no}
 	</delete>
 	<!-- 파일 자료 수정하기 -->
-<!--	<update id="fileUpdate">-->
-<!--		update fileobj set saveFolder=#{saveFolder}, originFile=#{originFile}, saveFile=#{saveFile}, fileSize=#{fileSize}, uploadDate=#{uploadDate} where postno=#{postNo}-->
-<!--	</update>-->
+	<!--	<update id="fileUpdate">-->
+	<!--		update fileobj set saveFolder=#{saveFolder}, originFile=#{originFile}, saveFile=#{saveFile}, fileSize=#{fileSize}, uploadDate=#{uploadDate} where postno=#{postNo}-->
+	<!--	</update>-->
 	<update id="fileboardUpdate">
 		update fileboard set title=#{title}, content=#{content} where postno=#{postNo}
 	</update>
@@ -54,11 +55,6 @@
 			</otherwise>
 		</choose>
 	</insert>
-
-
-
-
-
 	<!-- 파일 자료실 목록 -->
 	<select id="fileboardList" resultType="kr.co.teaspoon.dto.FileBoard">
 		select * from fileboard order by postno desc

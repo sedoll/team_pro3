@@ -14,6 +14,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/neumorphic-login.css">
+    <jsp:include page="../include/head.jsp"></jsp:include>
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="kross-bulma" />
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- bulma -->
+    <link rel="stylesheet" href="${path}/resources/theme/plugins/bulma/bulma.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="${path}/resources/theme/plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="${path}/resources/theme/plugins/themify-icons/themify-icons.css">
+
+    <!-- Main Stylesheet -->
+    <link href="${path}/resources/theme/css/style.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
     <style>
         .login{
             margin: 0 auto;
@@ -28,8 +49,6 @@
             padding-left: 50px;
             padding-right: 50px;
         }
-
-
     </style>
 </head>
 
@@ -59,6 +78,7 @@
                 <div class="level-item has-text-centered">
                     <div>
                         <a href="../member/term.do">회원가입</a>
+                        <a href="${path}/member/pw_find.do">비밀번호 찾기</a>
                     </div>
                 </div>
             </nav>

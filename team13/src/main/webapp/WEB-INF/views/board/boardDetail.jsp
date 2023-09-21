@@ -82,10 +82,10 @@
          }
         .tb1 thead td:nth-child(3) {
             font-weight: 600;
-            width: 62%;
+            width: 55%;
         }
         .tb1 thead td:nth-child(4) {
-            width: 10%;
+            width: 15%;
         }
         .tb1 thead td:nth-child(5) {
             width: 8%;
