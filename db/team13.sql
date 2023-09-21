@@ -314,3 +314,21 @@ CREATE TABLE report (
     FOREIGN KEY(board_bno) REFERENCES board(bno) ON DELETE CASCADE,
     FOREIGN KEY(reporter) REFERENCES member(id) ON DELETE CASCADE
 );
+CREATE TABLE report_tea (
+    report_id INT PRIMARY KEY AUTO_INCREMENT,
+    board_bno INT,
+    reporter VARCHAR(16),
+    reason VARCHAR(255),
+    report_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+    FOREIGN KEY(board_bno) REFERENCES board_tea(bno) ON DELETE CASCADE,
+    FOREIGN KEY(reporter) REFERENCES member(id) ON DELETE CASCADE
+);
+CREATE TABLE report_par (
+    report_id INT PRIMARY KEY AUTO_INCREMENT,
+    board_bno INT,
+    reporter VARCHAR(16),
+    reason VARCHAR(255),
+    report_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+    FOREIGN KEY(board_bno) REFERENCES board_par(bno) ON DELETE CASCADE,
+    FOREIGN KEY(reporter) REFERENCES member(id) ON DELETE CASCADE
+);

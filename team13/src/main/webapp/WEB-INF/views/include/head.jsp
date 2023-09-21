@@ -50,6 +50,8 @@
 <!-- themefy-icon -->
 <link rel="stylesheet" href="${path1}/resources/theme/plugins/themify-icons/themify-icons.css">
 
+<!-- main css -->
+<link rel="stylesheet" href="${path1}/resources/theme/css/style.css">
 <!-- header css -->
 <link rel="stylesheet" href="${path1}/resources/css/header/header.css">
 

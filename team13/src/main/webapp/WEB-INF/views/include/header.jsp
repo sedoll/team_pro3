@@ -4,8 +4,10 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path2" value="<%=request.getContextPath() %>" />
 
+
+
 <header id="header">
-    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-dark is-fixed-top nav-bg has-border-bottom" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="${path2}/">
                 <img src="${path2}/resources/img/logo_noBackground_blue.png" width="112" height="28">
@@ -23,7 +25,7 @@
                 <a href="${path2}" class="navbar-link is-arrowless">
                     <strong>정보</strong>
                 </a>
-                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                <div class="navbar-dropdown is-size-6 is-dark is-outlined .shadow">
                     <a href="${path2}/infoStu/list.do" class="navbar-item">
                         교육 정보
                     </a>
@@ -97,37 +99,37 @@
                 </div>
                 <div class="buttons">
                     <c:if test="${not empty sid && sid != 'admin'}"> <%-- 회원으로 로그인한 경우 --%>
-                        <%--<a href="${path2}/member/mypage.do" class="button is-link is-rounded" >--%>
-                        <a href="${path2}/member/mypage.do" class="button is-link is-rounded b1" >
+                        <%--<a href="${path1}/member/mypage.do" class="button is-link is-rounded" >--%>
+                        <a href="${path2}/member/mypage.do" class="button is-link is-rounded button-bg" >
                             마이페이지
                         </a>
-                        <%--<a href="${path2}/member/logout.do" class="button is-link2 is-rounded" >--%>
-                        <a href="${path2}/member/logout.do" class="button is-link2 is-rounded b2" >
+                        <%--<a href="${path1}/member/logout.do" class="button is-link2 is-rounded" >--%>
+                        <a href="${path2}/member/logout.do" class="button is-link2 is-rounded button-bg2" >
                             로그아웃
                         </a>
                     </c:if>
                     <c:if test="${empty sid}"> <%-- 로그인을 안 한 경우 --%>
-                        <%--<a href="${path2}/member/term.do" class="button is-link is-rounded" >--%>
-                        <a href="${path2}/member/term.do" class="button is-link is-rounded b1" >
+                        <%--<a href="${path1}/member/term.do" class="button is-link is-rounded" >--%>
+                        <a href="${path2}/member/term.do" class="button is-link is-rounded b1 button-bg" >
                             회원가입
                         </a>
-                        <%--<a href="${path2}/member/login.do" class="button is-link2 is-rounded" >--%>
-                        <a href="${path2}/member/login.do" class="button is-link2 is-rounded b2" >
+                        <%--<a href="${path1}/member/login.do" class="button is-link2 is-rounded" >--%>
+                        <a href="${path2}/member/login.do" class="button is-link2 is-rounded b2 button-bg2" >
                             로그인
                         </a>
                     </c:if>
                     <c:if test="${sid.equals('admin')}"> <%-- 관리자로 로그인 한 경우 --%>
-                        <%--<a href="${path2}/admin/adminMain.do" class="button is-link is-rounded " >--%>
-                        <a href="${path2}/admin/adminMain.do" class="button is-link is-rounded b1" >
+                        <%--<a href="${path1}/admin/adminMain.do" class="button is-link is-rounded " >--%>
+                        <a href="${path2}/admin/adminMain.do" class="button is-link is-rounded b1 button-bg" >
                             관리자페이지
                         </a>
-                        <%--<a href="${path2}/member/logout.do" class="button is-link2 is-rounded" >--%>
-                        <a href="${path2}/member/logout.do" class="button is-link2 is-rounded b2" >
+                        <%--<a href="${path1}/member/logout.do" class="button is-link2 is-rounded" >--%>
+                        <a href="${path2}/member/logout.do" class="button is-link2 is-rounded b2 button-bg2" >
                             로그아웃
                         </a>
                     </c:if>
                 </div>
             </div>
-      </div>
+        </div>
     </nav>
 </header>
