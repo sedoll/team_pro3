@@ -12,6 +12,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>회원유형</title>
     <%@ include file="../include/head.jsp" %>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- theme meta -->
+    <meta name="theme-name" content="kross-bulma" />
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- bulma -->
+    <link rel="stylesheet" href="${path}/resources/theme/plugins/bulma/bulma.min.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="${path}/resources/theme/plugins/slick/slick.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="${path}/resources/theme/plugins/themify-icons/themify-icons.css">
+
+    <!-- Main Stylesheet -->
+    <link href="${path}/resources/theme/css/style.css" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
+
     <style>
         /* 본문 영역 스타일 */
         /*.contents { clear:both; min-height:100vh;

@@ -32,19 +32,28 @@
                     <a href="${path2}/infoUni/list.do" class="navbar-item">
                         대입 정보
                     </a>
+                    <a href="${path2}/infoAct/list.do" class="navbar-item">
+                        대외 활동
+                    </a>
+                    <a href="${path2}/file/filelist1.do" class="navbar-item">
+                        자료실
+                    </a>
                 </div>
             </div>
 
-            <div class="navbar-item has-dropdown is-hoverable ">
+            <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link is-arrowless">
                     <strong>커뮤니티</strong>
                 </a>
-                <div class="navbar-dropdown is-size-6 is-dark is-outlined .shadow">
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/board/list.do" class="navbar-item">
+                        자유 게시판
+                    </a>
                     <a href="${path2}/boardTea/list.do" class="navbar-item">
-                        선생님게시판
+                        선생님 게시판
                     </a>
                     <a href="${path2}/boardPar/list.do" class="navbar-item">
-                        학부모게시판
+                        학부모 게시판
                     </a>
                 </div>
             </div>
@@ -53,15 +62,13 @@
                 <a class="navbar-link is-arrowless">
                     <strong>내 자녀</strong>
                 </a>
-                <div class="navbar-dropdown  is-size-6 is-dark is-outlined .shadow">
-                    <a href="${path2}/boardTea/list.do" class="navbar-item">
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/menu/list.do" class="navbar-item">
                         급식표
                     </a>
-                    <c:if test="${sid != null}">
-                    <a href="${path2}/grade/gradelist.do" class="navbar-item">
+                    <a href="${path2}/grade/list.do" class="navbar-item">
                         성적표
                     </a>
-                    </c:if>
                 </div>
             </div>
 
@@ -69,19 +76,18 @@
                 <a class="navbar-link is-arrowless">
                     <strong>고객센터</strong>
                 </a>
-                <div class="navbar-dropdown  is-size-6 is-dark is-outlined .shadow">
-                    <a href="${path2}/boardTea/list.do" class="navbar-item">
-                        공지사항
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/notice/list.do" class="navbar-item">
+                        공지 사항
                     </a>
-                    <a href="${path2}/boardPar/list.do" class="navbar-item">
+                    <a href="${path2}/faq/list.do" class="navbar-item">
                         자주 묻는 질문
                     </a>
-                    <a href="${path2}/boardPar/list.do" class="navbar-item">
+                    <a href="${path2}/qna/list.do" class="navbar-item">
                         QnA
                     </a>
                 </div>
             </div>
-        </div>
         </div>
         <!-- header menu end -->
         <div class="navbar-end">
@@ -124,7 +130,6 @@
                     </c:if>
                 </div>
             </div>
-        </div>
         </div>
     </nav>
 </header>

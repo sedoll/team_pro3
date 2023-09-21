@@ -82,10 +82,10 @@
          }
         .tb1 thead td:nth-child(3) {
             font-weight: 600;
-            width: 62%;
+            width: 55%;
         }
         .tb1 thead td:nth-child(4) {
-            width: 10%;
+            width: 15%;
         }
         .tb1 thead td:nth-child(5) {
             width: 8%;
@@ -284,6 +284,11 @@
                             </div>
                         </td>
                     </tr>
+                    <c:if test="${not empty sid}">
+                        <tr >
+                            <td colspan="5"style="text-align: right" ><button class="button is-danger is-hovered" onclick="openReportPopup()">게시글 신고</button></td>
+                        </tr>
+                    </c:if>
                     </tbody>
 
                 </table>
@@ -313,6 +318,17 @@
                     </tbody>
                 </table>
                 <script>
+                    function openReportPopup() {
+                        // 팝업 창의 크기 및 위치를 지정합니다. 필요에 따라 조절할 수 있습니다.
+                        let width = 400;
+                        let height = 300;
+                        let left = (screen.width/2) - (width/2);
+                        let top = (screen.height/2) - (height/2);
+
+                        window.open('${path}/boardTea/reportPopup.do?bno=${dto.bno}&id=${sid}', '신고', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+                    }
+                </script>
+                <script>
                     $(document).ready( function () {
                         $('#myTable').DataTable({
                             // sorting 화살표 제거
@@ -327,7 +343,7 @@
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 댓글(이)가 없습니다.'
+                                emptyTable: '작성된 후기가 없습니다.'
                             }
                         });
                         $('#myTable').css({

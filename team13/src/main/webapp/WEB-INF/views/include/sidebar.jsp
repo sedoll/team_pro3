@@ -29,7 +29,7 @@
                 </a>
             </li>
         </ul>
-        <a href="/member/" class="mypage-inquiry">
+        <a href="${path4}/boardPar/list.do" class="mypage-inquiry">
             <div>
                 <span class="ask-help">도움이 필요하신가요?</span>
                 <span>1:1 문의하기</span>

@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.io.PrintWriter;
 import java.util.List;
 
+// /grade/gradeList.do
 @Controller
 @RequestMapping("/grade/*")
 public class GradeCtrl {
@@ -26,8 +27,9 @@ public class GradeCtrl {
     @Autowired
     HttpSession session; // 세션 생성
 
-    @GetMapping("gradelist.do")
+    @GetMapping("list.do")
     public String gradeList(HttpServletResponse response, HttpServletRequest request ,Model model) throws Exception {
+        System.out.println("버튼 클릭");
         if(session.getAttribute("sid") != null && !"".equals(session.getAttribute("sid"))) {
             List<Grade> gradeList = gradeService.gradeList();
             model.addAttribute("gradeList", gradeList);
@@ -68,14 +70,14 @@ public class GradeCtrl {
         grade.setExam(request.getParameter("exam"));
         grade.setTname(request.getParameter("tname"));
         gradeService.gradeInsert(grade);
-        return "redirect:gradelist.do";
+        return "redirect:list.do";
     }
 
     @GetMapping("gradedelete.do")
     public String gradeDelete(HttpServletRequest request, Model model) throws Exception {
     int no = Integer.parseInt(request.getParameter("no"));
         gradeService.gradeDelete(no);
-        return "redirect:gradelist.do";
+        return "redirect:list.do";
     }
 
     @GetMapping("gradeedit.do")
@@ -98,7 +100,7 @@ public class GradeCtrl {
         grade.setScience(Integer.parseInt(request.getParameter("science")));
         grade.setNo(no);
         gradeService.gradeEdit(grade);
-        return "redirect:gradelist.do";
+        return "redirect:list.do";
     }
 
 }

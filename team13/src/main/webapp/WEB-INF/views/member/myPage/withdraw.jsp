@@ -41,8 +41,8 @@
             <h4>가입 정보</h4>
             <p>아이디: <span> ${member.id} </span></p>
             <p>이름: <span> ${member.name} </span></p>
-           <%-- <p>가입날짜: <span> ${member.regdate} </span></p>--%>
-           <%-- <p>가입날짜: <span><fmt:formatDate value="${member.regdate}" pattern="yyyy.MM.dd" type="date"/></span></p>--%>
+            <%-- <p>가입날짜: <span> ${member.regdate} </span></p>--%>
+            <%-- <p>가입날짜: <span><fmt:formatDate value="${member.regdate}" pattern="yyyy.MM.dd" type="date"/></span></p>--%>
         </div>
         <%--<div class="confirm-input">
             <h4>

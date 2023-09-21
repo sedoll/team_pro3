@@ -52,6 +52,8 @@
 
 <!-- main css -->
 <link rel="stylesheet" href="${path1}/resources/theme/css/style.css">
+<!-- header css -->
+<link rel="stylesheet" href="${path1}/resources/css/header/header.css">
 
 <!--Favicon-->
 <link rel="shortcut icon" href="${path1}/resources/theme/images/favicon.ico" type="image/x-icon">

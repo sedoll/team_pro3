@@ -5,6 +5,7 @@ import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MemberDAO {
     public List<Member> memberList() throws Exception;
@@ -37,5 +38,14 @@ public interface MemberDAO {
     public List<CommentlistVO> getWriteComment5(String id);
     public List<CommentlistVO> getWriteComment6(String id);
     public List<CommentlistVO> getWriteComment7(String id);
+
+
+
+
+    /*비밀번호 찾기*/
+    public Member selectMember(String email) throws Exception;
+    public int pwUpdate(Member member) throws Exception;
+
+    public void updateAuthStatus(Map<String, Integer> map) throws Exception;
 }
 
