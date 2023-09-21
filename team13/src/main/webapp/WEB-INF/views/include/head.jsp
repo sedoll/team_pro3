@@ -26,8 +26,7 @@
 <meta property="og:image" content="${path1}/img/img1.jpg">
 <meta property="og:url" content="${path1}/img/img1.jpg">
 
-<%--<!-- 파비콘 -->--%>
-<link rel="shortcut icon" href="${path1}/img/logo.ico">
+
 <!-- 애플 계열 모바일 -->
 <link rel="apple-touch-icon-precomposed" href="${path1}/img/logo_64.png">
 <!-- IE 계열 브라우저 -->
@@ -45,8 +44,20 @@
 <%-- css 초기화 --%>
 <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
 
-<%-- bulma --%>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<!-- bulma -->
+<link rel="stylesheet" href="${path1}/resources/theme/plugins/bulma/bulma.min.css">
+
+<!-- themefy-icon -->
+<link rel="stylesheet" href="${path1}/resources/theme/plugins/themify-icons/themify-icons.css">
+
+<!-- main css -->
+<link rel="stylesheet" href="${path1}/resources/theme/css/style.css">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="${path1}/resources/theme/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="${path1}/resources/theme/images/favicon.ico" type="image/x-icon">
+
+
 
 <!-- 불법 복제 방지, 필수 -->
 <script>
