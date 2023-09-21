@@ -128,6 +128,6 @@
                     </c:if>
                 </div>
             </div>
-        </>
+      </div>
     </nav>
 </header>

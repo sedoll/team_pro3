@@ -414,11 +414,12 @@ public class MemberCtrl {
 
     }
 
+    //이메일 인증번호 확인
     @RequestMapping(value = "/pw_set.do", method = RequestMethod.POST)
     public String pw_set(@RequestParam(value = "email_injeung") String email_injeung,
                          @RequestParam(value = "num") String num, Model model, HttpServletResponse response) throws Exception {
 
-        if (email_injeung.equals(num)) {
+       if (email_injeung.equals(num)) {
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
             out.println("<script>alert('인증번호가 일치합니다.');</script>");
@@ -433,9 +434,10 @@ public class MemberCtrl {
             return "/member/pw_auth";
 
         }
-    } //이메일 인증번호 확인
 
+    }
 
+    //비밀번호 재설정
     @RequestMapping(value = "/pw_new.do", method = RequestMethod.POST)
     public String pw_new(Member member, HttpSession session, HttpServletResponse response, Model model) throws Exception {
         System.out.println("session email : " + session.getAttribute("email"));
@@ -450,7 +452,7 @@ public class MemberCtrl {
         if (result == 1) {
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
-            out.println("<script>alert('비밀번호가 변경되었습니다.');</script>");
+            out.println("<script>alert('비밀번호가 재설정 되었습니다.');</script>");
             out.flush();
 
             return "/member/loginForm";
@@ -466,6 +468,7 @@ public class MemberCtrl {
             return "/member/pw_new";
         }
     }
+
 
 
     @GetMapping("/signUpConfirm.me")

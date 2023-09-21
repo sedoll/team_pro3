@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>로그인</title>
+    <title>Neumorphic Login - Free Bulma template</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.4/css/bulma.min.css" />
     <link rel="stylesheet" type="text/css" href="../css/neumorphic-login.css">
@@ -53,11 +53,10 @@
 </head>
 
 <body>
-<jsp:include page="../include/header.jsp"></jsp:include>
 <section class="hero is-fullheight">
     <div class="hero-body has-text-centered">
         <div class="login box is-rounded">
-            <img src="${path}/resources/img/logo_noBackground_blue.png" alt="logo">
+            <img src="${path}/resources/img/logo_noBackground_blue.png" alt="logo" width="220">
             <form action="${path }/member/signin.do" method="post" name="loginForm">
                 <div class="field">
                     <div class="control">
