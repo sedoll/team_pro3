@@ -99,51 +99,20 @@
                             <div class="content">
                                 <table class="table is-fullwidth is-striped">
                                     <tbody>
+                                    <c:forEach items="${boardList }" var="board" varStatus="status">
                                     <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
+                                        <td>
+                                            <span class="icon-text">
+                                              <span class="icon">
+                                                <i class="fas fa-home" style="padding-top: 8px"><img src="${path}/resources/img/alert.png"></i>
+                                              </span>
+                                                <span><strong> [${board.reason } 신고]</strong> 제목 : ${board.title}</span>
+                                            </span>
+                                        </td>
+
+                                        <td class="level-right"><a class="button is-small is-primary" href="${path}/${board.board_type}/detail.do?bno=${board.bno }">상세보기</a></td>
                                     </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                        <td>Lorum ipsum dolem aire</td>
-                                        <td class="level-right"><a class="button is-small is-primary" href="#">Action</a></td>
-                                    </tr>
+                                    </c:forEach>
                                     </tbody>
                                 </table>
                             </div>

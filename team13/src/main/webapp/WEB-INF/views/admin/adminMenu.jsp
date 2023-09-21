@@ -22,6 +22,14 @@
                 </p>
                 <ul class="menu-list">
                     <li>
+                        <p>신고 관리</p>
+                        <ul>
+                            <li><a href="${path}/admin/boardReportList.do?category=free">자유게시판 신고 내역</a></li>
+                            <li><a href="${path}/admin/boardReportList.do?category=teacher">선생님게시판 신고 내역</a></li>
+                            <li><a href="${path}/admin/boardReportList.do?category=parent">학부모게시판 신고 내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
                         <p>게시글 관리</p>
                         <ul>
                             <li><a href="${path}/admin/boardList.do?category=free">자유게시판 게시글 관리</a></li>
@@ -44,8 +52,8 @@
                     Help
                 </p>
                 <ul class="menu-list">
-                    <li><a>공지사항 작성</a></li>
-                    <li><a>FAQ 작성</a></li>
+                    <li><a href="${path}/notice/insert.do">공지사항 작성</a></li>
+<%--                    <li><a>FAQ 작성</a></li>--%>
                 </ul>
             </aside>
         </div>

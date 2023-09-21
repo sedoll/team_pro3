@@ -282,7 +282,8 @@ CREATE TABLE fileboard (
 	regdate DATETIME DEFAULT CURRENT_TIMESTAMP(),   -- 작성일
 	visited INT DEFAULT 0   -- 조회수
 );
-	
+
+-- 성적 게시판
 CREATE TABLE grade( 
 	no INTEGER auto_increment PRIMARY KEY,
 	sname VARCHAR(150) NOT NULL ,
@@ -302,3 +303,32 @@ CREATE TABLE grade(
 DROP TABLE grade;
 ​
 INSERT INTO grade VALUES(DEFAULT, '홍박사', 'kang', 90, 50, 50, 50, 50, '1학기 중간고사', '손흥민', default);
+
+-- 관리자 게시판 관리 테이블
+CREATE TABLE report (
+    report_id INT PRIMARY KEY AUTO_INCREMENT,
+    board_bno INT,
+    reporter VARCHAR(16),
+    reason VARCHAR(255),
+    report_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+    FOREIGN KEY(board_bno) REFERENCES board(bno) ON DELETE CASCADE,
+    FOREIGN KEY(reporter) REFERENCES member(id) ON DELETE CASCADE
+);
+CREATE TABLE report_tea (
+    report_id INT PRIMARY KEY AUTO_INCREMENT,
+    board_bno INT,
+    reporter VARCHAR(16),
+    reason VARCHAR(255),
+    report_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+    FOREIGN KEY(board_bno) REFERENCES board_tea(bno) ON DELETE CASCADE,
+    FOREIGN KEY(reporter) REFERENCES member(id) ON DELETE CASCADE
+);
+CREATE TABLE report_par (
+    report_id INT PRIMARY KEY AUTO_INCREMENT,
+    board_bno INT,
+    reporter VARCHAR(16),
+    reason VARCHAR(255),
+    report_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP(),
+    FOREIGN KEY(board_bno) REFERENCES board_par(bno) ON DELETE CASCADE,
+    FOREIGN KEY(reporter) REFERENCES member(id) ON DELETE CASCADE
+);

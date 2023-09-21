@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+.content-section{
+
+    padding-top: 200px;
+
+}
+
+.font{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.content{
+    margin: 0 auto;
+
+    width : 440px;
+    height : 434.02px;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+    color: #4a4a4a;
+    display: block;
+    padding: 2rem;
+    padding-top: 100px;
+    display : flex;
+    flex-direction: column;
+
+}
+
+#check{
+    margin: 0 auto;
+	width : 264px;
+	height : 48px;
+    /* border : 1px solid #4a89dc;
+   background-color : #4a89dc; */
+    border : 1px solid #dddddd;
+    background-color : #dddddd;
+	color : #fff;
+	padding : 5px;
+	border-radius : 5px;
+	align-self : center;
+}
+#check:hover{
+    /* color : #4a89dc;
+    background-color : #fff; */
+    color : #fff;
+    background-color : #4a89dc;
+}
+input {
+  	font-family: 'Noto Sans KR', sans-serif;
+	outline: 0;
+	border : 0;
+	display: block;
+	width : 250px;
+	height: 40px;
+	font-size: 1em;
+}
+.textbox {
+	display: flex;
+	flex-direction : column;
+	max-height: 60px;
+	margin-bottom : 20px;
+	padding: 20px 8px 4px 8px;
+	width: 400px;
+	height: 60px;
+	font-size : 1em;
+	position: relative;
+	align-self: center;
+}
+
+.textbox input[type="password"] {
+  width: 256px;
+  margin : 0 auto;
+  padding: 8px 4px 6px 4px;
+  font-size: 1.2em;
+  background: rgba(0,0,0,0);
+  color: rgba(0,0,0,0.67);
+  border-bottom: 0px solid rgba(0,0,0,0.4);
+}
+
+.textbox input[type="password"] ~ label {
+  font-size: 0.8em;
+  color: rgba(0,0,0,0.67);
+  display: block;
+  position: absolute;
+  top: 0px;
+  padding-left: 59px;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.textbox input[type="password"] ~ .error {
+  position: absolute;
+  bottom: -20px;
+  left: 75px;
+  color: rgba(0,0,0,0);
+  font-size: 0.8em;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.textbox input[type="password"] ~ .error:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2196f3;
+  position: absolute;
+  top: -3px;
+  left: -8px;
+  margin-left: 182px;
+  visibility: visible;
+  transition: all 0.2s;
+}
+
+.textbox input[type="password"]:not([value=""]) ~ label {
+	font-size: 0.8em;
+    top: 0px;
+  	padding-left: 59px;
+}
+
+.textbox input[type="password"]:focus ~ label {
+	font-size: 0.8em;
+    top: 0px;
+ 	padding-left: 59px;
+}
+
+.textbox input[type="password"]:focus ~ .error:before {
+  width: 264px;
+  margin: 0;
+}
+
+.textbox input[type="password"]:invalid:not(:focus):not([value=""]) ~ .error {
+  color: #f44336;
+}
+
+.textbox input[type="password"]:invalid:not(:focus):not([value=""]) ~ .error:before {
+  margin: 0;
+  width: 264px;
+  background: #f44336;
+}
+
+.textbox input[type="password"]:valid:not(:focus) ~ .error:before {
+  margin: 0;
+  width: 264px;
+  background: #bfbfbf;
+}
+
+#same{
+	font-size : 0.8em;
+	padding-left: 145px;
+
+}

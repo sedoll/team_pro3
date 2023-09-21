@@ -19,6 +19,27 @@
     <link rel="stylesheet" href="${path11}/resources/css/font.css"/>
 </head>
 <body>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
+<c:set var="path11" value="${pageContext.request.contextPath }"/>
+<%--<c:set var="path11" value="<%=request.getContextPath() %>" />--%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원 정보 보기</title>
+    <!-- 헤드 부분 인클루드 -->
+    <jsp:include page="../../include/head.jsp"></jsp:include>
+    <link rel="stylesheet" href="${path11}/resources/css/myPage/baseLayout.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/myPage/sidebar.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/myPage/validateUser.css"/>
+    <link rel="stylesheet" href="${path11}/resources/css/font.css"/>
+</head>
+<body>
 
 <jsp:include page="../../include/header.jsp"></jsp:include>
 
