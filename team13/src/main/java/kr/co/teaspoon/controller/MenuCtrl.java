@@ -33,43 +33,47 @@ public class MenuCtrl {
     }
 
     @PostMapping("list.do")		// board/list.do
-    public String getBoardList(HttpServletRequest request, Model model) throws Exception {
-        String sc_name = request.getParameter("name");
-        System.out.println(sc_name);
-        Menu dto = menuService2.getMenu(sc_name);
-        System.out.println(dto.toString());
+    public String getBoardList(HttpServletRequest request, Model model) {
+        try {
+            String sc_name = request.getParameter("name");
+            System.out.println(sc_name);
+            Menu dto = menuService2.getMenu(sc_name);
+            System.out.println(dto.toString());
 
-        List<String> ddishList; // 식단
-        List<String> mlsvList; // 날짜
-        List<String> orplcList; // 원산지
-        List<String> calList; // 칼로리
-        List<String> ntrList; // 영양
+            List<String> ddishList; // 식단
+            List<String> mlsvList; // 날짜
+            List<String> orplcList; // 원산지
+            List<String> calList; // 칼로리
+            List<String> ntrList; // 영양
 
-        Week week = new Week();
+            Week week = new Week();
 
-        List<String> date = week.getDate();
+            List<String> date = week.getDate();
 
-        String codeS = dto.getSc_code();
-        String codeK = dto.getEo_code();
-        String schoolName = dto.getSc_name();
+            String codeS = dto.getSc_code();
+            String codeK = dto.getEo_code();
+            String schoolName = dto.getSc_name();
 
-        int minValue = 1;
-        int maxValue = 5;
+            int minValue = 1;
+            int maxValue = 5;
 
-        menuService.menuServiceSet(codeS, codeK, date, minValue, maxValue);
-        ddishList = menuService.getDdishList();
-        mlsvList = menuService.getMlsvList();
-        orplcList = menuService.getOrplcList();
-        calList = menuService.getCalList();
-        ntrList = menuService.getNtrList();
+            menuService.menuServiceSet(codeS, codeK, date, minValue, maxValue);
+            ddishList = menuService.getDdishList();
+            mlsvList = menuService.getMlsvList();
+            orplcList = menuService.getOrplcList();
+            calList = menuService.getCalList();
+            ntrList = menuService.getNtrList();
 
-
-        model.addAttribute("schoolName", schoolName);
-        model.addAttribute("ddishList", ddishList);
-        model.addAttribute("mlsvList", mlsvList);
-        model.addAttribute("orplcList", orplcList);
-        model.addAttribute("calList", calList);
-        model.addAttribute("ntrList", ntrList);
-        return "/menu/menuList";
+            model.addAttribute("schoolName", schoolName);
+            model.addAttribute("ddishList", ddishList);
+            model.addAttribute("mlsvList", mlsvList);
+            model.addAttribute("orplcList", orplcList);
+            model.addAttribute("calList", calList);
+            model.addAttribute("ntrList", ntrList);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            return "/menu/menuList";
+        }
     }
 }

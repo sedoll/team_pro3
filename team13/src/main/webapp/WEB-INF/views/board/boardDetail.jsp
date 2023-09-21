@@ -292,7 +292,7 @@
                     </tbody>
 
                 </table>
-                <table class="tb2">
+                <table class="tb2" id="myTable">
                     <thead>
                     <tr>
                         <th class="item1">작성자</th>
@@ -334,16 +334,17 @@
                             // sorting 화살표 제거
                             "targets": 'no-sort',
                             "bSort": false,
+                            "destroy": true,
 
-                            // 3번째 컬럼을 기준으로 내림차순 정렬
-                            order: [[3, 'asc']],
+                            // 2번째 컬럼을 기준으로 내림차순 정렬
+                            order: [[2, 'desc']],
                             pageLength : 5,
                             searching: false, //검색 제거
                             lengthChange: false, // show entries 제거
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 후기가 없습니다.'
+                                emptyTable: '작성된 댓글(이)가 없습니다.'
                             }
                         });
                         $('#myTable').css({
@@ -353,7 +354,7 @@
                     } );
                 </script>
                 <form action="${path}/board/commentInsert.do" id="login_frm" class="frm" method="post">
-                    <table class="tb3" id="myTable">
+                    <table class="tb3">
                         <tbody>
                         <tr>
                             <c:if test="${not empty sid}">
@@ -367,35 +368,6 @@
                         </tbody>
                     </table>
                 </form>
-                <script>
-                    $(document).ready( function () {
-                        $('#myTable').DataTable({
-                            pageLength : 10,
-                            order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
-                            info: false,
-                            dom: 't<f>p',
-                            language: {
-                                emptyTable: '등록된 글이 없습니다.'
-                            }
-
-                        });
-                    } );
-                    $(document).ready(function() {
-                        $('.dataTables_paginate').css({
-                            'textAlign':'left',
-                            'float': 'none',
-                            'margin-top':'10px',
-                        });
-                        $('.dataTables_filter').css({
-                            'float': 'left',
-                            'margin-top':'14px',
-                            'margin-right':'280px'
-                        });
-                        $('#myTable_paginate').css({
-                            'margin-right':'120px'
-                        });
-                    });
-                </script>
             </div>
         </section>
     </div>

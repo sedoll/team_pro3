@@ -39,15 +39,14 @@
 	      <div class="container">
 				  <table class="table table-active" id="myTable">
 				  <thead>
-				  	<tr>
-						<th>글번호</th>
-						<th>제목</th>
-						<th>작성일</th>
-						<th>읽은횟수</th>
-					</tr>
+						<tr>
+							<th>글번호</th>
+							<th>제목</th>
+							<th>작성일</th>
+							<th>읽은횟수</th>
+						</tr>
 				  </thead>
 				  <tbody>
-				  <c:if test="${not empty fileboardList}">
 				  <c:forEach var="board" items="${fileboardList}">
 						  <tr class="table-info">
 							  <td>${board.fileBoard.postNo}</td>
@@ -60,12 +59,6 @@
 							  </td>
 						  </tr>
 				  </c:forEach>
-				  </c:if>
-				  <c:if test="${empty fileboardList}">
-					  <tr>
-						  <td colspan="4">아직 게시된 자료글이 없습니다.</td>
-					  </tr>
-				  </c:if>
 				  </tbody>
 			  </table>
 			  <c:if test="${sid.equals('admin')}">
