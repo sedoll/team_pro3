@@ -441,9 +441,6 @@ textarea.input {
     background: transparent;
 }
 
-.is-rounded {
-    border-radius: 50%;
-}
 
 .image.is-full {
     width: 100%;

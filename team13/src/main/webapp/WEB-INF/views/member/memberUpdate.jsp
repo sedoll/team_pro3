@@ -20,12 +20,12 @@
     <jsp:include page="../include/header.jsp"></jsp:include>
     <figure class="visual" id="vs1">
         <ul class="imgbox">
-            <li class="hero is-primary">
-                <div class="hero-body">
-                    <p class="title">
+            <li class="hero is-whtie is-medium">
+                <div class="hero-body has-text-centered">
+                    <p class="title is-size-3">
                         마이페이지
                     </p>
-                    <p class="subtitle">
+                    <p class="subtitle is-size-5">
                         <c:if test="${sid!='admin' }">
                             회원 정보 수정
                         </c:if>
