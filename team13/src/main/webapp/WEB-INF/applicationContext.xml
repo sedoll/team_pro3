@@ -19,7 +19,7 @@
         <!-- spring-jdbc-5.3.20.jar 안의 드라이버매니저 연결 -->
         <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
                 <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-                <property name="url" value="jdbc:log4jdbc:mariadb://localhost:3306/teaspoon" />
+                <property name="url" value="jdbc:log4jdbc:mariadb://localhost:3308/teaspoon" />
                 <property name="username" value="root" />
                 <property name="password" value="1234" />
         </bean>
