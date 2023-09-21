@@ -4,6 +4,7 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
+<!DOCTYPE html>
 
 <!--
 // WEBSITE: https://themefisher.com
@@ -11,12 +12,13 @@
 // FACEBOOK: https://www.facebook.com/themefisher
 // GITHUB: https://github.com/themefisher/
 -->
+
 <html lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <title>티스푼 메인 페이지</title>
 
-    <jsp:include page="./include/head.jsp" />
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -37,10 +39,140 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
+
+
 </head>
 
 <body>
-    <jsp:include page="./include/header.jsp"/>
+
+<header id="header">
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="${path}/">
+                <img src="${path}/resources/img/logo_noBackground_blue.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- header menu -->
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="${path}" class="navbar-link is-arrowless">
+                    <strong>정보</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path}/infoStu/list.do" class="navbar-item">
+                        교육 정보
+                    </a>
+                    <a href="${path}/infoUni/list.do" class="navbar-item">
+                        대입 정보
+                    </a>
+                    <a href="${path}/infoAct/list.do" class="navbar-item">
+                        대외 활동
+                    </a>
+                    <a href="${path}/file/filelist1.do" class="navbar-item">
+                        자료실
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <strong>커뮤니티</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path}/board/list.do" class="navbar-item">
+                        자유 게시판
+                    </a>
+                    <a href="${path}/boardTea/list.do" class="navbar-item">
+                        선생님 게시판
+                    </a>
+                    <a href="${path}/boardPar/list.do" class="navbar-item">
+                        학부모 게시판
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <strong>내 자녀</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path}/menu/list.do" class="navbar-item">
+                        급식표
+                    </a>
+                    <a href="${path}/grade/list.do" class="navbar-item">
+                        성적표
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <strong>고객센터</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path}/notice/list.do" class="navbar-item">
+                        공지 사항
+                    </a>
+                    <a href="${path}/faq/list.do" class="navbar-item">
+                        자주 묻는 질문
+                    </a>
+                    <a href="${path}/qna/list.do" class="navbar-item">
+                        QnA
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- header menu end -->
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div>
+                    <c:if test="${not empty sid}">
+                        ${sid} 회원님 환영합니다.
+                    </c:if>
+                </div>
+                <div class="buttons">
+                    <c:if test="${not empty sid && sid != 'admin'}"> <%-- 회원으로 로그인한 경우 --%>
+                        <%--<a href="${path}/member/mypage.do" class="button is-link is-rounded" >--%>
+                        <a href="${path}/member/mypage.do" class="button is-link is-rounded b1" >
+                            마이페이지
+                        </a>
+                        <%--<a href="${path}/member/logout.do" class="button is-link2 is-rounded" >--%>
+                        <a href="${path}/member/logout.do" class="button is-link2 is-rounded b2" >
+                            로그아웃
+                        </a>
+                    </c:if>
+                    <c:if test="${empty sid}"> <%-- 로그인을 안 한 경우 --%>
+                        <%--<a href="${path}/member/term.do" class="button is-link is-rounded" >--%>
+                        <a href="${path}/member/term.do" class="button is-link is-rounded b1" >
+                            회원가입
+                        </a>
+                        <%--<a href="${path}/member/login.do" class="button is-link2 is-rounded" >--%>
+                        <a href="${path}/member/login.do" class="button is-link2 is-rounded b2" >
+                            로그인
+                        </a>
+                    </c:if>
+                    <c:if test="${sid.equals('admin')}"> <%-- 관리자로 로그인 한 경우 --%>
+                        <%--<a href="${path}/admin/adminMain.do" class="button is-link is-rounded " >--%>
+                        <a href="${path}/admin/adminMain.do" class="button is-link is-rounded b1" >
+                            관리자페이지
+                        </a>
+                        <%--<a href="${path}/member/logout.do" class="button is-link2 is-rounded" >--%>
+                        <a href="${path}/member/logout.do" class="button is-link2 is-rounded b2" >
+                            로그아웃
+                        </a>
+                    </c:if>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
 
 <!-- hero area -->
 <section class="hero-area has-background-primary" id="parallax" >
@@ -52,6 +184,8 @@
     <div class="columns">
         <img src="${path }/resources/img/index_1.png">
     </div>
+
+
 
 </section>
 <!-- /hero area -->
