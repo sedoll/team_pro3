@@ -554,9 +554,6 @@
                         </div>
                     </div>
 
-
-
-
                     <div class="btn1">
                         <button class="submit button is-link has-text-black" type="submit">가입 완료</button>
                         <button class="reset button is-grey" type="reset">가입 취소</button>

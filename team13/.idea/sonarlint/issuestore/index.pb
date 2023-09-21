@@ -1,10 +1,4 @@
 
-f
-6src/main/java/kr/co/teaspoon/controller/BoardCtrl.java,3\e\3e9e81ff61d590bcb0c45a61e89feb2104e01711
-i
-9src/main/java/kr/co/teaspoon/controller/BoardParCtrl.java,a\c\acef1d9a9d09f565262a3daed71d0c655833fd3a
-i
-9src/main/java/kr/co/teaspoon/controller/BoardTeaCtrl.java,0\6\06da01874eac2c8a5f99214f90dcc3ba2322f3b2
 e
 5src/main/java/kr/co/teaspoon/controller/HomeCtrl.java,3\d\3d32752bb5f6606ea1eda3755702b5d5069fec82
 h
@@ -41,12 +35,6 @@ g
 7src/main/java/kr/co/teaspoon/service/SampleService.java,8\f\8fd27d8265fc4eaca5d8bd4cbe40b305252cbc71
 k
 ;src/main/java/kr/co/teaspoon/service/SampleServiceImpl.java,d\0\d0f9be077685c6315021c4f12bafcaa2c32cec27
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
-^
-.src/main/webapp/WEB-INF/dispatcher-servlet.xml,5\6\5610820762bc3ec47cc9dbd7324c057405172b6d
-[
-+src/main/webapp/WEB-INF/spring-security.xml,1\c\1c32f00779ff5236a44927df8f30826d3fbdc472
 `
 0src/main/java/kr/co/teaspoon/dto/Infomation.java,f\7\f712db932116eaeee3aecfe83357f88996a3aeb0
 Z
@@ -55,8 +43,6 @@ Y
 )src/main/java/kr/co/teaspoon/dto/Qna.java,3\7\378d9022e8d51a03a786dac4a76661383f8f1e05
 [
 +src/main/java/kr/co/teaspoon/util/Week.java,7\c\7c77d56bdd820c1a79cb52e50a50641d158d330e
-e
-5src/main/java/kr/co/teaspoon/controller/MenuCtrl.java,9\7\97f459fc2b5334543e581ee8d5fb29b1edb18bd8
 _
 /src/main/webapp/WEB-INF/views/menu/menuList.jsp,4\f\4f40af62e820fa0bf1ab9606ebcb26720d8e40c2
 n
@@ -85,3 +71,25 @@ m
 -src/main/java/kr/co/teaspoon/api/MenuKey.java,1\b\1bc6a5363131fcc99891f9372cce97d9a0222b60
 h
 8src/main/java/kr/co/teaspoon/controller/InfoActCtrl.java,7\2\72740624c3ac0dc39e401e9272d5785fbd0a6acc
+^
+.src/main/webapp/WEB-INF/dispatcher-servlet.xml,5\6\5610820762bc3ec47cc9dbd7324c057405172b6d
+^
+.src/main/webapp/WEB-INF/applicationContext.xml,0\9\098550351661f776bec95040b2d50042c4599987
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+[
++src/main/webapp/WEB-INF/spring-security.xml,1\c\1c32f00779ff5236a44927df8f30826d3fbdc472
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+]
+-src/main/webapp/WEB-INF/views/member/join.jsp,5\f\5f28de62260c434af076cc3364f45c928930ef88
+e
+5src/main/java/kr/co/teaspoon/controller/MenuCtrl.java,9\7\97f459fc2b5334543e581ee8d5fb29b1edb18bd8
+c
+3src/main/webapp/WEB-INF/views/board/boardDetail.jsp,f\6\f61f00f3ba1471098fc3f26606e73e5e0d86165e
+f
+6src/main/webapp/WEB-INF/views/boardPar/boardDetail.jsp,b\b\bbee016213b99612ef1b4eb6e6c81da2f7769c50
+f
+6src/main/webapp/WEB-INF/views/boardTea/boardDetail.jsp,a\f\af4ba1f377f48e6d6df5496d5c3795323fd9ea17
+e
+5src/main/webapp/WEB-INF/views/fileboard/filelist1.jsp,4\9\4915e5e3ebced68c7dd4ae5acded755a0bba563b

@@ -151,7 +151,7 @@ public class AdminCtrl {
     }
 
     //게시판 댓글 삭제
-    @GetMapping("freeCommentDelete.do")
+    @GetMapping("CommentDelete.do")
     public String freeCommentDelete(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
         String category = (String) request.getParameter("category");
