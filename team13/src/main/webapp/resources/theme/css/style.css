@@ -537,7 +537,7 @@ textarea.input {
 }
 
 .hero-area {
-  padding: 300px 0 200px;
+  padding: 250px 0px 0px;
   position: relative;
 }
 @media (max-width: 767px) {
