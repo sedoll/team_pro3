@@ -12,6 +12,7 @@ public class Report {
     private int board_bno;
     private String reporter;
     private String reason;
-//    private String report_date;
+    private String report_date;
+    private String board_type;
 
 }

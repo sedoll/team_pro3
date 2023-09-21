@@ -16,4 +16,5 @@ public class Board {
     private String reason;
     private String report_date;
     private int report_count;
+    private String board_type;
 }

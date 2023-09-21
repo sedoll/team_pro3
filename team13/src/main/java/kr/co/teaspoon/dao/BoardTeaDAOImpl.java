@@ -61,14 +61,18 @@ public class BoardTeaDAOImpl implements BoardDAO {
     }
     @Override
     public void reportBoard(Report report) throws Exception {
-        sqlSession.insert("boardMapper.reportBoard", report);
+        sqlSession.insert("boardTea.reportBoard", report);
     }
     @Override
     public int checkReported(Report report) throws Exception {
-        return sqlSession.selectOne("board.checkReported",report);
+        return sqlSession.selectOne("boardTea.checkReported",report);
     }
     @Override
     public List<Board> boardReportList() throws Exception {
-        return sqlSession.selectList("board.boardReportList");
+        return sqlSession.selectList("boardTea.boardReportList");
+    }
+    @Override
+    public List<Board> recentReportList() throws Exception {
+        return sqlSession.selectList("board.recentReportList");
     }
 }

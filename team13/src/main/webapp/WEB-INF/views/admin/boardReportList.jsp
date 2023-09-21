@@ -53,7 +53,7 @@
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title" style="text-align: center">
-                            게시글 신고 관리
+                            ${categoryKor}게시판 신고 내역
                         </h1>
                     </div>
                 </div>

@@ -41,4 +41,30 @@
     <delete id="commentDeleteAll">
         delete from board_par where par=#{bno}
     </delete>
+    <!-- 모든 댓글 목록 -->
+    <select id="allCommentList" resultType="kr.co.teaspoon.dto.Board">
+        select * from board_par where lev = 1 order by resdate desc
+    </select>
+    <!--    신고 기능 reportBoard-->
+    <insert id="reportBoard">
+        insert into report_par values (default, #{board_bno}, #{reporter}, #{reason}, default)
+    </insert>
+    <select id="checkReported" resultType="integer" >
+        SELECT COUNT(*) FROM report_par WHERE board_bno = #{board_bno} AND reporter = #{reporter}
+    </select>
+    <select id="boardReportList" resultType="kr.co.teaspoon.dto.Board">
+        SELECT
+            b.*,
+            r.reason,
+            r.report_date,
+            sub.report_count
+        FROM
+            (SELECT board_bno, COUNT(board_bno) as report_count FROM report_par GROUP BY board_bno) AS sub
+                JOIN
+            report_par r ON sub.board_bno = r.board_bno
+                JOIN
+            board_par b ON r.board_bno = b.bno
+        ORDER BY
+            r.report_date DESC;
+    </select>
 </mapper>

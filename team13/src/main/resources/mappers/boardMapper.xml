@@ -46,7 +46,7 @@
         select * from board where lev = 1 order by resdate desc
     </select>
 
-<!--    신고 기능 테스트 reportBoard-->
+<!--    신고 기능 reportBoard-->
     <insert id="reportBoard">
         insert into report values (default, #{board_bno}, #{reporter}, #{reason}, default)
     </insert>
@@ -67,5 +67,24 @@
             board b ON r.board_bno = b.bno
         ORDER BY
             r.report_date DESC;
+    </select>
+<!--    관리자 메인화면 신고리스트-->
+    <select id="recentReportList" resultType="kr.co.teaspoon.dto.Board">
+        (
+            SELECT r.board_bno as bno, r.reporter, r.reason, r.report_date, 'board' AS board_type, b.title
+            FROM report r join board b on r.board_bno = b.bno
+        )
+        UNION
+        (
+            SELECT board_bno as bno, reporter, reason, report_date, 'boardTea' AS board_type, b.title
+            FROM report_tea r join board_tea b on r.board_bno = b.bno
+        )
+        UNION
+        (
+            SELECT board_bno as bno, reporter, reason, report_date, 'boardPar' AS board_type, b.title
+            FROM report_par r join board_par b on r.board_bno = b.bno
+        )
+        ORDER BY report_date DESC
+            LIMIT 10;
     </select>
 </mapper>
