@@ -230,6 +230,21 @@ public class MemberServiceImpl implements MemberService{
     }
 
     @Override
+    public List<Board> myReportList(String id) throws Exception {
+        return memberDAO.myReportList(id);
+    }
+
+    @Override
+    public void boardReportCancel(int bno) throws Exception {
+        memberDAO.boardReportCancel(bno);
+    }
+
+    @Override
+    public void teaReportCancel(int bno) throws Exception {
+        memberDAO.teaReportCancel(bno);
+    }
+
+    @Override
     public void parReportCancel(int bno) throws Exception {
         memberDAO.parReportCancel(bno);
     }

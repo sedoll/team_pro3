@@ -377,4 +377,40 @@ public class MemberCtrl {
 
     }
 
+
+
+
+
+
+
+    //신고한 게시글 목록
+    @GetMapping("myReportList.do")
+    public String myReportList(HttpServletResponse response, HttpServletRequest request, Model model) throws Exception {
+        String id = (String) session.getAttribute("sid");
+        List<Board> boardList = memberService.myReportList(id);
+        model.addAttribute("boardList", boardList);
+        System.out.println(boardList.toString());
+        return "/member/myPage/myReportList";
+    }
+    @GetMapping("myReportCancel.do")
+    public String myReportCancel(HttpServletRequest request, Model model) throws Exception {
+        String id = request.getParameter("id");
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        String category = request.getParameter("category");
+
+        if (category.equals("board")) {
+            memberService.boardReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else if (category.equals("boardTea")) {
+            memberService.teaReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else if (category.equals("boardPar")) {
+            memberService.parReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else {
+            return "redirect:myReportList.do";
+        }
+
+    }
+
 }

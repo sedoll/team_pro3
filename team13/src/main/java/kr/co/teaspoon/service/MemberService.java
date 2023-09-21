@@ -38,9 +38,15 @@ public interface MemberService {
     public List<CommentlistVO> getWriteComment6(String id);
     public List<CommentlistVO> getWriteComment7(String id);
 
+    /* 비밀번호 찾기*/
+    public Member selectMember(String email) throws Exception;
+    public int pwUpdate(Member mem) throws Exception;
+    public void updateAuthStatus (Map<String, Integer> map) throws Exception;
+  
     //내가 신고한 게시글
     public List<Board> myReportList(String id) throws Exception;
     public  void boardReportCancel(int bno) throws Exception;
     public  void teaReportCancel(int bno) throws Exception;
     public  void parReportCancel(int bno) throws Exception;
+
 }

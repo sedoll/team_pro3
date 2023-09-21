@@ -157,4 +157,36 @@ public class MemberDAOImpl implements MemberDAO {
     public void parReportCancel(int bno) throws Exception {
         sqlSession.delete("member.parReportCancel", bno);
     }
+
+
+
+
+
+    @Override
+    public List<Board> myReportList(String id) throws Exception {
+        return sqlSession.selectList("member.myReportList",id);
+    }
+
+    @Override
+    public void boardReportCancel(int bno) throws Exception {
+        sqlSession.delete("member.boardReportCancel", bno);
+    }
+
+    @Override
+    public void teaReportCancel(int bno) throws Exception {
+        sqlSession.delete("member.teaReportCancel", bno);
+    }
+
+    @Override
+    public void parReportCancel(int bno) throws Exception {
+        sqlSession.delete("member.parReportCancel", bno);
+    }
+
+
+
+
+
+
+
+
 }

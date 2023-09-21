@@ -1,0 +1,19 @@
+body {padding:0;margin:0;font-family: 'Noto Sans KR', sans-serif;}
+ul {list-style: none;padding:0;margin:0}
+.clearfix::after {content:"";display:block;clear:both}
+.wrap {width:720px;margin:0 auto}
+.nav{width:220px;float:left;box-shadow:0 3px 7px 0 rgba(0,0,0,.05)}
+.nav li{position:relative;padding: 33px 25px;height: 83.5px;font-size:15px;line-height:1;color:#333;border:1px solid #e1e1e1;cursor:pointer;-webkit-transition:all .2s ease-in-out;transition:all .2s ease-in-out;box-sizing:border-box;}
+.nav li.on,.nav li:hover{font-weight:700;color:#fff;border-color:#5f7aff;background:#5f7aff;box-shadow:0 3px 7px 0 rgba(27,0,255,.25)}
+.nav li.on::before,.nav li:hover::before{position:absolute;top:-1px;bottom:-1px;left:-1px;right:-1px;border-top:1px solid #fff;content:""}
+.nav li~li{border-top:none}
+.slide{position:relative;float:left;width:500px;height:334px;overflow:hidden;visibility:none;opacity:0}
+.slide li img {max-width:100%}
+.slide .slick-dots{display:none!important}
+.slide.slick-initialized{visibility:visible;opacity:1}
+.slide .slick-slide {outline:none}
+.slide-arrow{position:absolute;top: 50%;transform: translateY(-50%);padding: 0 4px;font-size: 24px;color: #000;background: rgba(255,255,255,0.8);border:none;outline:0;z-index:1;cursor:pointer}
+.prev-arrow{left: 0;}
+.next-arrow{right:0}
+.slide_paging{margin-top:5px;text-align:right;font-size:14px;color:#aaa;cursor:default;}
+.slide_paging .page{color:#5f7aff}
