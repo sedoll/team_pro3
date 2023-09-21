@@ -19,9 +19,9 @@
 <body>
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
-<section class="hero is-primary">
-    <div class="hero-body">
-        <p class="title">
+<section class="hero is-white">
+    <div class="hero-body has-text-centered">
+        <p class="title is-size-3">
             관리자 페이지
         </p>
         <p class="subtitle">
@@ -54,7 +54,7 @@
             </section>
 
 <%--                    <table class="table" style="width: 100%">--%>
-        <table class="table is-fullwidth">
+        <table class="table is-fullwidth" >
             <thead>
             <tr>
                 <th>No</th>

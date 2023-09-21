@@ -69,10 +69,6 @@ g
 7src/main/java/kr/co/teaspoon/controller/NoticeCtrl.java,c\e\ce38dc8b2bfb3a10ded52031d099657e23cc5209
 e
 5src/main/webapp/WEB-INF/views/notice/noticeInsert.jsp,b\d\bd024ca35dcd39223d7c2ae348007a578d2783a8
-c
-3src/main/webapp/WEB-INF/views/notice/noticeList.jsp,7\f\7f2e9ae621b03a195c012ae3bbb00deeab558bac
-e
-5src/main/webapp/WEB-INF/views/notice/noticeDetail.jsp,e\4\e48a6fc01a14a2157d87234a530194699b3ffaa9
 \
 ,src/main/java/kr/co/teaspoon/dto/Notice.java,3\b\3be709da4fb7487b303756d01bfb0f14cc3de5be
 c
@@ -87,7 +83,5 @@ m
 =src/main/java/kr/co/teaspoon/controller/SampleController.java,b\7\b7656c4ef4b3cf0d3b4dd0ea978204738d9c5432
 ]
 -src/main/java/kr/co/teaspoon/api/MenuKey.java,1\b\1bc6a5363131fcc99891f9372cce97d9a0222b60
-a
-1src/main/webapp/WEB-INF/views/grade/gradeList.jsp,9\d\9dd1bded7cf4d9cabfd5fc49ef18ac7b1dfa0e1e
 h
 8src/main/java/kr/co/teaspoon/controller/InfoActCtrl.java,7\2\72740624c3ac0dc39e401e9272d5785fbd0a6acc

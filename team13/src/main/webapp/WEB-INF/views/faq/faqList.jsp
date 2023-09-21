@@ -73,12 +73,12 @@
 <body>
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
-<section class="hero is-primary">
-    <div class="hero-body">
-        <p class="title">
+<section class="hero is-white is-medium">
+    <div class="hero-body has-text-centered">
+        <p class="title is-size-3">
             FAQ
         </p>
-        <p class="subtitle">
+        <p class="subtitle is-size-5">
             자주 묻는 질문 목록
         </p>
     </div>
