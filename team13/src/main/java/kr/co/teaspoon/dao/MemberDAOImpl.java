@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
@@ -137,4 +138,20 @@ public class MemberDAOImpl implements MemberDAO {
         return sqlSession.selectList("getWriteComment7", id);
     }
 
+
+
+    @Override
+    public Member selectMember(String email) throws Exception {
+        return sqlSession.selectOne("member.selectMember", email);
+    }
+
+    @Override
+    public int pwUpdate(Member member) throws Exception{
+        return sqlSession.update("member.pwUpdate", member);
+    }
+
+    @Override
+    public void updateAuthStatus(Map<String, Integer> map) throws Exception{
+        sqlSession.update("member.updateAuthStatus", map);
+    }
 }

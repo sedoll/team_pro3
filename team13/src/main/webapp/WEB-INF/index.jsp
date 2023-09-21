@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path" value="<%=request.getContextPath() %>" />
+<c:set var="path1" value="/pro03_war" />
 <!DOCTYPE html>
 <!DOCTYPE html>
 
@@ -20,8 +20,6 @@
     <meta charset="utf-8">
     <title>티스푼 메인 페이지</title>
 
-    <jsp:include page="./include/head.jsp" />
-
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -30,33 +28,217 @@
 
     <!-- ** Plugins Needed for the Project ** -->
     <!-- bulma -->
-    <link rel="stylesheet" href="${path}/resources/theme/plugins/bulma/bulma.min.css">
+    <link rel="stylesheet" href="${path1}/resources/theme/plugins/bulma/bulma.min.css">
     <!-- slick slider -->
-    <link rel="stylesheet" href="${path}/resources/theme/plugins/slick/slick.css">
+    <link rel="stylesheet" href="${path1}/resources/theme/plugins/slick/slick.css">
     <!-- themefy-icon -->
-    <link rel="stylesheet" href="${path}/resources/theme/plugins/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="${path1}/resources/theme/plugins/themify-icons/themify-icons.css">
 
     <!-- Main Stylesheet -->
-    <link href="${path}/resources/theme/css/style.css" rel="stylesheet">
+    <link href="${path1}/resources/theme/css/style.css" rel="stylesheet">
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="${path1}/resources/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="${path1}/resources/theme/images/favicon.ico" type="image/x-icon">
 
-
+    <style>
+        .logoimg{
+            min-height: 50px !important;
+        }
+    </style>
 </head>
 
 <body>
 
-<jsp:include page="./include/header.jsp"/>
+
+<header id="header">
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+
+            <div class="navbar-brand">
+                <a class="navbar-item" href="${path1}/">
+                    <img src="images/logo.png" width="112" height="28">
+                </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <!-- header menu -->
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a href="${path2}" class="navbar-link is-arrowless">
+                    <strong>정보</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/infoStu/list.do" class="navbar-item">
+                        교육 정보
+                    </a>
+                    <a href="${path2}/infoUni/list.do" class="navbar-item">
+                        대입 정보
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <strong>커뮤니티</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/boardTea/list.do" class="navbar-item">
+                        선생님게시판
+                    </a>
+                    <a href="${path2}/boardPar/list.do" class="navbar-item">
+                        학부모게시판
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <strong>내 자녀</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/boardTea/list.do" class="navbar-item">
+                        급식표
+                    </a>
+                    <a href="${path2}/boardPar/list.do" class="navbar-item">
+                        성적표
+                    </a>
+                </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link is-arrowless">
+                    <strong>고객센터</strong>
+                </a>
+                <div class="navbar-dropdown is-transparent is-size-6 is-dark is-outlined">
+                    <a href="${path2}/boardTea/list.do" class="navbar-item">
+                        공지사항
+                    </a>
+                    <a href="${path2}/boardPar/list.do" class="navbar-item">
+                        자주 묻는 질문
+                    </a>
+                    <a href="${path2}/boardPar/list.do" class="navbar-item">
+                        QnA
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- header menu end -->
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div>
+                    <c:if test="${not empty sid}">
+                        ${sid} 회원님 환영합니다.
+                    </c:if>
+                </div>
+                <div class="buttons">
+                    <c:if test="${not empty sid && sid != 'admin'}"> <%-- 회원으로 로그인한 경우 --%>
+                        <a href="${path2}/member/mypage.do" class="button is-link is-rounded" >
+                            <strong>마이페이지</strong>
+                        </a>
+                        <a href="${path2}/member/logout.do" class="button is-link is-rounded">
+                            <strong>로그아웃</strong>
+                        </a>
+                    </c:if>
+                    <c:if test="${empty sid}"> <%-- 로그인을 안 한 경우 --%>
+                        <a href="${path2}/member/term.do" class="button is-link is-rounded">
+                            <strong>회원 가입</strong>
+                        </a>
+                        <a href="${path2}/member/login.do" class="button is-link is-rounded">
+                            <strong>로그인</strong>
+                        </a>
+                    </c:if>
+                    <c:if test="${sid.equals('admin')}"> <%-- 관리자로 로그인 한 경우 --%>
+                        <a href="${path2}/admin/adminMain.do" class="button is-link is-rounded">
+                            <strong>관리자페이지</strong>
+                        </a>
+                        <a href="${path2}/member/logout.do" class="button is-link is-rounded">
+                            <strong>로그아웃</strong>
+                        </a>
+                    </c:if>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+</header>
+
+<%--<header>
+
+
+
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="${path1}/">
+                <img src="images/logo.png" width="112" height="28">
+            </a>
+
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navigation">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navigation" class="navbar-menu">
+            <div class="navbar-end">
+                <a href="${path1}/board/list.do" class="navbar-item">일반게시판</a>
+                <a href="${path1}/free/list.do" class="navbar-item">자유게시판</a>
+                <a href="${path1 }/file/fileupload1.do" class="navbar-item">
+                    FileUpload
+                </a>
+                &lt;%&ndash; 로그인 안했을 때&ndash;%&gt;
+                <c:if test="${empty sid}">
+                    <a href="${path1 }/member/login.do" class="navbar-item">로그인</a>
+                    <a href="${path1 }/member/term.do" class="navbar-item">회원가입</a>
+                </c:if>
+
+
+                &lt;%&ndash; 회원으로 로그인 했을 때 &ndash;%&gt;
+                <c:if test="${!(sid.equals('admin')) && !empty sid}">
+                    &lt;%&ndash;<p>${sid } 님  </p>&ndash;%&gt;
+                    <a href="${path1 }/member/mypage.do" class="navbar-item">mypage </a>
+                    <a href="${path1 }/member/logout.do" class="navbar-item">logout </a>
+                </c:if>
+
+                &lt;%&ndash;관리자 일때&ndash;%&gt;
+                <c:if test="${sid.equals('admin') && !empty sid}">
+                    &lt;%&ndash;<p>${sid } 님</p>&ndash;%&gt;
+                    <a href="${path1 }/member/adminpage.do" class="navbar-item">관리자페이지</a>
+                    <a href="${path1 }/member/logout.do" class="navbar-item"> logout</a>
+                </c:if>
+
+            </div>
+        </div>
+    </nav>
+</header>--%>
 
 <!-- hero area -->
 <section class="hero-area has-background-primary" id="parallax" >
 
-
+    <%--<div class="container">--%>
     <div class="columns">
-        <img src="${path }/resources/img/new_main.png">
+        <img src="${path1 }/resources/images/new_main.png">
+
+        <%--<div class="column is-11-desktop is-offset-1-desktop">
+            <h1 class="has-text-white font-tertiary"> test <br> test <br> test</h1>
+        </div>
+
+        <!-- social icon -->
+        <div class="list list-hero-social">
+            <a class="list-item has-text-white" href="#"><i class="ti-facebook"></i></a>
+            <a class="list-item has-text-white" href="#"><i class="ti-instagram"></i></a>
+            <a class="list-item has-text-white" href="#"><i class="ti-dribbble"></i></a>
+            <a class="list-item has-text-white" href="#"><i class="ti-twitter"></i></a>
+        </div>
+        <!-- /social icon -->--%>
     </div>
+    <%--</div>--%>
+
 
 </section>
 <!-- /hero area -->
@@ -535,14 +717,14 @@
 <!-- /footer -->
 
 <!-- jQuery -->
-<script src="${path}/resources/theme/plugins/jQuery/jquery.min.js"></script>
+<script src="${path1}/resources/theme/plugins/jQuery/jquery.min.js"></script>
 <!-- slick slider -->
-<script src="${path}/resources/theme/plugins/slick/slick.min.js"></script>
+<script src="${path1}/resources/theme/plugins/slick/slick.min.js"></script>
 <!-- filter -->
-<script src="${path}/resources/theme/plugins/shuffle/shuffle.min.js"></script>
+<script src="${path1}/resources/theme/plugins/shuffle/shuffle.min.js"></script>
 
 <!-- Main Script -->
-<script src="${path}/resources/theme/js/script.js"></script>
+<script src="${path1}/resources/theme/js/script.js"></script>
 
 </body>
 </html>

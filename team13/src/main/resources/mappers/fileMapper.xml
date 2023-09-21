@@ -38,9 +38,9 @@
 		delete from fileobj where no=#{no}
 	</delete>
 	<!-- 파일 자료 수정하기 -->
-<!--	<update id="fileUpdate">-->
-<!--		update fileobj set saveFolder=#{saveFolder}, originFile=#{originFile}, saveFile=#{saveFile}, fileSize=#{fileSize}, uploadDate=#{uploadDate} where postno=#{postNo}-->
-<!--	</update>-->
+	<!--	<update id="fileUpdate">-->
+	<!--		update fileobj set saveFolder=#{saveFolder}, originFile=#{originFile}, saveFile=#{saveFile}, fileSize=#{fileSize}, uploadDate=#{uploadDate} where postno=#{postNo}-->
+	<!--	</update>-->
 	<update id="fileboardUpdate">
 		update fileboard set title=#{title}, content=#{content} where postno=#{postNo}
 	</update>
@@ -55,11 +55,6 @@
 			</otherwise>
 		</choose>
 	</insert>
-
-
-
-
-
 	<!-- 파일 자료실 목록 -->
 	<select id="fileboardList" resultType="kr.co.teaspoon.dto.FileBoard">
 		select * from fileboard order by postno desc

@@ -58,7 +58,6 @@ public class BoardServiceImpl implements BoardService{
     public void commentDeleteAll(int bno) throws Exception {
         boardDAO.commentDeleteAll(bno);
     }
-
     @Override
     public List<Board> allCommentList() throws Exception {
         return boardDAO.allCommentList();
