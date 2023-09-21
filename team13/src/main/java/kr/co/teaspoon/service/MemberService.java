@@ -6,6 +6,7 @@ import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
 
 import java.util.List;
+import java.util.Map;
 
 public interface MemberService {
     public List<Member> memberList() throws Exception;

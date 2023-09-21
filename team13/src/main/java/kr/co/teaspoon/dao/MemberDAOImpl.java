@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
@@ -139,27 +140,19 @@ public class MemberDAOImpl implements MemberDAO {
     }
 
     @Override
-    public List<Board> myReportList(String id) throws Exception {
-        return sqlSession.selectList("member.myReportList",id);
+    public Member selectMember(String email) throws Exception {
+        return sqlSession.selectOne("member.selectMember", email);
     }
 
     @Override
-    public void boardReportCancel(int bno) throws Exception {
-        sqlSession.delete("member.boardReportCancel", bno);
+    public int pwUpdate(Member member) throws Exception{
+        return sqlSession.update("member.pwUpdate", member);
     }
 
     @Override
-    public void teaReportCancel(int bno) throws Exception {
-        sqlSession.delete("member.teaReportCancel", bno);
+    public void updateAuthStatus(Map<String, Integer> map) throws Exception{
+        sqlSession.update("member.updateAuthStatus", map);
     }
-
-    @Override
-    public void parReportCancel(int bno) throws Exception {
-        sqlSession.delete("member.parReportCancel", bno);
-    }
-
-
-
 
 
     @Override

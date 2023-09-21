@@ -22,13 +22,13 @@
 	<jsp:include page="../include/header.jsp"></jsp:include>
 	<figure class="visual" id="vs1">
 		<ul class="imgbox">
-			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
+			<li class="hero is-medium is-white">
+				<div class="hero-body has-text-centered">
+					<p class="title is-size-3">
+						파일 자료 상세보기
 					</p>
-					<p class="subtitle">
-						Medium subtitle
+					<p class="subtitle is-size-5">
+
 					</p>
 				</div>
 			</li>
@@ -36,8 +36,6 @@
 	</figure>
 	<div class="content" id="contents">
 	    <div class="row column text-center">
-	      <h2 class="h1">파일 자료 상세보기</h2>
-	      <hr>
 	      <div class="container">
 				  <table class="table table-active">
 				  <tbody>

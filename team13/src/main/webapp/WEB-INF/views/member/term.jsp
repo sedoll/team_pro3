@@ -121,6 +121,10 @@
         .beforefile{
             margin-left: 20px;
         }
+
+        .add-border{
+            border: 2px solid #0a0a0a;
+        }
     </style>
 
     <link rel="stylesheet" href="../css/ft.css">
@@ -134,8 +138,8 @@
 <div class="contents" id="contents">
     <div class="container">
         <section class="hero is-medium is-white ">
-            <div class="hero-body has-text-centered is-size-4 ">
-                <p class="title has-text-black"><strong>회원 유형 선택</strong></p>
+            <div class="hero-body has-text-centered">
+                <p class="title is-size-3">회원 유형 선택</p>
             </div>
             <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
                 <ul>
@@ -181,14 +185,14 @@
 </footer>
 </body>
 <script>
-    if($(".term-radio1").click(function(){
+$('#stu').hover(
+    function(){$('.front').css({'border' : '2px solid #0a0a0a'}); },
+    function (){$('.front').css({'border' : '2px solid #dddddd'});}
+);
 
-    }))
-
-    $(".term-radio2").click(function(){
-        $(".before").css({
-            "border": "3px solid black"
-        });
-    });
+$('#tea').hover(
+    function(){$('.before').css({'border' : '2px solid #0a0a0a'}); },
+    function (){$('.before').css({'border' : '2px solid #dddddd'});}
+);
 </script>
 </html>

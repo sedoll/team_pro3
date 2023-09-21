@@ -106,12 +106,6 @@
         }
 
 
-        .title {
-            text-align: left;
-            font-weight: bold;
-        }
-
-
 
         .tb2{
             width: 1200px;
@@ -240,12 +234,12 @@
 <div class="wrap">
     <!-- 헤더 부분 인클루드 -->
     <jsp:include page="../include/header.jsp"></jsp:include>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <p class="title">
+    <section class="hero is-white is-medium">
+        <div class="hero-body has-text-centered">
+            <p class="title is-size-3">
                 대입 정보
             </p>
-            <p class="subtitle">
+            <p class="subtitle is-size-5">
                 상세
             </p>
         </div>
@@ -261,12 +255,12 @@
                         <tr>
                             <td>
                                 <c:if test="${dto.author eq sid && not empty sid}">
-                                <a href="${path}/infoUni/edit.do?bno=${dto.bno}" class="inbtn">수정</a>
+                                <a href="${path}/infoUni/edit.do?bno=${dto.bno}" class="button is-link is-outlined">수정</a>
                                 </c:if>
                             </td>
                             <td>
                                 <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
-                                <a href="${path}/infoUni/delete.do?bno=${dto.bno}" class="inbtn delete_btn" >삭제</a>
+                                <a href="${path}/infoUni/delete.do?bno=${dto.bno}" class="button is-danger is-notmall is-outlined" >삭제</a>
                                </c:if>
                             </td>
                             <td>${dto.author}</td>

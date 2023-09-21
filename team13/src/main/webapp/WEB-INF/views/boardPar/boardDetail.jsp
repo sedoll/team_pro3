@@ -240,12 +240,12 @@
 <div class="wrap">
     <!-- 헤더 부분 인클루드 -->
     <jsp:include page="../include/header.jsp"></jsp:include>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <p class="title">
+    <section class="hero is-white is-medium">
+        <div class="hero-body has-text-centered">
+            <p class="title is-size-3">
                 학부모 게시판
             </p>
-            <p class="subtitle">
+            <p class="subtitle is-size-5">
                 상세
             </p>
         </div>
@@ -286,8 +286,7 @@
                     </tr>
                     <c:if test="${not empty sid}">
                         <tr >
-                            <td colspan="5"style="text-align: right" ><button class="button is-danger is-hovered" onclick="openReportPopup()">
-                                <img src="${path1}/resources/img/report.png" alt="!" style="height: 20px; margin-right: 6px">신고</button></td>
+                            <td colspan="5"style="text-align: right" ><button class="button is-danger is-hovered" onclick="openReportPopup()">게시글 신고</button></td>
                         </tr>
                     </c:if>
                     </tbody>
@@ -344,7 +343,7 @@
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 댓글(이)가 없습니다.'
+                                emptyTable: '작성된 후기가 없습니다.'
                             }
                         });
                         $('#myTable').css({

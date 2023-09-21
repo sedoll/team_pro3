@@ -255,9 +255,9 @@
 <body>
     <jsp:include page="../include/header.jsp"></jsp:include>
 <div class="wrap">
-    <section class="hero is-link">
-        <div class="hero-body has-text-centered is-size-3">
-            <a><strong>성적 입력</strong></a>
+    <section class="hero is-white is-medium">
+        <div class="hero-body has-text-centered">
+            <p class="title is-size-3">성적표 입력</p>
         </div>
         <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
             <ul>
@@ -318,7 +318,7 @@
 
 
                         <div class="btn1">
-                            <button class="submit button is-link has-text-white" type="submit"> 성적 등록</button>
+                            <button class="submit button is-link has-text-black" type="submit"> 성적표 등록</button>
                             <button class="reset button is-grey" type="reset">작성 취소</button>
                         </div>
 
