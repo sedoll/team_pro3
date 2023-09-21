@@ -17,7 +17,7 @@
 <body>
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
-<section class="hero is-primary">
+<section class="hero is-white">
     <div class="hero-body">
         <p class="title">
             성적 게시판
