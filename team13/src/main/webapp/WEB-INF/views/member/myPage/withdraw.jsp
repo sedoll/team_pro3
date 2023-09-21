@@ -21,7 +21,7 @@
     <%@ include file="/WEB-INF/views/include/sidebar.jsp" %>
 
     <div class="withdraw-content">
-        <h1 class="header">회원 탈퇴 안내</h1>
+        <h1 class="header" style="font-size: 40px;">회원 탈퇴 안내</h1>
         <p>* 별도의 목적의 경우 고객센터로 문의해주시기 바랍니다.</p>
         <p>* 개인정보는 개인정보 처리 방침에 따라 보관합니다.</p>
         <p>* 탈퇴가 진행되면 이후에는 어떠한 복구도 할 수 없습니다.</p>
@@ -67,16 +67,13 @@
             <span>위 사항을 모두 숙지하였으며 동의합니다.</span>
         </label>
         <div class="btn-container">
-            <button class="cancel">취소하기</button>
-            <button class="delete" onclick="location.href='${path15}/member/withdraw.do?id=${member.id}' " >탈퇴하기</button>
+            <button class="cancel ">취소하기</button>
+            <button class="withdraw" onclick="location.href='${path15}/member/withdraw.do?id=${member.id}' " >탈퇴하기</button>
         </div>
     </div>
 
 </div>
-<footer id="footer" class="footer-nav row expanded collapse">
-    <!-- 푸터 부분 인클루드 -->
-    <jsp:include page="../../include/footer.jsp"></jsp:include>
-</footer>
+
 <%@ include file="/WEB-INF/views/include/footer.jsp" %>
 <%@ include file="/WEB-INF/views/include/script.jsp" %>
 <script src="/js/member/msg.js"></script>

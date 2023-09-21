@@ -31,7 +31,7 @@
 
             <div class="content-section">
                 <h5 class="font"> 비밀번호 찾기</h5>
-                <form class="content" action="pw_auth.do" method="post">
+                <form class="content2" action="pw_auth.do" method="post">
                     <div class="textbox">
                         <input id="text" name=name required="" type="text"/>
                         <label for="text">이름</label>

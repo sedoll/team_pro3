@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="${path11}/resources/css/myPage/baseLayout.css"/>
     <link rel="stylesheet" href="${path11}/resources/css/myPage/sidebar.css"/>
     <link rel="stylesheet" href="${path11}/resources/css/myPage/validateUser.css"/>
+
     <link rel="stylesheet" href="${path11}/resources/css/font.css"/>
 </head>
 <body>

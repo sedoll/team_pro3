@@ -181,9 +181,16 @@
     <div class="columns">
         <img src="${path }/resources/img/new_main.png">
     </div>
+
     <div class="columns">
         <img src="${path }/resources/img/index_1.png">
     </div>
+
+
+
+
+
+
 
 
 

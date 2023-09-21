@@ -4,6 +4,7 @@
     <option name="state">
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberDelete.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/myPage/memberDelete.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/myPage" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/myPage/memberUpdate.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/myPage" />
