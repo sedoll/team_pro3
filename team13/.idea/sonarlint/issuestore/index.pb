@@ -63,16 +63,12 @@ Z
 *src/main/java/kr/co/teaspoon/dto/Menu.java,9\c\9cfd226f60415799952cdac1905c3e1b713df65e
 Y
 )src/main/java/kr/co/teaspoon/dto/Qna.java,3\7\378d9022e8d51a03a786dac4a76661383f8f1e05
-d
-4src/main/java/kr/co/teaspoon/controller/QnaCtrl.java,e\4\e4d91237e5f15f5810986244b203b17402b79679
 [
 +src/main/java/kr/co/teaspoon/util/Week.java,7\c\7c77d56bdd820c1a79cb52e50a50641d158d330e
 e
 5src/main/java/kr/co/teaspoon/controller/MenuCtrl.java,9\7\97f459fc2b5334543e581ee8d5fb29b1edb18bd8
 _
 /src/main/webapp/WEB-INF/views/menu/menuList.jsp,4\f\4f40af62e820fa0bf1ab9606ebcb26720d8e40c2
-a
-1src/main/webapp/WEB-INF/views/board/boardEdit.jsp,e\2\e2d1119d13eaa87346fe353d17d05159177828cc
 n
 >src/main/webapp/WEB-INF/views/member/myPage/memberWritten2.jsp,e\8\e896099edfa1a7e2b401753b061b2d3d3671959d
 k
