@@ -1,5 +1,6 @@
 package kr.co.teaspoon.dao;
 
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.BoardlistVO;
 import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
@@ -47,5 +48,20 @@ public interface MemberDAO {
     public int pwUpdate(Member member) throws Exception;
 
     public void updateAuthStatus(Map<String, Integer> map) throws Exception;
+
+
+
+
+
+
+
+
+
+
+    //내가 신고한 게시글
+    public List<Board> myReportList(String id) throws Exception;
+    public  void boardReportCancel(int bno) throws Exception;
+    public  void teaReportCancel(int bno) throws Exception;
+    public  void parReportCancel(int bno) throws Exception;
 }
 

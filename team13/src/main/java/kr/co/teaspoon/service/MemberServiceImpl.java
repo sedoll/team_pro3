@@ -1,6 +1,7 @@
 package kr.co.teaspoon.service;
 
 import kr.co.teaspoon.dao.MemberDAO;
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.BoardlistVO;
 import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
@@ -252,6 +253,34 @@ public class MemberServiceImpl implements MemberService{
     public void updateAuthStatus ( Map<String, Integer> map) throws Exception{
         memberDAO.updateAuthStatus(map);
     }
+
+
+
+
+
+    @Override
+    public List<Board> myReportList(String id) throws Exception {
+        return memberDAO.myReportList(id);
+    }
+
+    @Override
+    public void boardReportCancel(int bno) throws Exception {
+        memberDAO.boardReportCancel(bno);
+    }
+
+    @Override
+    public void teaReportCancel(int bno) throws Exception {
+        memberDAO.teaReportCancel(bno);
+    }
+
+    @Override
+    public void parReportCancel(int bno) throws Exception {
+        memberDAO.parReportCancel(bno);
+    }
+
+
+
+
 
 
 
