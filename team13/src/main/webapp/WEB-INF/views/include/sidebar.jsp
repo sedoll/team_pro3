@@ -4,7 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="path4" value="${pageContext.request.contextPath }"/>
 
-<nav>
+<nav style="margin-right: 0">
     <div class="sidebar">
         <div class="header">티스푼</div>
         <ul>
@@ -19,17 +19,12 @@
                 </a>
             </li>
             <li>
-                <a href="/member/">
-                    index
-                </a>
-            </li>
-            <li>
-                <a href="/user/info">
-                    index
+                <a href="${path4}/member/myReportList.do">
+                    신고한 게시글
                 </a>
             </li>
         </ul>
-        <a href="${path4}/boardPar/list.do" class="mypage-inquiry">
+        <a href="${path4}/qna/list.do" class="mypage-inquiry">
             <div>
                 <span class="ask-help">도움이 필요하신가요?</span>
                 <span>1:1 문의하기</span>
