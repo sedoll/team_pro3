@@ -19,4 +19,5 @@ public interface BoardService {
     void reportBoard(Report report) throws Exception;
     int checkReported(Report report) throws Exception;
     public List<Board> boardReportList() throws Exception;
+    public List<Board> recentReportList() throws Exception;
 }

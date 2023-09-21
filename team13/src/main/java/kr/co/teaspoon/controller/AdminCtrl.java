@@ -2,10 +2,7 @@ package kr.co.teaspoon.controller;
 
 import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.Member;
-import kr.co.teaspoon.service.BoardParServiceImpl;
-import kr.co.teaspoon.service.BoardService;
-import kr.co.teaspoon.service.BoardTeaServiceImpl;
-import kr.co.teaspoon.service.MemberService;
+import kr.co.teaspoon.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,11 +28,16 @@ public class AdminCtrl {
     @Autowired
     private BoardParServiceImpl boardParService; //학부모게시판
     @Autowired
+    private NoticeService noticeService; //공지사항
+    @Autowired
     HttpSession session; // 세션 생성
 
 
     @GetMapping("adminMain.do")
     public String adminMain(HttpServletResponse response, HttpServletRequest request, Model model) throws Exception {
+        List<Board> boardList = boardService.recentReportList();    // 최근 신고 내역 알림창
+        model.addAttribute("boardList", boardList); // 최근 신고 내역 알림창
+
         return "/admin/adminMain";
     }
 
@@ -169,16 +171,35 @@ public class AdminCtrl {
         }
     }
 
-        @GetMapping("boardReportList.do")
-        public String getBoardReportList(HttpServletRequest request,Model model) throws Exception {
-            String category = (String) request.getParameter("category");
+    @GetMapping("boardReportList.do")
+    public String getBoardReportList(HttpServletRequest request,Model model) throws Exception {
+        String category = (String) request.getParameter("category");
+        if(category.equals("free")){
             List<Board> boardList = boardService.boardReportList();
             model.addAttribute("categoryKor", "자유");
             model.addAttribute("category", category); //한글 사용시 에러 나므로 영문값도 전달
             model.addAttribute("boardCate", "board");
             model.addAttribute("boardList", boardList);
             return "/admin/boardReportList";
+        } else if (category.equals("teacher")) {
+            List<Board> boardList = boardTeaService.boardReportList();
+            model.addAttribute("categoryKor", "선생님");
+            model.addAttribute("category", category);
+            model.addAttribute("boardList", boardList);
+            model.addAttribute("boardCate", "boardTea");
+                return "/admin/boardReportList";
+        } else if (category.equals("parent")) {
+            List<Board> boardList = boardParService.boardReportList();
+            model.addAttribute("categoryKor", "학부모");
+            model.addAttribute("category", category);
+            model.addAttribute("boardList", boardList);
+            model.addAttribute("boardCate", "boardPar");
+            return "/admin/boardReportList";
+        } else {
+            return "/admin/adminMain";
         }
+
+    }
     @GetMapping("boardReportDelete.do")
     public String boardReportDelete(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
@@ -187,6 +208,14 @@ public class AdminCtrl {
             boardService.boardDelete(bno);
             boardService.commentDeleteAll(bno);
             return "redirect:boardReportList.do?category=free";
+        } else if (category.equals("teacher")) {
+            boardTeaService.boardDelete(bno);
+            boardTeaService.commentDeleteAll(bno);
+            return "redirect:boardReportList.do?category=teacher";
+        } else if (category.equals("parent")) {
+            boardParService.boardDelete(bno);
+            boardParService.commentDeleteAll(bno);
+            return "redirect:boardReportList.do?category=parent";
         } else {
             return "/admin/adminMain";
         }

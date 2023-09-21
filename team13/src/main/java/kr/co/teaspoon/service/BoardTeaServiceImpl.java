@@ -75,4 +75,8 @@ public class BoardTeaServiceImpl implements BoardService{
     public List<Board> boardReportList() throws Exception {
         return boardDAO.boardReportList();
     }
+    @Override
+    public List<Board> recentReportList() throws Exception {
+        return boardDAO.recentReportList();
+    }
 }
