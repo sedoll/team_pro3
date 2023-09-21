@@ -55,6 +55,7 @@
 </head>
 
 <body>
+<jsp:include page="../include/header.jsp"></jsp:include>
 <section class="hero is-fullheight">
     <div class="hero-body has-text-centered">
         <div class="login box is-rounded">

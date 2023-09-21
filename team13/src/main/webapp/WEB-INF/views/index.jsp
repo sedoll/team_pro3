@@ -4,7 +4,6 @@
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <!--
 // WEBSITE: https://themefisher.com
@@ -12,15 +11,12 @@
 // FACEBOOK: https://www.facebook.com/themefisher
 // GITHUB: https://github.com/themefisher/
 -->
-
 <html lang="zxx">
-
 <head>
     <meta charset="utf-8">
     <title>티스푼 메인 페이지</title>
 
     <jsp:include page="./include/head.jsp" />
-
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -41,12 +37,10 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
-
-
 </head>
 
 <body>
-<jsp:include page="./include/header.jsp"/>
+    <jsp:include page="./include/header.jsp"/>
 
 <!-- hero area -->
 <section class="hero-area has-background-primary" id="parallax" >
@@ -58,8 +52,6 @@
     <div class="columns">
         <img src="${path }/resources/img/index_1.png">
     </div>
-
-
 
 </section>
 <!-- /hero area -->
