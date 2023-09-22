@@ -106,12 +106,6 @@
         }
 
 
-        .title {
-            text-align: left;
-            font-weight: bold;
-        }
-
-
 
         .tb2{
             width: 1200px;
@@ -234,6 +228,16 @@
             position: absolute;
             font-weight: bold;
         }
+
+        .item4 .button{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -261,12 +265,12 @@
                         <tr>
                             <td>
                                 <c:if test="${dto.author eq sid && not empty sid}">
-                                <a href="${path}/qna/edit.do?bno=${dto.bno}" class="inbtn">수정</a>
+                                <a href="${path}/qna/edit.do?bno=${dto.bno}" class="button is-outlined is-link">수정</a>
                                 </c:if>
                             </td>
                             <td>
                                 <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
-                                <a href="${path}/qna/delete.do?bno=${dto.bno}" class="inbtn delete_btn" >삭제</a>
+                                <a href="${path}/qna/delete.do?bno=${dto.bno}" class="button is-outlined is-danger" >삭제</a>
                                </c:if>
                             </td>
                             <td>${dto.author}</td>
@@ -302,8 +306,8 @@
                             <td class="item3">${lev.resdate}</td>
                             <td class="item4">
                                 <c:if test="${sid eq lev.author || sid eq 'admin'}">
-                                    <a href="${path}/qna/edit.do?bno=${lev.bno}" class="inbtn">수정</a>
-                                    <a href="${path}/qna/delete.do?bno=${lev.bno}" class="inbtn delete_btn"> 삭제 </a>
+                                    <a href="${path}/qna/edit.do?bno=${lev.bno}" class="button is-small is-link is-outlined is-rounded">수정</a>
+                                    <a href="${path}/qna/delete.do?bno=${lev.bno}" class="button is-small is-danger is-outlined is-rounded"> 삭제 </a>
                                 </c:if>
                             </td>
                         </tr>
@@ -339,7 +343,7 @@
                         <tbody>
                         <tr>
                             <c:if test="${not empty sid}">
-                                <th>${sid}</th>
+                                <th class="has-text-centered">${sid}</th>
                                 <th><textarea name="content" id="content" cols="100" rows="5" placeholder="댓글 작성" required ></textarea></th>
                                 <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
                                 <input type="hidden" name="bno" value="${dto.bno}" readonly>

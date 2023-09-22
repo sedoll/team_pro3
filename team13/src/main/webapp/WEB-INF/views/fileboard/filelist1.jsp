@@ -15,6 +15,12 @@
 	<title>파일 자료 목록</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+	<style>
+		.hero {
+			height: 250px;
+			margin-top: 40px;
+		}
+	</style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -44,6 +50,7 @@
 							<th>제목</th>
 							<th>작성일</th>
 							<th>읽은횟수</th>
+							<th></th>
 						</tr>
 				  </thead>
 				  <tbody>
@@ -53,8 +60,10 @@
 							  <td><a href="${path1}/file/getFileboard.do?postNo=${board.fileBoard.postNo}">${board.fileBoard.title}</a></td>
 							  <td>${board.fileBoard.regdate}</td>
 							  <td>${board.fileBoard.visited}
+							  </td>
+							  <td>
 								  <c:if test="${not empty board.fileList}">
-									<img src="${path1}/resources/img/disk.png" alt="디스크이미지" style="width:24px;height:24px;"/>
+									  <img src="${path1}/resources/img/disk.png" alt="디스크이미지" style="width:24px;height:24px;"/>
 								  </c:if>
 							  </td>
 						  </tr>
@@ -62,7 +71,7 @@
 				  </tbody>
 			  </table>
 			  <c:if test="${sid.equals('admin')}">
-			  	<a href="${path1}/file/fileupload1.do" class="button is-primary">파일 자료 등록</a>
+			  	<a href="${path1}/file/fileupload1.do" class="button is-link is-outlined">파일 자료 등록</a>
 			  </c:if>
 			  <script>
 				  $(document).ready( function () {
@@ -96,8 +105,8 @@
 		  </div>
 	    </div>
 	</div>
-	<!-- 푸터 부분 인클루드 -->
-	<jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

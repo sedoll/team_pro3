@@ -68,6 +68,11 @@
     border-radius: 50%;
     margin-right: 10px;
     }
+
+    .hero {
+        height: 250px;
+        margin-top: 40px;
+    }
     </style>
 </head>
 <body>

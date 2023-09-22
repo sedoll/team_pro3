@@ -15,6 +15,12 @@
     <title>파일 자료 수정하기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -125,8 +131,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="submit" class="button is-danger" value="자료 수정" />
-                                <a href="${path1}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
+                                <input type="submit" class="button is-link is-outlined" value="자료 수정" />
+                                <a href="${path1}/file/filelist1.do" class="button is-black is-outlined">파일 자료 목록</a>
                             </td>
                         </tr>
                         </tbody>
@@ -228,8 +234,8 @@
             </div>
         </div>
     </div>
-    <!-- 푸터 부분 인클루드 -->
-    <jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

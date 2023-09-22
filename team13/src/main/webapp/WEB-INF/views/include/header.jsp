@@ -95,7 +95,7 @@
         <!-- header menu end -->
         <div class="navbar-end">
             <div class="navbar-item">
-                <div>
+                <div style="padding-right: 10px">
                     <c:if test="${not empty sid}">
                         ${sid} 회원님 환영합니다.
                     </c:if>

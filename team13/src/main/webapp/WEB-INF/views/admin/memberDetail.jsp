@@ -156,9 +156,7 @@
 </div>
 
 
-<footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
-</footer>
 </body>
 </html>

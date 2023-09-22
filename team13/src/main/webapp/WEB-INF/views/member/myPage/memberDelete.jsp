@@ -50,8 +50,8 @@
                     </div>
                 </div>
                 <div class="button-box">
-                    <button id="return" class="button is-medium" onclick="location.href='${path10 }/member/mypage.do'" >취소하기</button>
-                    <button id="withdraw" class="button is-medium is-info">탈퇴하기</button>
+                    <button id="return" class="button is-black is-outlined" onclick="location.href='${path10 }/member/mypage.do'" >취소하기</button>
+                    <button id="withdraw" class="button is-danger is-outlined">탈퇴하기</button>
                 </div>
             </form>
         </div>

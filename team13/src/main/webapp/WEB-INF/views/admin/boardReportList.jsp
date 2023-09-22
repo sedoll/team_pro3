@@ -28,7 +28,7 @@
 <section class="hero is-white">
     <div class="hero-body">
         <p class="title is-size-3">
-            관리자 페이지
+
         </p>
         <p class="subtitle">
 
@@ -49,7 +49,7 @@
                     <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
                 </ul>
             </nav>
-            <section class="hero is-info welcome is-small">
+            <section class="hero is-white welcome is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title" style="text-align: center">
@@ -63,13 +63,13 @@
         <table class="table is-fullwidth">
             <thead>
             <tr>
-                <th width="80">No</th>
-                <th>Title</th>
-                <th>작성자</th>
-                <th width="100">사유</th>
-                <th width="100">누적 신고수</th>
-                <th width="120">신고일</th>
-                <th width="100">비고</th>
+                <th style="width: 10%">No</th>
+                <th style="width: 30%">Title</th>
+                <th style="width: 10%">작성자</th>
+                <th style="width: 10%">사유</th>
+                <th style="width: 15%">누적 신고수</th>
+                <th style="width: 15%">신고일</th>
+                <th style="width: 10%">비고</th>
             </tr>
             </thead>
             <tbody>
@@ -103,9 +103,7 @@
 </div>
 
 
-<footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
-</footer>
 </body>
 </html>

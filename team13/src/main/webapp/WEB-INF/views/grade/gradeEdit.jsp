@@ -13,6 +13,12 @@
     <title>성적표 수정</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <jsp:include page="../include/header.jsp"></jsp:include>
@@ -74,9 +80,9 @@
                             <tfoot>
                             <tr>
                                 <td colspan="1">
-                                    <input type="submit" class="button" value="등록하기">
-                                    <a href="${path }/grade/gradedelete.do?no=${grade.no}" class="button is-primary">성적 삭제</a>
-                                    <a href="${path }/grade/gradelist.do" class="button is-primary">회원 목록</a>
+                                    <input type="submit" class="button is-link is-outlined" value="등록하기">
+                                    <a href="${path }/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적 삭제</a>
+                                    <a href="${path }/grade/gradelist.do" class="button is-black is-outlined">회원 목록</a>
                                 </td>
                             </tr>
                             </tfoot>

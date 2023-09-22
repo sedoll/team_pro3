@@ -13,6 +13,12 @@
     <title>QNA 글쓰기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -48,7 +54,7 @@
                             <th style="background-color:#dcdcdc">비밀번호</th>
                             <td>
                                 <input type="password" name="pw" id="pw" class="input" placeholder="비밀글로 하고 싶은 경우 비밀번호 입력" maxlength="18">
-                                <div id="keyShow" class="button is-primary">SHOW</div>
+                                <div id="keyShow" class="button is-link">SHOW</div>
                             </td>
                         </tr>
                         <tr>
@@ -59,8 +65,8 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="submit button is-info" value="글 등록" >
-                                <a class="button is-primary" href="${path }/qna/list.do">글 목록</a>
+                                <input type="submit" class="submit button is-link is-outlined" value="글 등록" >
+                                <a class="button is-black is-outlined" href="${path }/qna/list.do">글 목록</a>
                             </td>
                         </tr>
                         </tbody>

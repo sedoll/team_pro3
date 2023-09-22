@@ -15,6 +15,11 @@
 	<title>파일 자료 상세보기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+	<style>
+		.hero {
+		height: 250px;
+		margin-top: 40px;
+	}</style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -55,7 +60,8 @@
 					  <th>첨부 파일</th>
 					  <td>
 						  <c:forEach var="file" items="${fileboard.fileList}">
-							  <a href="${path1}/resources/upload/${file.originFile}" title="${file.fileSize}" download>${file.originFile}</a>
+							  <img src="${path1}/resources/img/disk.png" alt="디스크이미지" style="width:24px;height:24px;"/>
+							  <a href="${path1}/resources/upload/${file.originFile}" title="${file.fileSize}" download style="margin-right: 16px">${file.originFile}</a>
 						  </c:forEach>
 						  <c:if test="${empty fileboard.fileList}">
 							  첨부된 파일이 없습니다.
@@ -72,11 +78,11 @@
 				  </tr>
 				  <tr>
 					  <td>
-						  <a href="${path1}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
-<%--						  <c:if test="${sid.equals('admin')}">--%>
-							  <a href="${path1}/file/removeFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-danger">자료 삭제</a>
-							  <a href="${path1}/file/modifyFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-info">자료 수정</a>
-<%--						  </c:if>--%>
+						  <a href="${path1}/file/filelist1.do" class="button is-black is-outlined">파일 자료 목록</a>
+					 		 <c:if test="${sid.equals('admin')}">
+							  <a href="${path1}/file/removeFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-danger is-outlined">자료 삭제</a>
+							  <a href="${path1}/file/modifyFileboard.do?postNo=${fileboard.fileBoard.postNo}" class="button is-link is-outlined">자료 수정</a>
+						 	 </c:if>
 					  </td>
 				  </tr>
 				  </tbody>
@@ -84,8 +90,8 @@
 		  </div>
 	    </div>
 	</div>
-	<!-- 푸터 부분 인클루드 -->
-	<jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>
