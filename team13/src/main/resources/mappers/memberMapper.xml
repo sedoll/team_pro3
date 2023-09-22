@@ -148,25 +148,27 @@
     <select id="getWriteComment7" parameterType="String" resultType="CommentlistVO">
         select doc_content as content, doc_date as write_date, doc_no from missing_reply where doc_email = #{email} order by doc_date desc
     </select>-->
+
+
     <select id="myReportList" resultType="kr.co.teaspoon.dto.Board">
-    (
-    SELECT r.board_bno as bno, r.reporter, r.reason, r.report_date, 'board' AS board_type, b.title
-    FROM report r join board b on r.board_bno = b.bno where reporter = #{id}
-    )
-    UNION
-    (
-    SELECT board_bno as bno, reporter, reason, report_date, 'boardTea' AS board_type, b.title
-    FROM report_tea r join board_tea b on r.board_bno = b.bno where reporter = #{id}
-    )
-    UNION
-    (
-    SELECT board_bno as bno, reporter, reason, report_date, 'boardPar' AS board_type, b.title
-    FROM report_par r join board_par b on r.board_bno = b.bno where reporter = #{id}
-    )
-    ORDER BY report_date DESC
+        (
+            SELECT r.board_bno as bno, r.reporter, r.reason, r.report_date, 'board' AS board_type, b.title
+            FROM report r join board b on r.board_bno = b.bno where reporter = #{id}
+        )
+        UNION
+        (
+            SELECT board_bno as bno, reporter, reason, report_date, 'boardTea' AS board_type, b.title
+            FROM report_tea r join board_tea b on r.board_bno = b.bno where reporter = #{id}
+        )
+        UNION
+        (
+            SELECT board_bno as bno, reporter, reason, report_date, 'boardPar' AS board_type, b.title
+            FROM report_par r join board_par b on r.board_bno = b.bno where reporter = #{id}
+        )
+        ORDER BY report_date DESC
     </select>
 
-<!--    boardReportCancel-->
+    <!--    boardReportCancel-->
     <delete id="boardReportCancel">
         delete from report where board_bno = #{bno}
     </delete>
@@ -176,6 +178,4 @@
     <delete id="parReportCancel">
         delete from report_par where board_bno = #{bno}
     </delete>
-
-
 </mapper>
