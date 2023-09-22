@@ -192,7 +192,7 @@
 🔹관리자페이지회원관리🔹
 ![관리자페이지회원관리_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/382d5979-9985-49a4-9f38-31059febb348)
 🔹교육정보🔹
-![교육정보_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/08daf619-c187-41c6-8317-5842e74e77de
+![교육정보_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/08daf619-c187-41c6-8317-5842e74e77de)
 🔹교육정보글쓰기🔹
 ![교육정보글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/42fce1d4-6e63-4080-9267-578a1ebd7161)
 
