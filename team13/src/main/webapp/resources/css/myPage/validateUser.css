@@ -65,15 +65,21 @@
     width: 200px;
     height: 56px;
     border-radius: 3px;
-    color: rgb(255, 255, 255);
-    background-color: var(--primary-color);
+    /*color: rgb(255, 255, 255);*/
+   /* background-color: var(--primary-color);*/
     border: 0px none;
 
     font-size: 16px;
 }
 
 .check-pwd-form .button-box #withdraw {
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    border: 1px solid black;
+    color: black;
+    background: white;
+}
+
+.check-pwd-form .button-box #return {
+    border: 1px solid black;
+    color: black;
     background: white;
 }

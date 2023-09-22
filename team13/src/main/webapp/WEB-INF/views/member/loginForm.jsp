@@ -50,11 +50,28 @@
             padding-right: 50px;
         }
 
+        .container table {
+            box-shadow: #dddddd;}
+
+        .level-item div{
+            margin-left: 27px;
+        }
+
+        .level-item .term {
+            margin-right: 20px;
+        }
+
+        .level-item .find{
+            margin-left: 20px;
+        }
+
+
 
     </style>
 </head>
 
 <body>
+<jsp:include page="../include/header.jsp"></jsp:include>
 <section class="hero is-fullheight">
     <div class="hero-body has-text-centered">
         <div class="login box is-rounded">
@@ -79,8 +96,9 @@
             <nav class="level">
                 <div class="level-item has-text-centered">
                     <div>
-                        <a href="../member/term.do">회원가입</a>
-                        <a href="${path}/member/pw_find.do">비밀번호 찾기</a>
+                        <a href="../member/term.do" class="term">회원가입</a> |
+
+                        <a href="${path}/member/pw_find.do" class="find">비밀번호 찾기</a>
                     </div>
                 </div>
             </nav>

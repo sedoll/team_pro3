@@ -31,7 +31,7 @@
             <p>
                 회원님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인해주세요.
             </p>
-            <form class="check-pwd-form" action="/user/info" method="post" id="verify_form">
+            <form class="check-pwd-form" action="${path10 }/member/mypage.do" method="post" id="verify_form">
                 <div class="center-padding">
                     <div class="input-line">
                         <div class="input-label"><label>아이디</label></div>
@@ -50,8 +50,8 @@
                     </div>
                 </div>
                 <div class="button-box">
-                    <button id="return" onclick="location.href='${path10 }/member/mypage.do'" >취소하기</button>
-                    <button id="withdraw" >탈퇴하기</button>
+                    <button id="return" class="button is-medium" onclick="location.href='${path10 }/member/mypage.do'" >취소하기</button>
+                    <button id="withdraw" class="button is-medium is-info">탈퇴하기</button>
                 </div>
             </form>
         </div>

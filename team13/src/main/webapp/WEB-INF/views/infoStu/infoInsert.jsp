@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path" value="/pro3_war" />
+<c:set var="path" value="<%=request.getContextPath() %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,12 +22,12 @@
     <jsp:include page="../include/header.jsp"></jsp:include>
     <figure class="visual" id="vs1">
         <ul class="imgbox">
-            <li class="hero is-medium is-link">
-                <div class="hero-body">
-                    <p class="title">
+            <li class="hero is-medium is-white">
+                <div class="hero-body has-text-centered">
+                    <p class="title is-size-3">
                         교육 정보
                     </p>
-                    <p class="subtitle">
+                    <p class="subtitle is-size-5">
                         글쓰기
                     </p>
                 </div>
@@ -57,8 +57,8 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="submit button is-info" value="글 등록" >
-                                <a class="button is-primary" href="${path }/infoStu/list.do">글 목록</a>
+                                <input type="submit" class="submit button is-link is-outlined" value="글 등록" >
+                                <a class="button is-black is-outlined" href="${path }/infoStu/list.do">글 목록</a>
                             </td>
                         </tr>
                         </tbody>

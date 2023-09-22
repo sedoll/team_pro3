@@ -14,15 +14,16 @@
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
+
 <body>
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
-<section class="hero is-primary">
-    <div class="hero-body">
-        <p class="title">
+<section class="hero is-white is-medium">
+    <div class="hero-body has-text-centered">
+        <p class="title is-size-3">
             ${not empty schoolName ? schoolName : '학교'}
         </p>
-        <p class="subtitle">
+        <p class="subtitle is-size-5">
             식단표
         </p>
     </div>
@@ -31,10 +32,10 @@
     <div class="row column text-center">
         <div class="container">
             <%-- post 방식 --%>
-            <h2>학교 선택</h2>
+            <p class="is-size-3">학교 선택<p>
             <form action="${path}/menu/list.do" method="post">
                 <input type="text" name="name" id="name" class="input" placeholder="학교 이름 입력" required autofocus>
-                <input class="button is-primary" type="submit" value="확인">
+                <input class="button is-link" type="submit" value="확인">
             </form>
                 <hr>
             <%-- get 방식 --%>
@@ -43,7 +44,7 @@
 <%--                <a class="button" href="${path}/menu/list.do?name=고척중">고척중학교</a>--%>
 <%--                <a class="button" href="${path}/menu/list.do?name=경인고">경인고등학교</a>--%>
 <%--            </div>--%>
-            <h2>이번 주 식단표</h2>
+            <p class="is-size-3">이번 주 식단표</p>
             <table>
                 <thead>
                 <tr>

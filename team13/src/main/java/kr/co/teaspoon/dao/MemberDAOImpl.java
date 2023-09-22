@@ -1,5 +1,6 @@
 package kr.co.teaspoon.dao;
 
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.BoardlistVO;
 import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
@@ -138,8 +139,6 @@ public class MemberDAOImpl implements MemberDAO {
         return sqlSession.selectList("getWriteComment7", id);
     }
 
-
-
     @Override
     public Member selectMember(String email) throws Exception {
         return sqlSession.selectOne("member.selectMember", email);
@@ -154,4 +153,33 @@ public class MemberDAOImpl implements MemberDAO {
     public void updateAuthStatus(Map<String, Integer> map) throws Exception{
         sqlSession.update("member.updateAuthStatus", map);
     }
+
+
+    @Override
+    public List<Board> myReportList(String id) throws Exception {
+        return sqlSession.selectList("member.myReportList",id);
+    }
+
+    @Override
+    public void boardReportCancel(int bno) throws Exception {
+        sqlSession.delete("member.boardReportCancel", bno);
+    }
+
+    @Override
+    public void teaReportCancel(int bno) throws Exception {
+        sqlSession.delete("member.teaReportCancel", bno);
+    }
+
+    @Override
+    public void parReportCancel(int bno) throws Exception {
+        sqlSession.delete("member.parReportCancel", bno);
+    }
+
+
+
+
+
+
+
+
 }

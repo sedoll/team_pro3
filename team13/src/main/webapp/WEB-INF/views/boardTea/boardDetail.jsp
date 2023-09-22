@@ -240,12 +240,12 @@
 <div class="wrap">
     <!-- 헤더 부분 인클루드 -->
     <jsp:include page="../include/header.jsp"></jsp:include>
-    <section class="hero is-primary">
-        <div class="hero-body">
-            <p class="title">
+    <section class="hero is-white is-medium">
+        <div class="hero-body has-text-centered">
+            <p class="title is-size-3">
                 선생님 게시판
             </p>
-            <p class="subtitle">
+            <p class="subtitle is-size-5">
                 상세
             </p>
         </div>
@@ -335,15 +335,15 @@
                             "targets": 'no-sort',
                             "bSort": false,
 
-                            // 3번째 컬럼을 기준으로 내림차순 정렬
-                            order: [[3, 'asc']],
+                            // 2번째 컬럼을 기준으로 내림차순 정렬
+                            order: [[2, 'desc']],
                             pageLength : 5,
                             searching: false, //검색 제거
                             lengthChange: false, // show entries 제거
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 후기가 없습니다.'
+                                emptyTable: '작성된 댓글(이)가 없습니다.'
                             }
                         });
                         $('#myTable').css({

@@ -32,7 +32,7 @@
                 <h5 class ="font"> 비밀번호찾기</h5>
                 <form action="pw_set.do" method="post">
                     <input type="hidden" name ="num" value="${num }">
-                    <div class=content style="padding-top: 110px;">
+                    <div class=content2 style="padding-top: 110px;">
                         <div class="textbox">
                             <input type="text" name="email_injeung" placeholder="인증번호를 입력하세요"><label>인증번호 </label>
                             <div class="error"> </div>

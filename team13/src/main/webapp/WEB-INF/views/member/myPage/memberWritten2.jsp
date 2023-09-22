@@ -43,16 +43,14 @@
 <div class="mypage-base">
     <%@ include file="/WEB-INF/views/include/sidebar.jsp" %>
 
-    <div class="content-wrap">
-
-
+    <div class="content-wrap" style="float:left; margin-left: -50px">
         <div class="content-section">
             <h5 class="font"> 작성글관리 > </h5>
             <br>
 
             <form class="content">
 
-                <div id="ud_tab">
+                <div id="ud_tab" style="float:left; margin-left: -20px">
                     <input type="radio" name="ud_tabs" id="tab1" checked>
                     <label for="tab1">작성글</label>
                     <input type="radio" name="ud_tabs" id="tab2">
@@ -62,12 +60,12 @@
                     <div id="ud_tab-content1" class="ud_content">
 
                         <h5> 자유 게시판</h5>
-                        <table>
+                        <table style="width: 700px; margin-left: -20px">
                             <thead>
                             <tr>
-                                <th>글번호</th>
-                                <th>제목</th>
-                                <th>작성일</th>
+                                <th style="width: 10%">글번호</th>
+                                <th style="width: 65%; text-align: center">제목</th>
+                                <th style="width: 25%; text-align: center">작성일</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -88,12 +86,12 @@
 
                         <c:if test="${member.job == 2}">
                             <h5> 선생님 게시판</h5>
-                            <table>
+                            <table style="width: 700px; margin-left: -20px">
                                 <thead>
                                 <tr>
-                                    <th>글번호</th>
-                                    <th>제목</th>
-                                    <th>작성일</th>
+                                    <th style="width: 10%">글번호</th>
+                                    <th style="width: 65%; text-align: center">제목</th>
+                                    <th style="width: 25%; text-align: center">작성일</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -114,12 +112,12 @@
 
                         <c:if test="${member.job == 1}">
                             <h5> 학부모 게시판</h5>
-                            <table>
+                            <table style="width: 700px; margin-left: -20px">
                                 <thead>
                                 <tr>
-                                    <th>글번호</th>
-                                    <th>제목</th>
-                                    <th>작성일</th>
+                                    <th style="width: 10%">글번호</th>
+                                    <th style="width: 65%; text-align: center">제목</th>
+                                    <th style="width: 25%; text-align: center">작성일</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -139,124 +137,126 @@
                         </c:if>
 
 
-                        <%-- <h5> 자료실 </h5>
-                         <table>
-                             <thead>
-                             <tr>
-                                 <th>글번호</th>
-                                 <th>제목</th>
-                                 <th>작성일</th>
-                             </tr>
-                             </thead>
-                             <tbody>
-                             <c:forEach items="${boardfreelist }" var="boardfreelist">
-                                 <tr class="boardlist4">
-                                     <td>${boardfreelist.num}</td>
-
-                                     <td><a class="path"
-                                            href="${path13}/boardPar/detail.do?bno=${boardparlist.num}">${boardfreelist.subject}</a>
-                                     </td>
-                                     <td>${boardfreelist.write_date}</td>
-                                 </tr>
-                             </c:forEach>
-                             </tbody>
-                         </table>
-                        <input type="button" id="check14" value="더보기">
-                         <div class="error14"></div>--%>
-
-                    </div> <%-- 작성글("ud_tab-content1") 끝--%>
-
-
-
-                    <%-- ---------------------------------------------------------------------------------------------  --%>
-
-                    <%--댓글 시작--%>
-                    <div id="ud_tab-content2" class="ud_content">
-
-
-                        <h5> 자유 게시판</h5>
+                       <%-- <h5> 자료실 </h5>
                         <table>
                             <thead>
-                            <tr><th>내용</th><th>작성일</th><th> </th></tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach items="${board_comlist }" var="board_comlist">
-                                <tr class = "commentlist">
-                                    <td>${board_comlist.content}</td>
-                                    <td>${board_comlist.write_date}</td>
-                                    <td><button type="button" class ="origin" onclick="location.href='${path13}/board/detail.do?bno=${board_comlist.num}'">원문보기</button></td>
-                                </tr>
-
-                            </c:forEach>
-                            </tbody>
-                        </table>
-
-                        <%--<input type="button" id="check21" value="더보기">
-                       <div class="error21"></div>--%>
-
-
-                        <%--<c:if test="${member.job == 2}">
-                            <h5> 선생님 게시판</h5>
-                            <table>
-                                <thead>
-                                <tr><th>글번호</th><th>제목</th><th>작성일</th></tr>
-                                </thead>
-                                <tbody>
-                                <c:forEach items="${boardtealist }" var="boardtealist">
-                                    <tr class = "boardlist2">
-                                        <td>${boardtealist.num}</td>
-                                        <td><a class="path" href="${path13}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a></td>
-                                        <td>${boardtealist.write_date}</td>
-                                    </tr>
-                                </c:forEach>
-                                </tbody>
-                            </table>
-                            &lt;%&ndash;<input type="button" id="check12" value="더보기">
-                            <div class="error12"></div>&ndash;%&gt;
-                        </c:if>
-
-                        <c:if test="${member.job == 1}">
-                            <h5> 학부모 게시판</h5>
-                            <table>
-                                <thead>
-                                <tr><th>글번호</th><th>제목</th><th>작성일</th></tr>
-                                </thead>
-                                <tbody>
-                                <c:forEach items="${boardparlist }" var="boardparlist">
-                                    <tr class = "boardlist3">
-                                        <td>${boardparlist.num}</td>
-                                        <td><a class="path" href="${path13}/boardPar/detail.do?bno=${boardlist.num}">${boardparlist.subject}</a></td>
-                                        <td>${boardparlist.write_date}</td>
-                                    </tr>
-                                </c:forEach>
-                                </tbody>
-                            </table>
-                            &lt;%&ndash;<input type="button" id="check13" value="더보기">
-                            <div class="error13"></div>
-                        </c:if>
-
-
-                        <h5> 자료실 </h5>
-                        <table>
-                            <thead>
-                            <tr><th>글번호</th><th>제목</th><th>작성일</th></tr>
+                            <tr>
+                                <th>글번호</th>
+                                <th>제목</th>
+                                <th>작성일</th>
+                            </tr>
                             </thead>
                             <tbody>
                             <c:forEach items="${boardfreelist }" var="boardfreelist">
-                                <tr class = "boardlist4">
+                                <tr class="boardlist4">
                                     <td>${boardfreelist.num}</td>
-                                    <td><a class="path" href="/InfoActCtrl/board.do?num=${boardfreelist.num}">${boardfreelist.subject}</a></td>
+
+                                    <td><a class="path"
+                                           href="${path13}/boardPar/detail.do?bno=${boardparlist.num}">${boardfreelist.subject}</a>
+                                    </td>
                                     <td>${boardfreelist.write_date}</td>
                                 </tr>
                             </c:forEach>
                             </tbody>
                         </table>
-                        &lt;%&ndash;<input type="button" id="check13" value="더보기">
-                        <div class="error13"></div>--%>
+                       <input type="button" id="check14" value="더보기">
+                        <div class="error14"></div>--%>
 
-                    </div>
+                    </div> <%-- 작성글("ud_tab-content1") 끝--%>
 
-                </div>
+
+
+            <%-- ---------------------------------------------------------------------------------------------  --%>
+
+                        <%--댓글 시작--%>
+                        <div id="ud_tab-content2" class="ud_content">
+
+                                <h5> 자유 게시판</h5>
+                                <table style="width: 700px; margin-left: -20px">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 60%; text-align: center">내용</th>
+                                        <th style="width: 35%; text-align: center">작성일</th>
+                                        <th style="width: 15%"></th></tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${board_comlist }" var="board_comlist">
+                                        <tr class = "commentlist">
+                                            <td>${board_comlist.content}</td>
+                                            <td>${board_comlist.write_date}</td>
+                                            <td><button type="button" class ="origin" onclick="location.href='${path13}/board/detail.do?bno=${board_comlist.num}'">원문보기</button></td>
+                                        </tr>
+
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+
+                                 <%--<input type="button" id="check21" value="더보기">
+                                <div class="error21"></div>--%>
+
+
+                                <%--<c:if test="${member.job == 2}">
+                                    <h5> 선생님 게시판</h5>
+                                    <table>
+                                        <thead>
+                                        <tr><th>글번호</th><th>제목</th><th>작성일</th></tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${boardtealist }" var="boardtealist">
+                                            <tr class = "boardlist2">
+                                                <td>${boardtealist.num}</td>
+                                                <td><a class="path" href="${path13}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a></td>
+                                                <td>${boardtealist.write_date}</td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                    &lt;%&ndash;<input type="button" id="check12" value="더보기">
+                                    <div class="error12"></div>&ndash;%&gt;
+                                </c:if>
+
+                                <c:if test="${member.job == 1}">
+                                    <h5> 학부모 게시판</h5>
+                                    <table>
+                                        <thead>
+                                        <tr><th>글번호</th><th>제목</th><th>작성일</th></tr>
+                                        </thead>
+                                        <tbody>
+                                        <c:forEach items="${boardparlist }" var="boardparlist">
+                                            <tr class = "boardlist3">
+                                                <td>${boardparlist.num}</td>
+                                                <td><a class="path" href="${path13}/boardPar/detail.do?bno=${boardlist.num}">${boardparlist.subject}</a></td>
+                                                <td>${boardparlist.write_date}</td>
+                                            </tr>
+                                        </c:forEach>
+                                        </tbody>
+                                    </table>
+                                    &lt;%&ndash;<input type="button" id="check13" value="더보기">
+                                    <div class="error13"></div>
+                                </c:if>
+
+
+                                <h5> 자료실 </h5>
+                                <table>
+                                    <thead>
+                                    <tr><th>글번호</th><th>제목</th><th>작성일</th></tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach items="${boardfreelist }" var="boardfreelist">
+                                        <tr class = "boardlist4">
+                                            <td>${boardfreelist.num}</td>
+                                            <td><a class="path" href="/InfoActCtrl/board.do?num=${boardfreelist.num}">${boardfreelist.subject}</a></td>
+                                            <td>${boardfreelist.write_date}</td>
+                                        </tr>
+                                    </c:forEach>
+                                    </tbody>
+                                </table>
+                                &lt;%&ndash;<input type="button" id="check13" value="더보기">
+                                <div class="error13"></div>--%>
+
+                        </div>
+
+              </div>
             </form>
         </div>
 
@@ -266,7 +266,7 @@
 
 
 
-    </div>
+</div>
 </div>
 
 

@@ -1,5 +1,6 @@
 package kr.co.teaspoon.controller;
 
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.BoardlistVO;
 import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
@@ -18,7 +19,6 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
@@ -73,7 +73,7 @@ public class MemberCtrl {
 
     // 로그아웃
     @GetMapping("logout.do")
-    public String logout(HttpServletResponse response, Model model) throws Exception {
+    public String logout(HttpServletResponse response,Model model) throws Exception {
         session.invalidate();
 
         //ScriptAlertUtils.alert(response,"로그아웃 되었습니다");
@@ -353,8 +353,8 @@ public class MemberCtrl {
         }*/
 
         return "/member/myPage/memberWritten2";
-    }
 
+    }
 
     @RequestMapping(value = "/pw_find.do", method = RequestMethod.GET)
     public String pw_find() {
@@ -419,7 +419,7 @@ public class MemberCtrl {
     public String pw_set(@RequestParam(value = "email_injeung") String email_injeung,
                          @RequestParam(value = "num") String num, Model model, HttpServletResponse response) throws Exception {
 
-       if (email_injeung.equals(num)) {
+        if (email_injeung.equals(num)) {
             response.setContentType("text/html; charset=UTF-8");
             PrintWriter out = response.getWriter();
             out.println("<script>alert('인증번호가 일치합니다.');</script>");
@@ -481,6 +481,42 @@ public class MemberCtrl {
         mav.addObject("display", "/member/loginForm");
         mav.setViewName("/member/loginForm");
         return mav;
+    }
+
+
+
+
+
+
+
+    //신고한 게시글 목록
+    @GetMapping("myReportList.do")
+    public String myReportList(HttpServletResponse response, HttpServletRequest request, Model model) throws Exception {
+        String id = (String) session.getAttribute("sid");
+        List<Board> boardList = memberService.myReportList(id);
+        model.addAttribute("boardList", boardList);
+        System.out.println(boardList.toString());
+        return "/member/myPage/myReportList";
+    }
+    @GetMapping("myReportCancel.do")
+    public String myReportCancel(HttpServletRequest request, Model model) throws Exception {
+        String id = request.getParameter("id");
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        String category = request.getParameter("category");
+
+        if (category.equals("board")) {
+            memberService.boardReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else if (category.equals("boardTea")) {
+            memberService.teaReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else if (category.equals("boardPar")) {
+            memberService.parReportCancel(bno);
+            return "redirect:myReportList.do";
+        } else {
+            return "redirect:myReportList.do";
+        }
+
     }
 
 }

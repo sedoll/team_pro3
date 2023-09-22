@@ -1,6 +1,7 @@
 package kr.co.teaspoon.service;
 
 import kr.co.teaspoon.dao.MemberDAO;
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.BoardlistVO;
 import kr.co.teaspoon.dto.CommentlistVO;
 import kr.co.teaspoon.dto.Member;
@@ -15,7 +16,7 @@ import java.util.Map;
 public class MemberServiceImpl implements MemberService{
     @Autowired
     private MemberDAO memberDAO;
-
+    
     // spring security 이용
     private BCryptPasswordEncoder pwEncoder = new BCryptPasswordEncoder();
 
@@ -53,7 +54,7 @@ public class MemberServiceImpl implements MemberService{
     public Member signIn(String id) throws Exception {
         return memberDAO.signIn(id);
     }
-
+    
     // 서비스에서 로그인 처리
     @Override
     public boolean loginCheck(String id, String pw) throws Exception {
@@ -65,16 +66,47 @@ public class MemberServiceImpl implements MemberService{
         }
         return comp;
     }
-
+    
     // Ajax로 로그인 처리 (컨트롤러)
     @Override
     public Member login(String id) throws Exception {
         return memberDAO.login(id);
     }
 
+    /*비밀번호 찾기 할때 */
+    @Override
+    public Member selectMember(String email) throws Exception {
+        System.out.println(email);
+        Member member = memberDAO.selectMember(email);
+        if(member != null) {
+            System.out.println("전화번호 : " + member.getTel());
+            StringBuffer str = new StringBuffer(member.getTel());
+            str.insert(0, "0");
+
+            String phone = str.substring(0);
+            if(phone.substring(0,2).equals("00")) {
+                phone = phone.substring(1);
+            }
+            member.setTel(phone);
+
+            System.out.println("전화번호는 : " + member.getTel());
+        }
+        System.out.println(member);
+        return member;
+    }
 
 
+    @Override
+    public int pwUpdate(Member member) throws Exception {
+        int result = memberDAO.pwUpdate(member);
 
+        return result;
+    }
+
+    @Override
+    public void updateAuthStatus ( Map<String, Integer> map) throws Exception{
+        memberDAO.updateAuthStatus(map);
+    }
 
 
     /*내가 쓴 글*/
@@ -214,45 +246,23 @@ public class MemberServiceImpl implements MemberService{
         return list;
     }
 
-
-
-
-
-    /*비밀번호 찾기 할때 */
     @Override
-    public Member selectMember(String email) throws Exception {
-        System.out.println(email);
-        Member member = memberDAO.selectMember(email);
-        if(member != null) {
-            System.out.println("전화번호 : " + member.getTel());
-            StringBuffer str = new StringBuffer(member.getTel());
-            str.insert(0, "0");
-
-            String phone = str.substring(0);
-            if(phone.substring(0,2).equals("00")) {
-                phone = phone.substring(1);
-            }
-            member.setTel(phone);
-
-            System.out.println("전화번호는 : " + member.getTel());
-        }
-        System.out.println(member);
-        return member;
-    }
-
-
-    @Override
-    public int pwUpdate(Member member) throws Exception {
-        int result = memberDAO.pwUpdate(member);
-
-        return result;
+    public List<Board> myReportList(String id) throws Exception {
+        return memberDAO.myReportList(id);
     }
 
     @Override
-    public void updateAuthStatus ( Map<String, Integer> map) throws Exception{
-        memberDAO.updateAuthStatus(map);
+    public void boardReportCancel(int bno) throws Exception {
+        memberDAO.boardReportCancel(bno);
     }
 
+    @Override
+    public void teaReportCancel(int bno) throws Exception {
+        memberDAO.teaReportCancel(bno);
+    }
 
-
+    @Override
+    public void parReportCancel(int bno) throws Exception {
+        memberDAO.parReportCancel(bno);
+    }
 }

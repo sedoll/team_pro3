@@ -38,6 +38,9 @@
                     <a href="${path2}/file/filelist1.do" class="navbar-item">
                         자료실
                     </a>
+                    <a href="${path2}/news/list.do" class="navbar-item">
+                        뉴스
+                    </a>
                 </div>
             </div>
 
@@ -100,11 +103,11 @@
                 <div class="buttons">
                     <c:if test="${not empty sid && sid != 'admin'}"> <%-- 회원으로 로그인한 경우 --%>
                         <%--<a href="${path1}/member/mypage.do" class="button is-link is-rounded" >--%>
-                        <a href="${path2}/member/mypage.do" class="button is-link is-rounded button-bg" >
+                        <a href="${path2}/member/mypage.do" class="button is-link is-rounded b1 button-bg" >
                             마이페이지
                         </a>
                         <%--<a href="${path1}/member/logout.do" class="button is-link2 is-rounded" >--%>
-                        <a href="${path2}/member/logout.do" class="button is-link2 is-rounded button-bg2" >
+                        <a href="${path2}/member/logout.do" class="button is-link2 is-rounded b2 button-bg2" >
                             로그아웃
                         </a>
                     </c:if>

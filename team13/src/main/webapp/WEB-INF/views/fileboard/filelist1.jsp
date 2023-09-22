@@ -22,13 +22,13 @@
 	<jsp:include page="../include/header.jsp"></jsp:include>
 	<figure class="visual" id="vs1">
 		<ul class="imgbox">
-			<li class="hero is-medium is-link">
-				<div class="hero-body">
-					<p class="title">
-						Medium hero
+			<li class="hero is-medium is-white">
+				<div class="hero-body has-text-centered">
+					<p class="title is-size-3">
+						자료실 목록
 					</p>
-					<p class="subtitle">
-						Medium subtitle
+					<p class="subtitle is-size-5">
+
 					</p>
 				</div>
 			</li>
@@ -36,20 +36,17 @@
 	</figure>
 	<div class="content" id="contents">
 	    <div class="row column text-center">
-	      <h2 class="h1">자료실 목록</h2>
-	      <hr>
 	      <div class="container">
-				  <table class="table table-active">
+				  <table class="table table-active" id="myTable">
 				  <thead>
-				  	<tr>
-						<th>글번호</th>
-						<th>제목</th>
-						<th>작성일</th>
-						<th>읽은횟수</th>
-					</tr>
+						<tr>
+							<th>글번호</th>
+							<th>제목</th>
+							<th>작성일</th>
+							<th>읽은횟수</th>
+						</tr>
 				  </thead>
 				  <tbody>
-				  <c:if test="${not empty fileboardList}">
 				  <c:forEach var="board" items="${fileboardList}">
 						  <tr class="table-info">
 							  <td>${board.fileBoard.postNo}</td>
@@ -62,17 +59,40 @@
 							  </td>
 						  </tr>
 				  </c:forEach>
-				  </c:if>
-				  <c:if test="${empty fileboardList}">
-					  <tr>
-						  <td colspan="4">아직 게시된 자료글이 없습니다.</td>
-					  </tr>
-				  </c:if>
 				  </tbody>
 			  </table>
-<%--			  <c:if test="${sid.equals('admin')}">--%>
+			  <c:if test="${sid.equals('admin')}">
 			  	<a href="${path1}/file/fileupload1.do" class="button is-primary">파일 자료 등록</a>
-<%--			  </c:if>--%>
+			  </c:if>
+			  <script>
+				  $(document).ready( function () {
+					  $('#myTable').DataTable({
+						  pageLength : 10,
+						  order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
+						  info: false,
+						  dom: 't<f>p',
+						  language: {
+							  emptyTable: '등록된 글이 없습니다.'
+						  }
+
+					  });
+				  } );
+				  $(document).ready(function() {
+					  $('.dataTables_paginate').css({
+						  'textAlign':'left',
+						  'float': 'none',
+						  'margin-top':'10px',
+					  });
+					  $('.dataTables_filter').css({
+						  'float': 'left',
+						  'margin-top':'14px',
+						  'margin-right':'280px'
+					  });
+					  $('#myTable_paginate').css({
+						  'margin-right':'120px'
+					  });
+				  });
+			  </script>
 		  </div>
 	    </div>
 	</div>

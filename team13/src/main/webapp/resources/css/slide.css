@@ -1,0 +1,103 @@
+* {
+    margin:0; /*브라우저 내 기본 설정값 초기화*/
+    padding: 0;/*브라우저 내 기본 설정값 초기화*/
+    box-sizing: border-box;
+}
+ul, li { /*ul, li의 리스트 스타일 제거*/
+    list-style: none;
+}
+/*슬라이드에 직접 적용되는 스타일*/
+[name="slide"] { display: none; } /*클래스 slidebox 내 name="slide"부분 */
+.slidebox {
+    max-width: 2000px;
+    width: 100%;
+    margin: 0 auto;
+}
+.slidebox img { /*자신의 넓이 이상으로 커지지 않도록 함, 반응형 사용 가능*/
+    max-width: 100%;
+}
+.slidebox .slidelist {
+    white-space: nowrap;
+    font-size:0; /*빈공간을 없애기 위함*/
+    overflow: hidden; /*초과해서 이미지가 나올 경우 나오지 않게 함*/
+}
+.slidebox .slideitem {
+    position: relative;
+    display: inline-block; /*세로 정렬을 가운데 맞추기 위함*/
+    vertical-align: middle;
+    width: 100%;
+    transition: all .35s; /*자연스러운 전환 속성을 위함*/
+}
+/*.slidebox .slideitem label {
+    position: absolute; !*자율 배치하는 값*!
+    z-index: 1; !*기본값 1*!
+    top: 50%;
+    transform: translateY(-50%); !*가운데 지정*!
+    padding: 20px;
+    border-radius: 50%; !*둥근 버튼 모양*!
+    cursor: pointer; !*마우스가 올라가면 커서가 포인터로 바뀌도록 함*!
+}*/
+label.left {
+    left: 20px;
+    background-color: white;
+    background-image:url('images/left-arrow.png');
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+label.right {
+    right: 20px;
+    background-color: white;/*강의에서는 #5f5f5f;*/
+    background-image:url('images/right-arrow.png');
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0); animation:slide01 10s infinite}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%); animation:slide02 10s infinite}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%); animation:slide03 10s infinite}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%); animation:slide04 10s infinite}
+
+@keyframes slide01 {
+    0% {left: 0%;} /*첫 번째 스크린*/
+    25% {left: 0%;} /*두 번째로 위치 이동*/
+    48% {left: -100%;} /*두 번째로 위치 이동, 두 번쨰 스크린*/
+    50% {left: -100%;}/*세 번째로 위치 이동*/
+    73%  {left: -200%;}/*세 번째로 위치 이동, 세 번쨰 스크린*/
+    75% {left: -200%;}/*네 번째로 위치 이동, 네 번째 스크린*/
+    98% {left: -300%;} /*네 번째 스크린*/
+    100% {left:0%} /*첫 번째 스크린 이동*/
+}
+@keyframes slide02 {
+    0% {left: 0%;} /*첫 번째 스크린*/
+    23% {left: 0%;}
+    25% {left: -100%;}
+    48% {left: -100%;}
+    50% {left: -200%;}
+    73%  {left: -200%;}
+    75% {left: 100%;}/*첫 스크린 이동*/
+    98% {left: 100%;} /*첫 스크린 이동*/
+    100% {left:0%}
+}
+@keyframes slide03 {
+    0% {left: 0%;} /*첫 번째 스크린*/
+    23% {left: 0%;}
+    25% {left: -100%;}
+    48% {left: -100%;}
+    50% {left: 200%;}
+    73%  {left: 200%;}
+    75% {left: 100%;}/*첫 스크린 이동*/
+    98% {left: 100%;} /*첫 스크린 이동*/
+    100% {left:0%}
+}
+@keyframes slide04 {
+    0% {left: 0%;} /*첫 번째 스크린*/
+    23% {left: 0%;}
+    25% {left: 300%;}
+    48% {left: 300%;}
+    50% {left: 200%;}
+    73%  {left: 200%;}
+    75% {left: 100%;}/*첫 스크린 이동*/
+    98% {left: 100%;} /*첫 스크린 이동*/
+    100% {left:0%}
+}
