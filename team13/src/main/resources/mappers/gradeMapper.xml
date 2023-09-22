@@ -5,7 +5,7 @@
 <mapper namespace="grade">
     <!-- 성적표 목록 -->
     <select id="gradeList" resultType="kr.co.teaspoon.dto.Grade">
-        select * from grade order by no desc
+        select * from grade order by no asc
     </select>
     <!-- 성적 상세보기 -->
     <select id="gradeDetail" resultType="kr.co.teaspoon.dto.Grade">

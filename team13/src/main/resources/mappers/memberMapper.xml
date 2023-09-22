@@ -45,8 +45,19 @@
         select id, pw, name from member where id = #{id}
     </select>
 
+    <!-- 회원 정보 조회 (비밀번호 찾기 할 때 필요)-->
+    <select id="selectMember"  resultType="kr.co.teaspoon.dto.Member">
+        select * from member where email = #{email}
+    </select>
 
+    <!-- 패스워드변경 -->
+    <update id = "pwUpdate" parameterType="kr.co.teaspoon.dto.Member">
+        update member set pw=#{pw} where email= #{email}
+    </update>
 
+    <update id="updateAuthStatus" parameterType="HashMap">
+        update member_list set status =1 where email=#{email} and authkey=#{authkey, jdbcType=VARCHAR}
+    </update>
 
   <!--  &lt;!&ndash; 내 작성글 리스트 &ndash;&gt;
     <select id="getWriteList" parameterType="String" resultType="BoardlistVO">

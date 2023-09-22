@@ -240,6 +240,7 @@
             display: flex;
             margin: 20px auto;
         }
+
         #msg {
             text-align: left;
             padding-top: 6px;
@@ -256,7 +257,9 @@
             padding: 0;
             margin-top: 4px;
             cursor: pointer;
-            box-shadow: 2px 3px 7px 0px #0000005e;
+            /*box-shadow: 2px 3px 7px 0px #0000005e;*/
+            font-weight: 550;
+            line-height: 32px;
         }
 
         #ck_btn{
@@ -270,6 +273,20 @@
         #content{
             width: 400px
         }
+
+        .hero-body a{
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 32px;
+            color: #333d4b;
+        }
+
+        .submit{
+            font-weight: 550;
+            line-height: 32px;
+        }
+
+
     </style>
 
     <link rel="stylesheet" href="${path}/css/ft.css">
@@ -277,9 +294,9 @@
 <body>
 <jsp:include page="../include/header.jsp"></jsp:include>
 <div class="wrap">
-    <section class="hero is-link">
-        <div class="hero-body has-text-centered is-size-3">
-            <a><strong>회원 가입</strong></a>
+    <section class="hero is-white is-medium">
+        <div class="hero-body has-text-centered">
+            <p class="title is-size-3">회원 가입</p>
         </div>
         <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
             <ul>
@@ -345,7 +362,7 @@
                     <div class="register_info">
                         <label>주소</label>
                         <input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="form-control" readonly>
-                        <button type="button" id="post_btn" onclick="findAddr()" class="button has-text-white is-link is-size-6">우편번호 검색</button>
+                        <button type="button" id="post_btn" onclick="findAddr()" class="button has-text-black is-link is-size-6">우편번호 검색</button>
                         <input type="text" name="addr1" id="addr1" placeholder="기본 주소 입력" class="form-control" required readonly/><br>
                         <input type="text" name="addr2" id="addr2" placeholder="상세 주소 입력" class="form-control" required /><br>
                     </div>
@@ -537,11 +554,8 @@
                         </div>
                     </div>
 
-
-
-
                     <div class="btn1">
-                        <button class="submit button is-link has-text-white" type="submit">가입 완료</button>
+                        <button class="submit button is-link has-text-black" type="submit">가입 완료</button>
                         <button class="reset button is-grey" type="reset">가입 취소</button>
                     </div>
 

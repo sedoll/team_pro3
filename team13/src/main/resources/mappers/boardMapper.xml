@@ -5,7 +5,7 @@
 <mapper namespace="board">
     <!-- 공지사항 목록 -->
     <select id="boardList" resultType="kr.co.teaspoon.dto.Board">
-        select * from board where lev = 0 order by resdate desc
+        select * from board where lev = 0 order by resdate asc
     </select>
     <!-- 글 상세보기 -->
     <select id="boardDetail" resultType="kr.co.teaspoon.dto.Board">

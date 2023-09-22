@@ -18,13 +18,12 @@
 <jsp:include page="../include/header.jsp"></jsp:include>
 <figure class="visual" id="vs1">
     <ul class="imgbox">
-        <li class="hero is-link">
+        <li class="hero is-white is-medium">
             <div class="hero-body has-text-centered">
-                <p class="title is-size-4">
+                <p class="title is-size-3">
                     성적표 수정
                 </p>
                 <p class="subtitle is-size-5">
-                    Medium subtitle
                 </p>
             </div>
         </li>

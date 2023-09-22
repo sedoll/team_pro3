@@ -302,7 +302,7 @@ CREATE TABLE grade(
 						  
 DROP TABLE grade;
 ​
-INSERT INTO grade VALUES(DEFAULT, '홍박사', 'kang', 90, 50, 50, 50, 50, '1학기 중간고사', '손흥민', default);
+INSERT INTO grade VALUES(DEFAULT, '홍길동', 'oh12345', 90, 50, 50, 50, 50, '1학기 중간고사', '이순신', default);
 
 -- 관리자 게시판 관리 테이블
 CREATE TABLE report (

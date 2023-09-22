@@ -20,12 +20,12 @@
     <jsp:include page="../include/header.jsp"></jsp:include>
     <figure class="visual" id="vs1">
         <ul class="imgbox">
-            <li class="hero is-medium is-link">
-                <div class="hero-body">
-                    <p class="title">
+            <li class="hero is-medium is-whtie">
+                <div class="hero-body has-text-centered">
+                    <p class="title is-size-3">
                         Medium hero
                     </p>
-                    <p class="subtitle">
+                    <p class="subtitle is-size-5">
                         Medium subtitle
                     </p>
                 </div>

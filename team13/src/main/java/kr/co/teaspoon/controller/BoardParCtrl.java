@@ -30,7 +30,7 @@ public class BoardParCtrl {
 
     @GetMapping("list.do")		// board/list.do
     public String getBoardList(HttpServletResponse response, Model model) throws Exception {
-        if(session.getAttribute("sid") != null &&("admin".equals(session.getAttribute("sid")) || session.getAttribute("job").equals("1"))) {
+        if(session.getAttribute("sid") != null &&("admin".equals(session.getAttribute("sid")) || 1 == (Integer) session.getAttribute("job"))) {
             List<Board> boardList = boardService.boardList();
             model.addAttribute("boardList", boardList);
             return "/boardPar/boardList";

@@ -33,11 +33,13 @@
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
 <!-- hero -->
-<section class="hero is-link is-medium">
+<section class="hero is-white is-medium">
     <div class="hero-body has-text-centered">
-        <ul>
-            <li class="title is-size-3"><strong>마이페이지</strong></li>
-        </ul>
+        <p class="title is-size-3">
+            성적표 상세보기
+        </p>
+        <p class="subtitle is-size-5">
+        </p>
     </div>
     <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
         <ul>
