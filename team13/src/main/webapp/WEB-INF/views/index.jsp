@@ -181,6 +181,7 @@
         <input type="radio" name="slide" id="slide02">
         <input type="radio" name="slide" id="slide03">
         <input type="radio" name="slide" id="slide04">
+
         <ul class="slidelist">
             <li class="slideitem">
                 <div>
@@ -194,14 +195,15 @@
             </li>
             <li class="slideitem">
                 <div>
-                    <a><img src="${path }/resources/img/index_1.png"></a>
+                    <a><img src="${path }/resources/img/index_3.png"></a>
                 </div>
             </li>
             <li class="slideitem">
                 <div>
-                    <a><img src="${path }/resources/img/index_2.png"></a>
+                    <a><img src="${path }/resources/img/index_4.png"></a>
                 </div>
             </li>
+
         </ul>
     </div>
 
