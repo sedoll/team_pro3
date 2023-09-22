@@ -160,36 +160,61 @@
 <br/>
 ​
 #  💻 화면 설계도
-🔹메인페이지 - 로그인 전  
-![01_메인페이지 - 로그인 전](https://github.com/kuyejin/project2/assets/65212187/434f8d36-330b-43d7-bdbf-6ceb596c8239)
+🔹메인페이지🔹<
+![main_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/413df33a-5ef3-4258-92f7-c82e43825393)
 
-🔹header - 로그인 전
-![01_header - 로그인 전](https://github.com/kuyejin/project1/assets/65212187/f0f5b725-4483-4afe-b869-f485e7dbc848)
+🔹FAQ🔹
+![FAQ_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/a54eea46-bc4e-4e7f-bf4d-2cb390efd69d)
 
 
-🔹header - 로그인 후
-![02_header - 로그인 후](https://github.com/kuyejin/project2/assets/65212187/5141bf5b-897c-45fa-b1c3-6e0f155ab8e8)
+🔹QnA🔹
+![QnA_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/e4157b41-81bd-4ad3-aba6-d27fe94a68aa)
 
-🔹header - 관리자
-![03_header - 관리자](https://github.com/kuyejin/project2/assets/65212187/4dd7885f-0144-45c9-a2f4-123fd49e5dbf)
+🔹QnA글쓰기 🔹
+![QnA글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/c0c20712-9935-4cf9-8ba8-cefb8aea418e)
 
-🔹footer
-![04_footer](https://github.com/kuyejin/project2/assets/65212187/a916474e-54b7-47c8-b387-378678b7aedc)
-🔹로그인
-![05_로그인](https://github.com/kuyejin/project2/assets/65212187/5b955dfe-79d7-4867-beb7-800b55d94721)
-🔹회원가입
-![06_회원가입](https://github.com/kuyejin/project2/assets/65212187/7de65506-14e7-4c08-96a9-e514be158b39)
-🔹마이페이지
-![07_마이페이지](https://github.com/kuyejin/project2/assets/65212187/3df43261-deab-45ad-b0bc-2dc98840ed69)
-🔹초등
-![08_초등](https://github.com/kuyejin/project2/assets/65212187/cabc3923-2006-4275-9889-401235ba5757)
-🔹상품상세
-![09_상품 상세](https://github.com/kuyejin/project2/assets/65212187/40802809-1d6a-45d8-a88b-4972fe9d2e0d)
-🔹상품 구매
-![10_상품 구매](https://github.com/kuyejin/project2/assets/65212187/6b9fe231-3d31-4c5c-80b7-05a0667d5d6b)
-🔹관리자 페이지
-![11_관리자 페이지](https://github.com/kuyejin/project2/assets/65212187/e2172851-db55-4596-a48b-db389fe9e143)
-🔹고객센터
-![12_고객센터](https://github.com/kuyejin/project2/assets/65212187/bcb8577d-e8ae-48d2-83de-f490154d1879)
-🔹장바구니
-![13_장바구니](https://github.com/kuyejin/project2/assets/65212187/69f0651d-7d08-443b-b616-a59d671fa569)
+🔹QnA상세보기🔹
+![QnA상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/3dd6217a-ee97-4b16-b44b-cdbd72901e9f)
+
+
+🔹공지사항 🔹
+![공지사항_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/3ebba92c-c0b2-4b5a-981d-6b3b25c1cf46)
+🔹공지사항글쓰기 🔹
+![공지사항글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/e9450127-913b-4f6d-8574-e3114ed6d43d)
+🔹공지사항상세보기🔹
+![공지사항상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/b61484fc-1783-4122-a023-05a569acc75b)
+🔹관리자페이지개인정보변경🔹
+![관리자페이지개인정보변경_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/2642b18c-3434-40f9-94f8-26818ae7c87e)
+🔹관리자페이지게시판관리🔹
+![관리자페이지게시판관리_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/dd636ac3-b219-4072-bef3-798014ff3cab)
+🔹관리자페이지댓글관리🔹
+![관리자페이지댓글관리_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/9b81d2ee-3262-4650-a994-de04a028cb2a)
+🔹관리자페이지회원관리🔹
+![관리자페이지회원관리_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/382d5979-9985-49a4-9f38-31059febb348)
+🔹교육정보🔹
+![교육정보_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/08daf619-c187-41c6-8317-5842e74e77de
+🔹교육정보글쓰기🔹
+![교육정보글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/42fce1d4-6e63-4080-9267-578a1ebd7161)
+
+🔹교육정보상세보기🔹
+![교육정보상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/1cbe9435-1766-41ee-b2d9-6ab5cce9feda)
+🔹대입정보🔹
+![대입정보_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/6340e04b-fb40-431a-8010-83f4917cd3d0)
+🔹대입정보글쓰기🔹
+![대입정보글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/92809491-54ad-4c97-b33f-ff478a320792)
+🔹대입정보상세보기🔹
+![대입정보상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/5475f5aa-c03d-400e-9794-a1d0a45a4d4c)
+🔹마이페이지🔹
+![마이페이지_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/39ac5319-a370-421e-8e81-da0edfb0ef91)
+🔹마이페이지내가쓴글🔹
+![마이페이지내가쓴글_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/5c563d34-2dab-4790-a47e-3e652cf79f88)
+🔹마이페이지내가쓴댓글🔹
+![마이페이지내가쓴댓글_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/ea65dd53-2916-407e-afaa-299053970371)
+🔹자유게시판🔹
+![자유게시판_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/5ace4380-1eff-4687-a148-d63a191d6621)
+🔹자유게시판글쓰기🔹
+![자유게시판글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/d8ed8eec-b71e-4b8e-b72d-a7f1dc42c094)
+🔹자유게시판상세보기🔹
+![자유게시판상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/c8a0c81e-c354-40cc-aae1-b83c82090561)
+🔹회원가입🔹
+![회원가입_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/19f6cfe1-63f7-4de4-b23c-2590fb4f0cd1)
