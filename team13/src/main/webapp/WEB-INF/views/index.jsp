@@ -30,6 +30,11 @@
     <!--Favicon-->
     <link rel="shortcut icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="${path}/resources/theme/images/favicon.ico" type="image/x-icon">
+
+
+    <!-- 슬라이드 -->
+    <link href="${path}/resources/css/slide.css" rel="stylesheet">
+
     <style>
         * {
             font-family: 'NanumSquare' !important;
@@ -168,6 +173,45 @@
     <div class="columns">
         <img src="${path }/resources/img/new_main.png">
     </div>
+
+    <%--<div class="columns">
+        <img src="${path }/resources/img/index_1.png">
+    </div>--%>
+
+
+    <div class="slidebox">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+
+        <ul class="slidelist">
+            <li class="slideitem">
+                <div>
+                    <a><img src="${path }/resources/img/index_1.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <a><img src="${path }/resources/img/index_2.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <a><img src="${path }/resources/img/index_3.png"></a>
+                </div>
+            </li>
+            <li class="slideitem">
+                <div>
+                    <a><img src="${path }/resources/img/index_4.png"></a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+
+
 </section>
 <!-- /hero area -->
 <!-- 사이드 메뉴 -->
