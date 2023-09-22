@@ -91,10 +91,16 @@
 ​
 ## 1️⃣ 요구사항 분석
 🔹비회원🔹<br/>
+![비회원](https://github.com/kuyejin/chunjae_spring/assets/65212187/db16194d-4e56-4164-a154-1d55f1c37985)
 
 
 🔹회원🔹<br/>
-
+![슬라이드1](https://github.com/kuyejin/chunjae_spring/assets/65212187/ba34ccae-f793-4b7b-b154-25c9581631f6)
+![슬라이드2](https://github.com/kuyejin/chunjae_spring/assets/65212187/4f2be579-16ca-4103-90f8-be578acf06d4)
+![슬라이드3](https://github.com/kuyejin/chunjae_spring/assets/65212187/b6f6fd2e-6783-4ddd-95a0-04c7e3146def)
+![슬라이드4](https://github.com/kuyejin/chunjae_spring/assets/65212187/1a1e459e-5903-4159-a09e-1d1ba14c6d90)
+![슬라이드5](https://github.com/kuyejin/chunjae_spring/assets/65212187/5722b2bc-41cc-43e9-b7d1-571d9586807e)
+![슬라이드6](https://github.com/kuyejin/chunjae_spring/assets/65212187/54357058-1ccd-4d7c-acfc-494d3b377d24)
 
 🔹관리자🔹<br/>
 
@@ -103,7 +109,7 @@
 ## 2️⃣ 개념적 설계
 ​
 ### 🔹유즈케이스 (USE CASE)
-![usecase](https://github.com/kuyejin/project2/assets/65212187/b54639f8-0869-487b-95c3-02d256adddda)
+![usecasediagram13](https://github.com/kuyejin/chunjae_spring/assets/65212187/d417f51e-743d-42ef-ba62-bba7eb5ad132)
 ​
 ​
 ## 3️⃣ 논리적 설계
