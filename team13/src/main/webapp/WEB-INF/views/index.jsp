@@ -68,6 +68,9 @@
                     <a href="${path}/file/filelist1.do" class="navbar-item">
                         자료실
                     </a>
+                    <a href="${path}/news/list.do" class="navbar-item">
+                        뉴스
+                    </a>
                 </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable">

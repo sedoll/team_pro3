@@ -83,8 +83,6 @@ O
 src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 ]
 -src/main/webapp/WEB-INF/views/member/join.jsp,5\f\5f28de62260c434af076cc3364f45c928930ef88
-e
-5src/main/java/kr/co/teaspoon/controller/MenuCtrl.java,9\7\97f459fc2b5334543e581ee8d5fb29b1edb18bd8
 c
 3src/main/webapp/WEB-INF/views/board/boardDetail.jsp,f\6\f61f00f3ba1471098fc3f26606e73e5e0d86165e
 f
