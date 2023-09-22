@@ -49,17 +49,3 @@ e
 5src/main/java/kr/co/teaspoon/controller/NewsCtrl.java,7\a\7aaf6a879b8443731c517fae2581d96af98f9a05
 _
 /src/main/webapp/WEB-INF/views/news/newsList.jsp,7\3\732b45cb346b6456374cf171503bf44c7a9f8daf
-a
-1src/main/webapp/WEB-INF/views/admin/boardList.jsp,8\c\8c270eb705a20c2c65cc57b480df5efcac772731
-a
-1src/main/webapp/WEB-INF/views/admin/adminMain.jsp,1\1\11987007f17c316ce4e503545e640652b5e87d61
-f
-6src/main/java/kr/co/teaspoon/controller/AdminCtrl.java,3\1\3107823900a2421a2aeaca81c74ed4aa8fd97a58
-]
--src/main/webapp/resources/theme/css/style.css,f\1\f190868fa13c64abad502106969f223c9c8eff3a
-_
-/src/main/webapp/WEB-INF/views/menu/menuList.jsp,4\f\4f40af62e820fa0bf1ab9606ebcb26720d8e40c2
-W
-'src/main/webapp/WEB-INF/views/index.jsp,3\0\305b3bb8194d08e1e32b17ac5f1d53c1cf0118c1
-_
-/src/main/webapp/resources/css/header/header.css,6\d\6dbb09895cf384546318fa746bfb95d07e15c8f1
