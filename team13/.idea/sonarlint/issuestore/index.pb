@@ -43,8 +43,6 @@ Y
 )src/main/java/kr/co/teaspoon/dto/Qna.java,3\7\378d9022e8d51a03a786dac4a76661383f8f1e05
 [
 +src/main/java/kr/co/teaspoon/util/Week.java,7\c\7c77d56bdd820c1a79cb52e50a50641d158d330e
-_
-/src/main/webapp/WEB-INF/views/menu/menuList.jsp,4\f\4f40af62e820fa0bf1ab9606ebcb26720d8e40c2
 n
 >src/main/webapp/WEB-INF/views/member/myPage/memberWritten2.jsp,e\8\e896099edfa1a7e2b401753b061b2d3d3671959d
 k

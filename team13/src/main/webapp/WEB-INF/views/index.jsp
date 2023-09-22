@@ -33,9 +33,13 @@
 
 
     <!-- 슬라이드 -->
-    <link href="${path}/resources/css/slide.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
     <style>
+        .swiper {
+            z-index: 2;
+        }
+
         * {
             font-family: 'NanumSquare' !important;
         }
@@ -171,46 +175,57 @@
 <!-- hero area -->
 <section class="hero-area has-background-primary" id="parallax" >
     <div class="columns">
-        <img src="${path }/resources/img/new_main.png">
+        <img src="${path }/resources/img/new_main3.png">
     </div>
 
     <%--<div class="columns">
         <img src="${path }/resources/img/index_1.png">
     </div>--%>
 
-
-    <div class="slidebox">
-        <input type="radio" name="slide" id="slide01" checked>
-        <input type="radio" name="slide" id="slide02">
-        <input type="radio" name="slide" id="slide03">
-        <input type="radio" name="slide" id="slide04">
-
-        <ul class="slidelist">
-            <li class="slideitem">
-                <div>
-                    <a><img src="${path }/resources/img/index_1.png"></a>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <a><img src="${path }/resources/img/index_2.png"></a>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <a><img src="${path }/resources/img/index_3.png"></a>
-                </div>
-            </li>
-            <li class="slideitem">
-                <div>
-                    <a><img src="${path }/resources/img/index_4.png"></a>
-                </div>
-            </li>
-
-        </ul>
+    <!-- slidebar banner -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="${path }/resources/img/index_1.png" alt="메인페이지 배너1" style="width: 100vw">
+            </div>
+            <div class="swiper-slide">
+                <img src="${path }/resources/img/index_2.png" alt="메인페이지 배너2" style="width: 100vw">
+            </div>
+            <div class="swiper-slide">
+                <img src="${path }/resources/img/index_3.png" alt="메인페이지 배너3" style="width: 100vw">
+            </div>
+            <div class="swiper-slide">
+                <img src="${path }/resources/img/index_4.png" alt="메인페이지 배너4" style="width: 100vw">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
     </div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true, // 무한 루프
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
 </section>
 <!-- /hero area -->
