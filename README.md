@@ -69,7 +69,7 @@
 **✔ 언제든 자유롭게 의견내기, 단 강요는 ��‍♂️**   
 ​
 ✔   [![](https://camo.githubusercontent.com/5f4f9e864500236994df27a0204caec7543b79162b3e45e9edaecc499ad2186d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f74696f6e2d3030303030303f7374796c653d666c61742d726f756e64266c6f676f3d4e6f74696f6e266c6f676f436f6c6f723d7768697465)](https://www.notion.so/2-61e48e6a682e4d7191fc2993b91b0665)
-&nbsp;&nbsp;**개발에 관련된 모든 자료를 공유하며 과정를 기록합니다.**
+&nbsp;&nbsp;**개발에 관련된 모든 자료를 공유하며 과정를 기록합니다.** <br/>
 ​
 ✔ <img src="https://img.shields.io/badge/slack-4A154B?style=flat&logo=slack&logoColor=white"/></a>
 &nbsp;&nbsp;**개발 과정에서 발생하는 모든 이슈를 공유하며 협력하여 해결할 수 있도록 합니다.**
@@ -84,27 +84,13 @@
 ​
 ## 1️⃣ 요구사항 분석
 🔹비회원🔹<br/>
-![비회원_요구분석정의서](https://github.com/kuyejin/project2/assets/65212187/ac63286a-8802-41a0-8277-c995c54d6def)  
+
 
 🔹회원🔹<br/>
-![회원 - 결제,고객센터](https://github.com/kuyejin/project2/assets/65212187/ab3b25ef-4b36-4ed7-ba79-7f6529a804f8)
-![회원 - 마이페이지 (장바구니)](https://github.com/kuyejin/project2/assets/65212187/b692fce2-df31-4374-a8ef-68e6c7e58429)
-![회원 - 마이페이지(상품목록)](https://github.com/kuyejin/project2/assets/65212187/eca570e4-1f63-4379-9500-a22c00d1e0e5)
-![회원 - 마이페이지(상품상세보기)](https://github.com/kuyejin/project2/assets/65212187/ce8e610d-b4ef-41ff-9e3f-07b0b31d3099)
-![회원 - 마이페이지(찜)](https://github.com/kuyejin/project2/assets/65212187/d055f826-fb78-409f-b100-9403112e5799)
-![회원 - 마이페이지(후기1)](https://github.com/kuyejin/project2/assets/65212187/890bdd08-e737-4d9b-aacf-5074fbbebf26)
-![회원 - 마이페이지(후기2)](https://github.com/kuyejin/project2/assets/65212187/20f517ef-1179-4dc8-8ba4-c41662c767ff)
-![회원 - 마이페이지](https://github.com/kuyejin/project2/assets/65212187/d522a0bf-c63b-4f64-a402-0347a9cc1cea)
-![회원_로그인,로그아웃](https://github.com/kuyejin/project2/assets/65212187/6e8f2f7d-2281-447b-98d6-8ea6f99544aa)  
+
 
 🔹관리자🔹<br/>
-![관리자_게시판관리](https://github.com/kuyejin/project2/assets/65212187/ddb0c10b-f434-4383-bb78-98d885bee1ac)
-![관리자_결제관리](https://github.com/kuyejin/project2/assets/65212187/1cd8293a-d11f-46dc-8564-7272309f4d42)
-![관리자_배송관리](https://github.com/kuyejin/project2/assets/65212187/98165b8d-b234-431d-9ece-949d3e54b453)
-![관리자_상품관리](https://github.com/kuyejin/project2/assets/65212187/e606c54d-cc4a-468e-a0b6-5b03d7626fcc)
-![관리자_상품관리2](https://github.com/kuyejin/project2/assets/65212187/e8bb5047-9b1b-406a-9134-0c13780da461)
-![관리자_주문관리](https://github.com/kuyejin/project2/assets/65212187/4d420552-abb5-4f29-8483-931081457255)
-![관리자_회원관리](https://github.com/kuyejin/project2/assets/65212187/04efffa3-a5b2-4d69-be95-213bfd411165)
+
 <br/><br/>
 ​
 ## 2️⃣ 개념적 설계
@@ -114,19 +100,58 @@
 ​
 ​
 ## 3️⃣ 논리적 설계
-![image](https://github.com/kuyejin/project2/assets/65212187/273470b1-3e6f-45b8-a44d-a7fda653200b)
-![image](https://github.com/kuyejin/project2/assets/65212187/9d34eac3-a6a9-4b18-b593-0e95923ca0f6)
-![image](https://github.com/kuyejin/project2/assets/65212187/3223fac3-4ab7-4294-b1c0-6894136527fc)
-![image](https://github.com/kuyejin/project2/assets/65212187/75923a7c-7cb5-4c4d-9246-1bce99531779)
+🔹Board🔹<br/>
+![board](https://github.com/kuyejin/chunjae_spring/assets/65212187/c4a13994-ba48-46a6-9f2c-f4689a1af54d) <br/>
+🔹faq🔹<br/>
+![faq](https://github.com/kuyejin/chunjae_spring/assets/65212187/20345f09-979c-42e2-8b31-0bed9f256c2d) <br/>
+🔹fileboard🔹<br/>
+![fileboard](https://github.com/kuyejin/chunjae_spring/assets/65212187/af002b50-ebbb-4aed-b432-6d2a5febfeea)<br/>
+🔹fileinfo🔹<br/>
+![fileinfo](https://github.com/kuyejin/chunjae_spring/assets/65212187/fdbafc96-c00e-4db1-bcc2-90b8014c39f1) <br/>
+🔹fileobj🔹<br/>
+![fileobj](https://github.com/kuyejin/chunjae_spring/assets/65212187/dc8ea64c-d739-4d06-94d6-e7f60c9c2f20) <br/>
+🔹grade🔹<br/>
+![grade](https://github.com/kuyejin/chunjae_spring/assets/65212187/e9aadce7-117b-4b29-9718-a3ba0e35f68f) <br/>
+🔹info1🔹<br/>
+![info1](https://github.com/kuyejin/chunjae_spring/assets/65212187/7b37d731-07c4-47a7-854f-2c7ee1d34702)<br/>
+🔹member🔹<br/>
+![member](https://github.com/kuyejin/chunjae_spring/assets/65212187/211add1a-fd2e-4a4b-9822-8137e003d601)<br/>
+🔹notice🔹<br/>
+![notice](https://github.com/kuyejin/chunjae_spring/assets/65212187/dd20afd1-c961-4342-94c0-cb7220e64478)<br/>
+🔹qna🔹<br/>
+![qna](https://github.com/kuyejin/chunjae_spring/assets/65212187/dff12e45-1f67-4c78-b626-a076b00b0add)<br/>
+🔹school🔹<br/>
+![school](https://github.com/kuyejin/chunjae_spring/assets/65212187/2c56a066-8d9d-43c9-9114-0cb8023bd473)<br/>
+
+
+
 ​
 ## 4️⃣ 물리적 설계 － ＥＲＤ
-![ERD(shop)](https://github.com/kuyejin/project2/assets/65212187/684ee9da-6d5a-4863-adc8-479b904db03a)
+![erd](https://github.com/kuyejin/chunjae_spring/assets/65212187/b2da6c68-57e5-4d10-b211-ad1b350afda1)
 ​
 <br/>
 <br/>
 ​
 # 📐  클래스 다이어그램
-![class다이어그램](https://github.com/kuyejin/project2/assets/65212187/c7577e2c-3c6a-4b91-87f6-5a3e8fdc25c9)
+🔹Board🔹<br/>
+![Board](https://github.com/kuyejin/chunjae_spring/assets/65212187/cceb988f-dc49-4fb8-8f03-3032b230f767)<br/>
+🔹Faq🔹<br/>
+![Faq](https://github.com/kuyejin/chunjae_spring/assets/65212187/73f3dede-57e4-44bd-918d-4a8b11b22334)<br/>
+🔹FileDownLoad🔹<br/>
+![FileDownLoad](https://github.com/kuyejin/chunjae_spring/assets/65212187/784d9c50-e129-4460-b0c5-0a34b6aa1153)<br/>
+🔹Grade🔹<br/>
+![Grade](https://github.com/kuyejin/chunjae_spring/assets/65212187/37e7b453-bba1-4361-bd0c-29de66128c6e)<br/>
+🔹Info🔹<br/>
+![Info](https://github.com/kuyejin/chunjae_spring/assets/65212187/56493680-1ffd-4574-8c2c-84f78ad7bebd)<br/>
+🔹Member🔹<br/>
+![Member](https://github.com/kuyejin/chunjae_spring/assets/65212187/c44e79fc-0b94-459f-a5e1-267968279df4)<br/>
+🔹Menu🔹<br/>
+![Menu](https://github.com/kuyejin/chunjae_spring/assets/65212187/df5cbd25-f955-4cfc-956f-084d3bcad9cb)<br/>
+​🔹Notice🔹<br/>
+![Notice](https://github.com/kuyejin/chunjae_spring/assets/65212187/d2676f26-c899-46c6-aa36-e62013e5751d)<br/>
+🔹Qna🔹<br/>
+![Qna](https://github.com/kuyejin/chunjae_spring/assets/65212187/88bb6afe-467b-492b-ac83-81aad2a9f6a1)
+<br/>
 ​
 <br/>
 ​
