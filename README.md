@@ -2,6 +2,8 @@
 <br/>
 
 
+
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ​
 <br/><br/>
@@ -19,7 +21,7 @@
  <br/> <br/>
  
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔹 TSPOON 🔹에 대해 자세히 설명해 드릴게요!
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[🙋‍♀️  CLIKE ME  🙋](https://drive.google.com/file/d/17pVcjRG1zmZlccVw1lUjXmn67raB-5W5/view?usp=drive_link)
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[🙋‍♀️  CLIKE ME  🙋]
 <br/>
   
 ​
@@ -28,11 +30,11 @@
   
 ​
 # 👤 팀원 소개
-백준철 - **리더**  <br/>
-구예진 -  **팀원** <br/>
-신승원 -  **팀원** <br/>
-박진권 -  **팀원** <br/>
-오세훈 - **깃마스터**  <br/>
+백준철 - **리더**    &nbsp;&nbsp;관리자 관련 기능 구현, 게시글 신고 기능 구현 <br/>
+구예진 -  **팀원**   &nbsp;&nbsp;회원 관련 기능 구현, 이메일 인증 기능 구현<br/>
+신승원 -  **팀원**   &nbsp;&nbsp;템플릿 및 전체 CSS 담당, 성적표 게시판 기능 구현 <br/>
+박진권 -  **팀원**   &nbsp;&nbsp;FAQ 게시판 기능 구현, 공지사항 기능 구현<br/>
+오세훈 - **깃마스터**    &nbsp;&nbsp;급식 API 관련 기능 구현, 게시판 담당<br/>
 ​
 <br/>
 ​
@@ -42,7 +44,6 @@
 <br/>
 ​
 #  🔨 개발스택
-​
 ### 주요언어
 <img  src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> <img  src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img  src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
@@ -79,6 +80,12 @@
 <br/>
 ​
 ​
+
+# 📅 WBS
+![분석 설계](https://github.com/kuyejin/chunjae_spring/assets/65212187/87602aeb-99c9-47c3-ad5f-a1f17cc7da9d)
+![개발 테스트](https://github.com/kuyejin/chunjae_spring/assets/65212187/7041285b-6a61-4944-b7e7-c180728101b8)
+
+
 ​
 #  📊 데이터베이스 설계
 ​
