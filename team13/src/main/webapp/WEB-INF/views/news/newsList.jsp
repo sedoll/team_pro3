@@ -12,6 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>뉴스</title>
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,7 +39,7 @@
             <h2>뉴스 검색</h2>
             <form action="${path}/news/list.do" method="post">
                 <input type="text" name="search" id="search" class="input" placeholder="뉴스 제목 입력" required autofocus>
-                <input class="button is-link" type="submit" value="확인">
+                <input class="button is-link is-outlined" type="submit" value="확인">
             </form>
             <hr>
             <article class="media">

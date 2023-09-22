@@ -10,9 +10,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자유게시판 목록</title>
+    <title>성적표 목록</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <!-- 헤더 부분 인클루드 -->
@@ -54,10 +60,10 @@
                         </td>
                         <td colspan="2">
                             <c:if test="${sid == grade.pid || job == 2 || job == 0}">
-                                <a href="${path}/grade/gradedetail.do?no=${grade.no}" class="button is-small">성적 상세보기</a>
+                                <a href="${path}/grade/gradedetail.do?no=${grade.no}" class="button is-black is-outlined">상세보기</a>
                             </c:if>
                             <c:if test="${job == 2  || job == 0}">
-                                <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-small">성적 삭제</a>
+                                <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적 삭제</a>
                             </c:if>
                         </td>
                     </tr>
@@ -66,7 +72,7 @@
             </table>
             <c:if test='${job == 2 || job == 0}'>
             <div class="button-group">
-                <a class="button" href="${path}/grade/gradeinsert.do">글쓰기</a>
+                <a class="button is-link is-outlined" href="${path}/grade/gradeinsert.do">글쓰기</a>
             </div>
             </c:if>
             <script>

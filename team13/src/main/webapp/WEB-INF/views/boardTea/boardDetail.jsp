@@ -106,12 +106,6 @@
         }
 
 
-        .title {
-            text-align: left;
-            font-weight: bold;
-        }
-
-
 
         .tb2{
             width: 1200px;
@@ -234,6 +228,16 @@
             position: absolute;
             font-weight: bold;
         }
+
+        .item4 .button{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -262,14 +266,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <c:if test="${dto.author eq sid && not empty sid}">
-                                <a href="${path}/boardTea/edit.do?bno=${dto.bno}" class="inbtn">수정</a>
-                                </c:if>
+                                <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
+                                <a href="${path}/boardTea/delete.do?bno=${dto.bno}" class="button is-danger is-outlined" >삭제</a>
+                               </c:if>
                             </td>
                             <td>
-                                <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
-                                <a href="${path}/boardTea/delete.do?bno=${dto.bno}" class="inbtn delete_btn" >삭제</a>
-                               </c:if>
+                                <c:if test="${dto.author eq sid && not empty sid}">
+                                    <a href="${path}/boardTea/edit.do?bno=${dto.bno}" class="button is-link is-outlined">수정</a>
+                                </c:if>
                             </td>
                             <td>${dto.author}</td>
                             <td>${dto.resdate}</td>
@@ -286,7 +290,9 @@
                     </tr>
                     <c:if test="${not empty sid}">
                         <tr >
-                            <td colspan="5"style="text-align: right" ><button class="button is-danger is-hovered" onclick="openReportPopup()">게시글 신고</button></td>
+                            <td colspan="5"style="text-align: right" >
+                                <button class="button is-danger is-hovered" onclick="openReportPopup()">
+                                    <img src="${path1}/resources/img/report.png" alt="!" style="height: 20px; margin-right: 6px">신고</button></td>
                         </tr>
                     </c:if>
                     </tbody>
@@ -309,8 +315,8 @@
                             <td class="item3">${lev.resdate}</td>
                             <td class="item4">
                                 <c:if test="${sid eq lev.author || sid eq 'admin'}">
-                                    <a href="${path}/boardTea/edit.do?bno=${lev.bno}" class="inbtn">수정</a>
-                                    <a href="${path}/boardTea/delete.do?bno=${lev.bno}" class="inbtn delete_btn"> 삭제 </a>
+                                    <a href="${path}/boardTea/edit.do?bno=${lev.bno}" class="button is-small is-link is-outlined is-rounded">수정</a>
+                                    <a href="${path}/boardTea/delete.do?bno=${lev.bno}" class="button is-small is-danger is-rounded is-outlined"> 삭제 </a>
                                 </c:if>
                             </td>
                         </tr>
@@ -320,7 +326,7 @@
                 <script>
                     function openReportPopup() {
                         // 팝업 창의 크기 및 위치를 지정합니다. 필요에 따라 조절할 수 있습니다.
-                        let width = 400;
+                        let width = 550;
                         let height = 300;
                         let left = (screen.width/2) - (width/2);
                         let top = (screen.height/2) - (height/2);
@@ -357,7 +363,7 @@
                         <tbody>
                         <tr>
                             <c:if test="${not empty sid}">
-                                <th>${sid}</th>
+                                <th class="has-text-centered">${sid}</th>
                                 <th><textarea name="content" id="content" cols="100" rows="5" placeholder="리뷰 작성" required ></textarea></th>
                                 <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
                                 <input type="hidden" name="bno" value="${dto.bno}" readonly>

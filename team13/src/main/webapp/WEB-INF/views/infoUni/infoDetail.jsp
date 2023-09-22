@@ -228,6 +228,10 @@
             position: absolute;
             font-weight: bold;
         }
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -250,22 +254,22 @@
                 <table class="tb1">
                     <thead>
                         <tr class="title">
-                            <th colspan="5">${dto.title}</th>
+                            <th colspan="5" style="width: 10%">${dto.title}</th>
                         </tr>
                         <tr>
-                            <td>
+                            <td style="width: 8%; float: left; text-align: left">
                                 <c:if test="${dto.author eq sid && not empty sid}">
                                 <a href="${path}/infoUni/edit.do?bno=${dto.bno}" class="button is-link is-outlined">수정</a>
                                 </c:if>
                             </td>
-                            <td>
+                            <td style="width: 50%">
                                 <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
-                                <a href="${path}/infoUni/delete.do?bno=${dto.bno}" class="button is-danger is-notmall is-outlined" >삭제</a>
+                                <a href="${path}/infoUni/delete.do?bno=${dto.bno}" class="button is-danger is-outlined" >삭제</a>
                                </c:if>
                             </td>
-                            <td>${dto.author}</td>
-                            <td>${dto.resdate}</td>
-                            <td>조회수 : ${dto.cnt}</td>
+                            <td style="width: 10%">${dto.author}</td>
+                            <td style="width: 20%">${dto.resdate}</td>
+                            <td style="width: 10%">조회수 : ${dto.cnt}</td>
                         </tr>
                     </thead>
                     <tbody>

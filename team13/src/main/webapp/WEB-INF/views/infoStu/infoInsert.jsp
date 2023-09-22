@@ -15,6 +15,12 @@
     <jsp:include page="../include/head.jsp"></jsp:include>
     <!-- <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script> -->
     <script type="text/javascript" src="${path }/resources/ckeditor/ckeditor.js"></script>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">

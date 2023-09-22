@@ -8,7 +8,7 @@
     <!-- /web/member/login.jsp -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원 정보수정</title>
+    <title>성적 입력</title>
     <jsp:include page="../include/head.jsp"></jsp:include>
     <style>
         /* 본문 영역 스타일 */
@@ -249,6 +249,11 @@
             width: 400px
         }
 
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+
 
     </style>
 </head>
@@ -313,13 +318,13 @@
 
                         <div class="register_info">
                             <label>담당 선생님 성함</label>
-                            <input type="text" name="tname" id="tname" value="${member.name}" class="indata"  required/>
+                            <input type="text" name="tname" id="tname" value="${member.name}" class="indata" placeholder="선생님 성함 입력"  required/>
                         </div>
 
 
                         <div class="btn1">
-                            <button class="submit button is-link has-text-black" type="submit"> 성적표 등록</button>
-                            <button class="reset button is-grey" type="reset">작성 취소</button>
+                            <button class="submit button is-link is-outlined" type="submit"> 성적표 등록</button>
+                            <button class="reset button is-danger is-outlined" type="reset">작성 취소</button>
                         </div>
 
 

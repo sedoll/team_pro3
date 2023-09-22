@@ -13,6 +13,12 @@
     <title>QNA 수정하기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -55,8 +61,8 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="submit button is-info" value="글 수정" >
-                                <a class="button is-danger" href="${path }/qna/list.do">글 목록</a>
+                                <input type="submit" class="submit button is-link is-outlined" value="글 수정" >
+                                <a class="button is-black is-outlined" href="${path }/qna/list.do">글 목록</a>
                             </td>
                         </tr>
                         </tbody>

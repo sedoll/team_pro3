@@ -15,22 +15,13 @@
     <title>관리자 페이지</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+
 </head>
 <body>
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
-<section class="hero is-medium is-white">
-    <div class="hero-body has-text-centered">
-        <p class="title is-size-3">
-            관리자 페이지
-        </p>
-        <p class="subtitle">
 
-        </p>
-    </div>
-</section>
-
-<div class="container">
+<div class="container" style="top: 100px">
     <div class="columns">
         <jsp:include page="./adminMenu.jsp"></jsp:include>
 
@@ -42,14 +33,14 @@
                     <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
                 </ul>
             </nav>
-            <section class="hero is-info welcome is-small">
+            <section class="hero is-white welcome is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title">
-                            Hello, Admin.
+                            어서오세요, 관리자님
                         </h1>
                         <h2 class="subtitle">
-                            I hope you are having a great day!
+                            관리자페이지
                         </h2>
                     </div>
                 </div>
@@ -100,18 +91,18 @@
                                 <table class="table is-fullwidth is-striped">
                                     <tbody>
                                     <c:forEach items="${boardList }" var="board" varStatus="status">
-                                    <tr>
-                                        <td>
-                                            <span class="icon-text">
-                                              <span class="icon">
-                                                <i class="fas fa-home" style="padding-top: 8px"><img src="${path}/resources/img/alert.png"></i>
+                                        <tr style="line-height: 22px;">
+                                            <td style="line-height: 22px; padding-left:10px; vertical-align: middle; border: none">
+                                            <span class="icon-text" style="line-height: 22px;padding:0; margin: 0">
+                                              <span class="icon" style="line-height: 22px;padding:0; margin: 0">
+                                                <i class="fas fa-home" style="padding-top: 8px;height: 20px"><img src="${path}/resources/img/alert.png" width="20px" height="20px"></i>
                                               </span>
-                                                <span><strong> [${board.reason } 신고]</strong> 제목 : ${board.title}</span>
+                                                <span style="font-weight: bold; padding-bottom: 10px;position: absolute"> [${board.reason } 신고]</span><span style="position: relative"> 제목 : ${board.title}</span>
                                             </span>
-                                        </td>
+                                            </td>
 
-                                        <td class="level-right"><a class="button is-small is-primary" href="${path}/${board.board_type}/detail.do?bno=${board.bno }">상세보기</a></td>
-                                    </tr>
+                                            <td class="level-right" style="line-height: 22px; margin-bottom: 0; padding-bottom: 14px; border: none"><a class="button is-small is-link is-outlined" style="margin-top: 10px " href="${path}/${board.board_type}/detail.do?bno=${board.bno }">상세보기</a></td>
+                                        </tr>
                                     </c:forEach>
                                     </tbody>
                                 </table>
@@ -156,10 +147,7 @@
     </div>
 </div>
 
-
-<footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
-</footer>
 </body>
 </html>
