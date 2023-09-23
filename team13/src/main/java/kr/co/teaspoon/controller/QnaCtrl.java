@@ -105,7 +105,7 @@ public class QnaCtrl {
         dto.setBno(Integer.parseInt(request.getParameter("bno")));
         dto.setContent(request.getParameter("content"));
         qnaService.commentInsert(dto);
-        return "redirect:list.do";
+        return "redirect:detail.do?bno="+dto.getBno();
     }
 
     @GetMapping("delete.do")
