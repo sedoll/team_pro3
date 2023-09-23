@@ -109,8 +109,8 @@
 ## 2️⃣ 개념적 설계
 ​
 ### 🔹유즈케이스 (USE CASE)
-![usecasediagram13](https://github.com/kuyejin/chunjae_spring/assets/65212187/d417f51e-743d-42ef-ba62-bba7eb5ad132)
-​
+​![usecasediagram13](https://github.com/sedoll/team_pro3/assets/132269367/8c5dd11e-08a5-416c-9ea9-96c0928a8cd4)
+
 ​
 ## 3️⃣ 논리적 설계
 🔹Board🔹<br/>
