@@ -367,7 +367,7 @@
                         <tr>
                             <c:if test="${not empty sid}">
                                 <th class="has-text-centered">${sid}</th>
-                                <th><textarea name="content" id="content" cols="100" rows="5" placeholder="리뷰 작성" required ></textarea></th>
+                                <th><textarea name="content" id="content" cols="100" rows="5" placeholder="댓글 작성" required ></textarea></th>
                                 <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
                                 <input type="hidden" name="bno" value="${dto.bno}" readonly>
                                 <input type="hidden" name="id" value="${sid}" readonly>

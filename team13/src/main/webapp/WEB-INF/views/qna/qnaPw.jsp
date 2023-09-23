@@ -32,7 +32,7 @@
                         QnA
                     </p>
                     <p class="subtitle is-size-5">
-                        글쓰기
+                        비밀번호 입력
                     </p>
                 </div>
             </li>

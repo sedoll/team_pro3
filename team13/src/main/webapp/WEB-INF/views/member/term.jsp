@@ -157,14 +157,14 @@
                     <ul class="join_type">
                         <li class="frontfile">
                             <figure class="image front" style="width: 300px; height: 300px">
-                            <img class="is-rounded" src="${path}/resources/img/ogu4.png" alt="학부모">
+                            <img class="is-rounded" src="${path}/resources/img/mother2.png" alt="학부모">
                             </figure>
                             <input type="radio" name="job" value="1" id="stu" checked class="term-radio1">
                             <label for="stu">학부모</label><br>
                         </li>
                         <li class="beforefile">
                             <figure class="image before" style="width: 300px; height: 300px">
-                            <img class="is-rounded" src="${path}/resources/img/ogu7.png" alt="교사">
+                            <img class="is-rounded" src="${path}/resources/img/teacher_icon2.png" alt="교사">
                             </figure>
                                 <input type="radio" name="job" value="2" id="tea" class="term-radio2">
                             <label for="tea">교사</label><br>
