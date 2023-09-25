@@ -38,6 +38,9 @@
                     <a href="${path2}/file/filelist1.do" class="navbar-item">
                         자료실
                     </a>
+                    <a href="${path2}/news/list.do" class="navbar-item">
+                        뉴스
+                    </a>
                 </div>
             </div>
 
@@ -92,7 +95,7 @@
         <!-- header menu end -->
         <div class="navbar-end">
             <div class="navbar-item">
-                <div>
+                <div style="padding-right: 10px">
                     <c:if test="${not empty sid}">
                         ${sid} 회원님 환영합니다.
                     </c:if>

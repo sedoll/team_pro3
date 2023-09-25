@@ -82,10 +82,10 @@
          }
         .tb1 thead td:nth-child(3) {
             font-weight: 600;
-            width: 62%;
+            width: 52%;
         }
         .tb1 thead td:nth-child(4) {
-            width: 10%;
+            width: 20%;
         }
         .tb1 thead td:nth-child(5) {
             width: 8%;
@@ -106,10 +106,6 @@
         }
 
 
-        .title {
-            text-align: left;
-            font-weight: bold;
-        }
 
 
 
@@ -234,6 +230,11 @@
             position: absolute;
             font-weight: bold;
         }
+
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -256,17 +257,17 @@
                 <table class="tb1">
                     <thead>
                         <tr class="title">
-                            <th colspan="5">${dto.title}</th>
+                            <th colspan="5" >${dto.title}</th>
                         </tr>
                         <tr>
                             <td>
                                 <c:if test="${not empty sid && sid eq 'admin'}">
-                                <a href="${path}/notice/edit.do?no=${dto.no}" class="inbtn">수정</a>
+                                <a href="${path}/notice/edit.do?no=${dto.no}" class="button is-outlined is-link">수정</a>
                                 </c:if>
                             </td>
                             <td>
                                 <c:if test="${not empty sid && sid eq 'admin'}">
-                                <a href="${path}/notice/delete.do?no=${dto.no}" class="inbtn delete_btn" >삭제</a>
+                                <a href="${path}/notice/delete.do?no=${dto.no}" class="button is-outlined is-danger" >삭제</a>
                                </c:if>
                             </td>
                             <td>관리자</td>

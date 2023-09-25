@@ -15,6 +15,12 @@
     <jsp:include page="../include/head.jsp"></jsp:include>
     <!-- <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script> -->
     <script type="text/javascript" src="${path }/resources/ckeditor/ckeditor.js"></script>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -57,8 +63,8 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="submit button is-info" value="글 등록" >
-                                <a class="button is-primary" href="${path }/infoAct/list.do">글 목록</a>
+                                <input type="submit" class="submit button is-link is-outlined" value="글 등록" >
+                                <a class="button is-black is-outlined" href="${path }/infoAct/list.do">글 목록</a>
                             </td>
                         </tr>
                         </tbody>

@@ -15,6 +15,12 @@
     <title>파일 업로드</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -93,8 +99,8 @@
                         </label>
                     </div>
                     <div class="button-group">
-                        <input type="submit" value="파일 업로드" class="button is-info">
-                        <a href="${path1}/file/filelist1.do" class="button is-primary">파일 자료 목록</a>
+                        <input type="submit" value="파일 업로드" class="button is-link is-outlined">
+                        <a href="${path1}/file/filelist1.do" class="button is-black is-outlined">파일 자료 목록</a>
                     </div>
                 </form>
             </div>
@@ -123,8 +129,9 @@
             }
         }
     </script>
-    <!-- 푸터 부분 인클루드 -->
-    <jsp:include page="../include/footer.jsp"></jsp:include>
+
 </div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

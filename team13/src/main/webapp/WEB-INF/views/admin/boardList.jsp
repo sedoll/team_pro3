@@ -43,7 +43,7 @@
                     <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
                 </ul>
             </nav>
-            <section class="hero is-info welcome is-small">
+            <section class="hero is-white welcome is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title" style="text-align: center">
@@ -93,9 +93,7 @@
 </div>
 
 
-<footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
-</footer>
 </body>
 </html>

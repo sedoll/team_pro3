@@ -26,6 +26,12 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/hd.css">
     <link rel="stylesheet" href="../css/ft.css">
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -65,9 +71,9 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="submit button is-primary" value="글 등록" >
-                                <input type="reset" value="취소" class="button is-primary" onclick="window.history.back();">
-                                <a class="button" href="${path }/boardPar/list.do">글 목록</a>
+                                <input type="submit" class="submit button is-link is-outlined" value="글 등록" >
+                                <input type="reset" value="취소" class="button is-danger is-outlined" onclick="window.history.back();">
+                                <a class="button is-outlined is-black" href="${path }/boardPar/list.do">글 목록</a>
                             </td>
                         </tr>
                         </tbody>

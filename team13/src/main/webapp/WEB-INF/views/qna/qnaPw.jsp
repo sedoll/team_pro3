@@ -13,6 +13,12 @@
     <title>비밀번호 입력</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -26,7 +32,7 @@
                         QnA
                     </p>
                     <p class="subtitle is-size-5">
-                        글쓰기
+                        비밀번호 입력
                     </p>
                 </div>
             </li>
@@ -47,8 +53,8 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <input type="submit" class="submit button is-info" value="입력" >
-                                <a class="button is-primary" href="${path }/qna/list.do">글 목록</a>
+                                <input type="submit" class="submit button is-link is-outlined" value="입력" >
+                                <a class="button is-black is-outlined" href="${path }/qna/list.do">글 목록</a>
                             </td>
                         </tr>
                         </tbody>

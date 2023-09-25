@@ -106,10 +106,6 @@
         }
 
 
-        .title {
-            text-align: left;
-            font-weight: bold;
-        }
 
 
 
@@ -234,6 +230,16 @@
             position: absolute;
             font-weight: bold;
         }
+
+        .item4 .button{
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -262,14 +268,14 @@
                         </tr>
                         <tr>
                             <td>
-                                <c:if test="${dto.author eq sid && not empty sid}">
-                                <a href="${path}/board/edit.do?bno=${dto.bno}" class="inbtn">수정</a>
-                                </c:if>
+                                <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
+                                <a href="${path}/board/delete.do?bno=${dto.bno}" class="button is-outlined is-danger" >삭제</a>
+                               </c:if>
                             </td>
                             <td>
-                                <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
-                                <a href="${path}/board/delete.do?bno=${dto.bno}" class="inbtn delete_btn" >삭제</a>
-                               </c:if>
+                                <c:if test="${dto.author eq sid && not empty sid}">
+                                    <a href="${path}/board/edit.do?bno=${dto.bno}" class="button is-outlined is-link">수정</a>
+                                </c:if>
                             </td>
                             <td>${dto.author}</td>
                             <td>${dto.resdate}</td>
@@ -285,14 +291,16 @@
                         </td>
                     </tr>
                     <c:if test="${not empty sid}">
-                    <tr >
-                        <td colspan="5"style="text-align: right" ><button class="button is-danger is-hovered" onclick="openReportPopup()">게시글 신고</button></td>
-                    </tr>
+                        <tr >
+                            <td colspan="5"style="text-align: right" >
+                                <button class="button is-danger is-hovered" onclick="openReportPopup()">
+                                    <img src="${path1}/resources/img/report.png" alt="!" style="height: 20px; margin-right: 6px">신고</button></td>
+                        </tr>
                     </c:if>
                     </tbody>
 
                 </table>
-                <table class="tb2">
+                <table class="tb2" id="myTable">
                     <thead>
                     <tr>
                         <th class="item1">작성자</th>
@@ -309,8 +317,8 @@
                             <td class="item3">${lev.resdate}</td>
                             <td class="item4">
                                 <c:if test="${sid eq lev.author || sid eq 'admin'}">
-                                    <a href="${path}/board/edit.do?bno=${lev.bno}" class="inbtn">수정</a>
-                                    <a href="${path}/board/delete.do?bno=${lev.bno}" class="inbtn delete_btn"> 삭제 </a>
+                                    <a href="${path}/board/edit.do?bno=${lev.bno}" class="button is-link is-small is-outlined is-rounded ">수정</a>
+                                    <a href="${path}/board/delete.do?bno=${lev.bno}" class="button is-danger is-small is-outlined is-rounded"> 삭제 </a>
                                 </c:if>
                             </td>
                         </tr>
@@ -320,7 +328,7 @@
                 <script>
                     function openReportPopup() {
                         // 팝업 창의 크기 및 위치를 지정합니다. 필요에 따라 조절할 수 있습니다.
-                        let width = 400;
+                        let width = 550;
                         let height = 300;
                         let left = (screen.width/2) - (width/2);
                         let top = (screen.height/2) - (height/2);
@@ -334,16 +342,17 @@
                             // sorting 화살표 제거
                             "targets": 'no-sort',
                             "bSort": false,
+                            "destroy": true,
 
-                            // 3번째 컬럼을 기준으로 내림차순 정렬
-                            order: [[3, 'asc']],
+                            // 2번째 컬럼을 기준으로 내림차순 정렬
+                            order: [[2, 'desc']],
                             pageLength : 5,
                             searching: false, //검색 제거
                             lengthChange: false, // show entries 제거
                             info: false,
 
                             language: {
-                                emptyTable: '작성된 후기가 없습니다.'
+                                emptyTable: '작성된 댓글(이)가 없습니다.'
                             }
                         });
                         $('#myTable').css({
@@ -353,12 +362,12 @@
                     } );
                 </script>
                 <form action="${path}/board/commentInsert.do" id="login_frm" class="frm" method="post">
-                    <table class="tb3" id="myTable">
+                    <table class="tb3">
                         <tbody>
                         <tr>
                             <c:if test="${not empty sid}">
-                                <th>${sid}</th>
-                                <th><textarea name="content" id="content" cols="100" rows="5" placeholder="리뷰 작성" required ></textarea></th>
+                                <th class="has-text-centered">${sid}</th>
+                                <th><textarea name="content" id="content" cols="100" rows="5" placeholder="댓글 작성" required ></textarea></th>
                                 <th><input type="submit" value="글쓰기" class="inbtn" id="ans_btn"></th>
                                 <input type="hidden" name="bno" value="${dto.bno}" readonly>
                                 <input type="hidden" name="id" value="${sid}" readonly>
@@ -367,35 +376,6 @@
                         </tbody>
                     </table>
                 </form>
-                <script>
-                    $(document).ready( function () {
-                        $('#myTable').DataTable({
-                            pageLength : 10,
-                            order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
-                            info: false,
-                            dom: 't<f>p',
-                            language: {
-                                emptyTable: '등록된 글이 없습니다.'
-                            }
-
-                        });
-                    } );
-                    $(document).ready(function() {
-                        $('.dataTables_paginate').css({
-                            'textAlign':'left',
-                            'float': 'none',
-                            'margin-top':'10px',
-                        });
-                        $('.dataTables_filter').css({
-                            'float': 'left',
-                            'margin-top':'14px',
-                            'margin-right':'280px'
-                        });
-                        $('#myTable_paginate').css({
-                            'margin-right':'120px'
-                        });
-                    });
-                </script>
             </div>
         </section>
     </div>

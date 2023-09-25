@@ -13,6 +13,12 @@
     <title>자유게시판 목록</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <!-- 헤더 부분 인클루드 -->
@@ -55,7 +61,7 @@
             </table>
             <c:if test='${not empty sid}'>
                 <div class="button-group">
-                    <a class="button is-primary" href="${path}/board/insert.do">글쓰기</a>
+                    <a class="button is-link is-outlined" href="${path}/board/insert.do">글쓰기</a>
                 </div>
             </c:if>
         </div>

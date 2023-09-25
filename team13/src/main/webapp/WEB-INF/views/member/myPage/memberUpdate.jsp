@@ -51,12 +51,12 @@
 
         <figure class="visual" id="vs1">
             <ul class="imgbox">
-                <li class="hero is-primary">
-                    <div class="hero-body has-text-centered" >
-                        <p class="title is-size-3">
+                <li class="hero is-white">
+                    <div class="hero-body">
+                        <p class="title">
                             마이페이지
                         </p>
-                        <p class="subtitle is-size-5">
+                        <p class="subtitle">
                             <c:if test="${sid!='admin' }">
                                 회원 정보 수정
                             </c:if>
@@ -109,7 +109,7 @@
                                         <input type="text" name="addr1" id="addr1" class="input" value="${member.addr1 }"><br>
                                         <input type="text" name="addr2" id="addr2" class="input" value="${member.addr2 }"><br>
                                         <input type="text" name="postcode" id="postcode"  class="input" value="${member.postcode }">
-                                        <input type="button" value="주소찾기" id="findBtn" onclick="findAddr()" class="button is-primary">
+                                        <input type="button" value="주소찾기" id="findBtn" onclick="findAddr()" class="button is-link">
                                     </td>
                                 </tr>
                                 <tr>
@@ -122,16 +122,16 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <input type="submit" class="button btn-writer" value="수정">
-                                        <input type="reset" class="button btn-primary" value="취소">
+                                        <input type="submit" class="button is-link is-outlined" value="수정">
+                                        <input type="reset" class="button is-black is-outlined" value="취소">
                                         <c:if test="${sid!='admin' }">
-                                            <a href="${path11 }/member/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
+                                            <a href="${path11 }/member/delete.do?id=${sid }" class="button is-danger is-outlined">회원 탈퇴</a>
                                         </c:if>
                                         <c:if test="${sid =='admin' }">
-                                            <a href="${path11 }/member/delete.do?id=${member.id }" class="button is-primary">회원 강퇴</a>
+                                            <a href="${path11 }/member/delete.do?id=${member.id }" class="button is-danger is-outlined">회원 강퇴</a>
                                         </c:if>
                                         <c:if test="${sid== 'admin' }">
-                                            <a href="${path11 }/member/list.do" class="button is-primary">회원 목록</a>
+                                            <a href="${path11 }/member/list.do" class="button is-white is-outlined">회원 목록</a>
                                         </c:if>
                                     </td>
                                 </tr>

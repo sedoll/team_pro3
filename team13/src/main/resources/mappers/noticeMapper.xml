@@ -3,7 +3,7 @@
 <mapper namespace="notice">
 <!-- 공지사항 목록 -->
     <select id="noticeList" resultType="kr.co.teaspoon.dto.Notice">
-        select * from notice order by resdate desc
+        select * from notice order by resdate asc
     </select>
 <!-- 글 상세보기 -->
     <select id="noticeDetail" resultType="kr.co.teaspoon.dto.Notice">

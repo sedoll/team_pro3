@@ -65,7 +65,7 @@
                     <p class="my-page__introduction"></p>
 
                     <div class="my-page__edit-buttons">
-                        <button type="button" class="my-profile-edit" onclick="location.href='${path14}/Mypage.do'">회원 정보 변경
+                        <button type="button" class="button is-link is-rounded is-outlined" onclick="location.href='${path14}/member/update.do'">회원 정보 변경
                         </button>
                         <button type="button" class="my-info-edit" onclick="location.href='${path14 }/LikeList.do'">
                             <i class="fas fa-cog my-info-edit__icon"></i>
