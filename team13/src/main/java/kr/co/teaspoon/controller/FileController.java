@@ -1,5 +1,6 @@
 package kr.co.teaspoon.controller;
 
+import kr.co.teaspoon.dto.Board;
 import kr.co.teaspoon.dto.FileBoard;
 import kr.co.teaspoon.dto.FileDTO;
 import kr.co.teaspoon.dto.FileVO;
@@ -18,8 +19,11 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 @Controller
@@ -33,6 +37,9 @@ public class FileController {
 
     @Autowired
     private FileService fileService;
+
+    @Autowired
+    HttpSession session; // 세션 생성
 
     @GetMapping("fileupload1.do")
     public String fileUploadForm(){
@@ -112,10 +119,18 @@ public class FileController {
     }
 
     @GetMapping("filelist1.do")
-    public String getFileList(Model model) throws Exception {
-        List<FileVO> fileboardList = fileService.getFileList();
-        model.addAttribute("fileboardList", fileboardList);
-        return "/fileboard/filelist1";
+    public String getFileList(HttpServletResponse response, Model model) throws Exception {
+        if(session.getAttribute("sid") != null && !"".equals(session.getAttribute("sid"))) {
+            List<FileVO> fileboardList = fileService.getFileList();
+            model.addAttribute("fileboardList", fileboardList);
+            return "/fileboard/filelist1";
+        } else {
+            response.setContentType("text/html; charset=UTF-8");
+            PrintWriter out = response.getWriter();
+            out.println("<script>alert('해당 페이지는 회원만 접근 가능합니다.');</script>");
+            out.flush();
+            return "/index";
+        }
     }
 
     //getFileboard.do

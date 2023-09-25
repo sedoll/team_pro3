@@ -55,8 +55,6 @@ b
 -src/main/webapp/WEB-INF/views/member/term.jsp,4\0\4000a0f69d20cad65c9d76314d9364fab1898911
 j
 :src/main/java/kr/co/teaspoon/service/BoardServiceImpl.java,e\4\e45d877f699fbd55a0cbb723fa636a86b2e422e4
-i
-9src/main/java/kr/co/teaspoon/controller/BoardParCtrl.java,a\c\acef1d9a9d09f565262a3daed71d0c655833fd3a
 `
 0src/main/java/kr/co/teaspoon/dao/QnaDAOImpl.java,c\4\c403a2f20f6dccfe57a9f8597f80312944f1d7c9
 d
