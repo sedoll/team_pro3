@@ -175,7 +175,7 @@
 <!-- hero area -->
 <section class="hero-area has-background-primary" id="parallax" >
     <div class="columns">
-        <img src="${path }/resources/img/new_main3.png">
+        <img src="${path }/resources/img/new_main.jpg">
     </div>
 
     <%--<div class="columns">

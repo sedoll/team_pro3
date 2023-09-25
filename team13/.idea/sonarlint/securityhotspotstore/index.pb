@@ -45,8 +45,6 @@ g
 7src/main/webapp/WEB-INF/views/admin/boardReportList.jsp,e\c\ec1f70b1c022c97defd8d1632f7ae5ec4ded68fa
 f
 6src/main/java/kr/co/teaspoon/controller/AdminCtrl.java,3\1\3107823900a2421a2aeaca81c74ed4aa8fd97a58
-W
-'src/main/webapp/WEB-INF/views/index.jsp,3\0\305b3bb8194d08e1e32b17ac5f1d53c1cf0118c1
 ]
 -src/main/webapp/WEB-INF/views/main/awards.jsp,6\6\669e60701095fec22bdb82f1530e76d619e4b990
 c
