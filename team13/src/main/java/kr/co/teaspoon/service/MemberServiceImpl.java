@@ -60,9 +60,13 @@ public class MemberServiceImpl implements MemberService{
     public boolean loginCheck(String id, String pw) throws Exception {
         boolean comp = false;
         Member member = memberDAO.loginCheck(id);
-        boolean check = pwEncoder.matches(pw, member.getPw()); // 입력된 비밀번호와 db의 암호화된 비밀번호 비교
-        if(member != null && check) {
-            comp = true;
+        try{
+            boolean check = pwEncoder.matches(pw, member.getPw()); // 입력된 비밀번호와 db의 암호화된 비밀번호 비교
+            if(check) {
+                comp = true;
+            }
+        } catch (Exception e) {
+            
         }
         return comp;
     }
