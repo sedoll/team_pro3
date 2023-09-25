@@ -103,13 +103,24 @@
 ![슬라이드6](https://github.com/kuyejin/chunjae_spring/assets/65212187/54357058-1ccd-4d7c-acfc-494d3b377d24)
 
 🔹관리자🔹<br/>
+![1](https://github.com/kuyejin/chunjae_spring2/assets/65212187/20c23a74-cffd-40e6-9df6-c466c38e5bef)
+![2](https://github.com/kuyejin/chunjae_spring2/assets/65212187/63020776-b18b-4bd1-b8e8-06906532e7bc)
+![3](https://github.com/kuyejin/chunjae_spring2/assets/65212187/bc190cb6-b90b-4c96-81bf-54afcbcfeef3)
+![4](https://github.com/kuyejin/chunjae_spring2/assets/65212187/c4621c04-d5a3-4c3e-8d76-f4929b819a72)
+![5](https://github.com/kuyejin/chunjae_spring2/assets/65212187/fb4163e9-064b-471e-8f45-7a14a4c60936)
+![6](https://github.com/kuyejin/chunjae_spring2/assets/65212187/0cf1e5e2-d87a-472b-94e2-69d75ac3fe8b)
+![7](https://github.com/kuyejin/chunjae_spring2/assets/65212187/98fa6c48-9220-4c61-8683-888362a41c78)
+![8](https://github.com/kuyejin/chunjae_spring2/assets/65212187/94dddf1d-e283-4d7e-aac2-054ead691e28)
+![9](https://github.com/kuyejin/chunjae_spring2/assets/65212187/7b40d386-1650-40de-9bc2-a8b170ff7839)
+![10](https://github.com/kuyejin/chunjae_spring2/assets/65212187/ccff02b6-560a-407e-9063-e6385fdc9ba5)
+![11](https://github.com/kuyejin/chunjae_spring2/assets/65212187/6dc82a01-150d-410e-a598-9b679848a56c)
 
 <br/><br/>
 ​
 ## 2️⃣ 개념적 설계
 ​
 ### 🔹유즈케이스 (USE CASE)
-![usecasediagram13](https://github.com/kuyejin/chunjae_spring/assets/65212187/d417f51e-743d-42ef-ba62-bba7eb5ad132)
+![usecasediagram13](https://github.com/kuyejin/chunjae_spring2/assets/65212187/ea6c55ba-ad07-4acd-9aa2-09538ff2009e)
 ​
 ​
 ## 3️⃣ 논리적 설계
