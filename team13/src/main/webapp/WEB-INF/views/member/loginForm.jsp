@@ -79,12 +79,12 @@
             <form action="${path }/member/signin.do" method="post" name="loginForm">
                 <div class="field">
                     <div class="control">
-                        <input class="input is-medium is-rounded" name="id" id="id" type="text" placeholder="id"  />
+                        <input class="input is-medium is-rounded" name="id" id="id" type="text" placeholder="id" autofocus required/>
                     </div>
                 </div>
                 <div class="field">
                     <div class="control">
-                        <input class="input is-medium is-rounded" name="pw" id="pw" type="password" placeholder="**********" />
+                        <input class="input is-medium is-rounded" name="pw" id="pw" type="password" placeholder="**********" required/>
                     </div>
                 </div>
                 <br />
