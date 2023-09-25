@@ -18,6 +18,12 @@
             height: 250px;
             margin-top: 40px;
         }
+
+        tbody .button{
+            width: 40px;
+            height: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -63,7 +69,7 @@
                                 <a href="${path}/grade/gradedetail.do?no=${grade.no}" class="button is-black is-outlined">상세보기</a>
                             </c:if>
                             <c:if test="${job == 2  || job == 0}">
-                                <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적 삭제</a>
+                                <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적삭제</a>
                             </c:if>
                         </td>
                     </tr>
@@ -72,7 +78,7 @@
             </table>
             <c:if test='${job == 2 || job == 0}'>
             <div class="button-group">
-                <a class="button is-link is-outlined" href="${path}/grade/gradeinsert.do">글쓰기</a>
+                <a class="button is-link is-outlined" href="${path}/grade/gradeinsert.do">성적입력</a>
             </div>
             </c:if>
             <script>

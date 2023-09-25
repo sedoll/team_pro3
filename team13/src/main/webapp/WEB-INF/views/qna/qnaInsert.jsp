@@ -86,8 +86,8 @@
             </script>
         </div>
     </div>
-    <!-- 푸터 부분 인클루드 -->
-    <jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
+<!-- footer include -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

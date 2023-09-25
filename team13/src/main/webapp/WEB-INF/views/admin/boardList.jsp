@@ -15,14 +15,18 @@
     <title>관리자 페이지</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero{
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
-<section class="hero is-white">
+<section class="hero is-white is-small">
     <div class="hero-body has-text-centered">
         <p class="title is-size-3">
-            관리자 페이지
         </p>
         <p class="subtitle">
 

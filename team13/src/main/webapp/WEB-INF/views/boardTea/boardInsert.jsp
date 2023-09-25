@@ -82,9 +82,8 @@
             </div>
         </div>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../include/footer.jsp" %>
-    </footer>
 </div>
+<!-- footer imclude -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

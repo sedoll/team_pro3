@@ -20,6 +20,10 @@
             vertical-align: middle;
             text-align: center;
         }
+         .hero{
+             height: 100px;
+         }
+
     </style>
 </head>
 <body>

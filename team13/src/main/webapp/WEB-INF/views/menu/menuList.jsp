@@ -41,7 +41,7 @@
             <p class="is-size-3">학교 선택<p>
             <form action="${path}/menu/list.do" method="post">
                 <input type="text" name="name" id="name" class="input" placeholder="학교 이름 입력" required autofocus>
-                <input class="button is-link" type="submit" value="확인">
+                <input class="button is-link is-outlined" type="submit" value="확인">
             </form>
                 <hr>
             <%-- get 방식 --%>
