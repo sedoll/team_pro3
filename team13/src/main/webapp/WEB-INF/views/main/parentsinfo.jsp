@@ -25,7 +25,7 @@
                         <h4 class="mb-10" ><a href="${path}/infoStu/list.do" class="navbar-item text02" style="padding-left: 150px;">교육정보</a>
                         </h4>
                         <p class="mb-10">최신 교육 동향과 교육 관련 뉴스를 한눈에!</p>
-                        <a href="blog-single.html" class="button is-extra-small is-info">바로가기</a>
+                        <a href="${path}/infoStu/list.do" class="button is-extra-small is-info">바로가기</a>
                     </div>
                 </article>
             </div>
@@ -38,7 +38,7 @@
                         <h4 class="mb-10"><a href="${path}/infoUni/list.do" class="navbar-item text02" style="padding-left: 150px;">대입정보</a>
                         </h4>
                         <p class="mb-10">대학 입시의 모든 것! 리얼 컨설팅과 신규 입시정보</p>
-                        <a href="blog-single.html" class="button is-extra-small is-info">바로가기</a>
+                        <a href="${path}/infoUni/list.do" class="button is-extra-small is-info">바로가기</a>
                     </div>
                 </article>
             </div>
@@ -51,7 +51,7 @@
                         <h4 class="mb-10"><a href="${path}/menu/list.do" class="navbar-item text02" style="padding-left: 150px;">학교급식</a>
                         </h4>
                         <p class="mb-10">건강한 학교생활을 위한 우리아이 식단 체크!</p>
-                        <a href="blog-single.html" class="button is-extra-small is-info">바로가기</a>
+                        <a href="${path}/menu/list.do" class="button is-extra-small is-info">바로가기</a>
                     </div>
                 </article>
             </div>
