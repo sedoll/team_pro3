@@ -127,8 +127,6 @@ d
 4src/main/java/kr/co/teaspoon/controller/QnaCtrl.java,e\4\e4d91237e5f15f5810986244b203b17402b79679
 h
 8src/main/java/kr/co/teaspoon/service/QnaServiceImpl.java,6\1\61c07d1d53131e7f75b867a8c2a0f80dbe43bfb9
-i
-9src/main/java/kr/co/teaspoon/controller/BoardParCtrl.java,a\c\acef1d9a9d09f565262a3daed71d0c655833fd3a
 c
 3src/main/webapp/WEB-INF/views/board/boardDetail.jsp,f\6\f61f00f3ba1471098fc3f26606e73e5e0d86165e
 f
