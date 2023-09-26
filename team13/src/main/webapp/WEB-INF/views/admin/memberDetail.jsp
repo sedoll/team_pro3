@@ -22,7 +22,6 @@
 <section class="hero is-whtie">
     <div class="hero-body has-text-centered">
         <p class="title is-size-3">
-            관리자 페이지
         </p>
         <p class="subtitle">
 
@@ -156,9 +155,7 @@
 </div>
 
 
-<footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
-</footer>
 </body>
 </html>

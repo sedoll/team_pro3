@@ -15,6 +15,12 @@
     <jsp:include page="../include/head.jsp"></jsp:include>
     <!-- <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script> -->
     <script type="text/javascript" src="${path }/resources/ckeditor/ckeditor.js"></script>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 <div class="container is-fullhd">
@@ -67,8 +73,8 @@
             </div>
         </div>
     </div>
-    <!-- 푸터 부분 인클루드 -->
-    <jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

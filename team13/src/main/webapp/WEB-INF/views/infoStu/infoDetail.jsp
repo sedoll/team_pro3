@@ -116,8 +116,8 @@
         .tb2 .item1 { width: 10%; }
         .tb2 .item2 { width: 68%;}
         .tb2 .item3 { width: 10%; }
-        .tb2 .item4 { width: 12%;
-        }
+        .tb2 .item4 { width: 12%;}
+
         .tb2 td {
             border-bottom: 1px solid #7e7e7e;
             vertical-align: middle;
@@ -230,6 +230,11 @@
             position: absolute;
             font-weight: bold;
         }
+
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
@@ -252,22 +257,22 @@
                 <table class="tb1">
                     <thead>
                         <tr class="title">
-                            <th colspan="5">${dto.title}</th>
+                            <th colspan="5" style="width: 10%">${dto.title}</th>
                         </tr>
                         <tr>
-                            <td>
+                            <td style="width: 5%">
                                 <c:if test="${dto.author eq sid && not empty sid}">
                                 <a href="${path}/infoStu/edit.do?bno=${dto.bno}" class="button is-link is-outlined">수정</a>
                                 </c:if>
                             </td>
-                            <td>
+                            <td style="width: 55%">
                                 <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
                                 <a href="${path}/infoStu/delete.do?bno=${dto.bno}" class="button is-danger is-outlined" >삭제</a>
                                </c:if>
                             </td>
-                            <td>${dto.author}</td>
-                            <td>${dto.resdate}</td>
-                            <td>조회수 : ${dto.cnt}</td>
+                            <td style="width: 10%">${dto.author}</td>
+                            <td style="width: 20%">${dto.resdate}</td>
+                            <td style="width: 10%">조회수 : ${dto.cnt}</td>
                         </tr>
                     </thead>
                     <tbody>

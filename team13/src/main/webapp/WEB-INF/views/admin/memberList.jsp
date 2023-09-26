@@ -22,7 +22,6 @@
 <section class="hero is-white">
     <div class="hero-body has-text-centered">
         <p class="title is-size-3">
-            관리자 페이지
         </p>
         <p class="subtitle">
 
@@ -43,7 +42,7 @@
                     <li class="is-active"><a href="#" aria-current="page">Admin</a></li>
                 </ul>
             </nav>
-            <section class="hero is-info welcome is-small">
+            <section class="hero is-white welcome is-small">
                 <div class="hero-body">
                     <div class="container">
                         <h1 class="title" style="text-align: center">

@@ -251,8 +251,8 @@ a:hover {
 }
 
 .has-background-primary {
-  /*background: #162656  !important;*/
-  background: linear-gradient(to right, #C8DAEA, #CAD8E9, #B7D2E9)  !important;
+  background: #B7D2E9  !important;
+  /*background: linear-gradient(to right, #C8DAEA, #CAD8E9, #B7D2E9)  !important;*/
 
 }
 

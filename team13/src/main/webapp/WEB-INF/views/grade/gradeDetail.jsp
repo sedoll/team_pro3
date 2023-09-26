@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원 정보 보기</title>
+    <title>성적표 상세 보기</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
     <style>
@@ -25,6 +25,10 @@
         #content{
             height: 701px;
             padding-top: 24px;
+        }
+        .hero {
+            height: 250px;
+            margin-top: 40px;
         }
 
     </style>
@@ -102,9 +106,9 @@
                             <tr>
                                 <td colspan="2">
                                     <c:if test="${job == 2 || job == 0}">
-                                    <a href="${path}/grade/gradeedit.do?no=${grade.no}" class="button">성적 수정</a>
+                                    <a href="${path}/grade/gradeedit.do?no=${grade.no}" class="button is-outlined is-link">성적 수정</a>
                                     </c:if>
-                                    <a href="/team13_war/" class="button">메인화면</a>
+                                    <a href="/team13_war/" class="button is-black is-outlined">메인화면</a>
                                 </td>
                             </tr>
                         </table>

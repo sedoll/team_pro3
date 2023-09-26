@@ -17,13 +17,13 @@
 <section class="section has-background-primary is-relative testimonial-bg-shapes">
     <div class="container">
         <div class="has-text-centered">
-            <h2 class="section-title has-text-grey-dark">서비스 소개</h2>
+            <h2 class="section-title has-text-grey">서비스 소개</h2>
         </div>
         <div class="columns is-centered">
             <div class="column is-10 testimonial-slider">
                 <!-- slider-item01 -->
                 <div class="has-text-centered">
-                    <h3 class="has-text-grey-dark text02">정보</h3>
+                    <h3 class="has-text-grey text02">정보</h3>
                     <img class="imgsize" src="${path}/resources/img/slidebanner01.jpg" alt="slide-image">
                     <br>
                     <h4 class="has-text-grey text03">
@@ -33,7 +33,7 @@
                 </div>
                 <!-- slider-item02 -->
                 <div class="has-text-centered">
-                    <h3 class="has-text-grey-dark text02">커뮤니티</h3>
+                    <h3 class="has-text-grey text02">커뮤니티</h3>
                     <img class="imgsize" src="${path}/resources/img/slidebanner02.png" alt="slide-image">
                     <br>
                     <h4 class="has-text-grey text03">
@@ -43,7 +43,7 @@
                 </div>
                 <!-- slider-item03 -->
                 <div class="has-text-centered">
-                    <h3 class="has-text-grey-dark text02">내 자녀</h3>
+                    <h3 class="has-text-grey text02">내 자녀</h3>
                     <img class="imgsize" src="${path}/resources/img/slidebanner03.jpg" alt="slide-image">
                     <br>
                     <h4 class="has-text-grey text03">

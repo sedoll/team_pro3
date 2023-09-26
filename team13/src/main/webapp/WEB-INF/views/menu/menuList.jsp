@@ -13,6 +13,12 @@
     <title>식단표</title>
     <!-- 헤드 부분 인클루드 -->
     <jsp:include page="../include/head.jsp"></jsp:include>
+    <style>
+        .hero {
+            height: 250px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -35,7 +41,7 @@
             <p class="is-size-3">학교 선택<p>
             <form action="${path}/menu/list.do" method="post">
                 <input type="text" name="name" id="name" class="input" placeholder="학교 이름 입력" required autofocus>
-                <input class="button is-link" type="submit" value="확인">
+                <input class="button is-link is-outlined" type="submit" value="확인">
             </form>
                 <hr>
             <%-- get 방식 --%>
