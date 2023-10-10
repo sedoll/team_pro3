@@ -1,4 +1,4 @@
-# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 3차 프로젝트 
+![뉴스](https://github.com/sedoll/team_pro3/assets/132269367/966ee551-a36b-44e7-ae6e-aaaf89825fb0)# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 3차 프로젝트 
 <br/>
 
 
@@ -184,7 +184,7 @@
 <br/>
 ​
 #  💻 화면 설계도
-🔹메인페이지🔹<
+🔹메인페이지🔹
 ![main_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/413df33a-5ef3-4258-92f7-c82e43825393)
 
 🔹FAQ🔹
@@ -194,14 +194,14 @@
 🔹QnA🔹
 ![QnA_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/e4157b41-81bd-4ad3-aba6-d27fe94a68aa)
 
-🔹QnA글쓰기 🔹
+🔹QnA글쓰기🔹
 ![QnA글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/c0c20712-9935-4cf9-8ba8-cefb8aea418e)
 
 🔹QnA상세보기🔹
 ![QnA상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/3dd6217a-ee97-4b16-b44b-cdbd72901e9f)
 
 
-🔹공지사항 🔹
+🔹공지사항🔹
 ![공지사항_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/3ebba92c-c0b2-4b5a-981d-6b3b25c1cf46)
 🔹공지사항글쓰기 🔹
 ![공지사항글쓰기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/e9450127-913b-4f6d-8574-e3114ed6d43d)
@@ -242,3 +242,68 @@
 ![자유게시판상세보기_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/c8a0c81e-c354-40cc-aae1-b83c82090561)
 🔹회원가입🔹
 ![회원가입_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/19f6cfe1-63f7-4de4-b23c-2590fb4f0cd1)
+<br/>
+
+<br/>
+#  결과 이미지
+🔹메인페이지🔹
+![메인](https://github.com/sedoll/team_pro3/assets/132269367/050cf1ea-1c1f-4806-893d-9cba0981a0f1)
+🔹term🔹
+![term](https://github.com/sedoll/team_pro3/assets/132269367/d597a8fb-0e77-47e0-bb88-e7363a0a9181)
+🔹join🔹
+![join](https://github.com/sedoll/team_pro3/assets/132269367/aa3686b8-dc22-4eab-a2a8-8e2b45c1e7e0)
+🔹login🔹
+![login](https://github.com/sedoll/team_pro3/assets/132269367/49a3d900-dfec-4520-a033-f63800d514fc)
+🔹비밀번호 찾기🔹
+![비밀번호찾기](https://github.com/sedoll/team_pro3/assets/132269367/a434eedd-ff81-42be-993f-df683a17b92b)
+🔹FAQ🔹
+![faq](https://github.com/sedoll/team_pro3/assets/132269367/319efd7e-0172-4e90-b89e-f97f5cb1b108)
+🔹QnA🔹
+![qna](https://github.com/sedoll/team_pro3/assets/132269367/15ec4f00-54fc-4a31-8a5d-5c1789ed460e)
+🔹QnA 상세🔹
+![qna상세](https://github.com/sedoll/team_pro3/assets/132269367/5b7d8f20-8c5a-400d-baab-843bdf952700)
+🔹QnA비밀번호 입력🔹
+![qna비밀번호입력](https://github.com/sedoll/team_pro3/assets/132269367/7981e576-eefa-4248-9a61-6f2e4964b2ba)
+🔹공지사항🔹
+![공지사항](https://github.com/sedoll/team_pro3/assets/132269367/d37af2f6-6878-4fd8-b9d0-89c2cdcd07a7)
+🔹공지사항 상세🔹
+![공지사항상세](https://github.com/sedoll/team_pro3/assets/132269367/51bd5ee4-27cf-4b38-ae84-815137897fff)
+🔹공지사항 수정🔹
+![공지사항수정](https://github.com/sedoll/team_pro3/assets/132269367/417eebe4-c54e-4bc8-a623-25b87227de78)
+🔹커뮤니티 게시판🔹
+![커뮤니티게시판](https://github.com/sedoll/team_pro3/assets/132269367/80c19845-d6db-4d9d-9154-513b0a47e670)
+🔹커뮤니티 게시판 작성🔹
+![커뮤니티게시판작성](https://github.com/sedoll/team_pro3/assets/132269367/ec86e09b-df52-4bc4-8b8d-8ee977cfc503)
+🔹커뮤니티 게시판 상세🔹
+![커뮤니티게시판상세](https://github.com/sedoll/team_pro3/assets/132269367/90df3dcc-076a-4159-b45e-c2abb7f79099)
+🔹정보 게시판🔹
+![정보게시판](https://github.com/sedoll/team_pro3/assets/132269367/f88ec723-a93b-42bd-85ee-3c83082b6a8b)
+🔹정보 게시판 작성🔹
+![정보게시판작성](https://github.com/sedoll/team_pro3/assets/132269367/a5a79425-3700-414f-aa84-f78815cfbb64)
+🔹정보 게시판 상세🔹
+![정보게시판상세](https://github.com/sedoll/team_pro3/assets/132269367/64a8acfe-6bee-49ca-820e-df17836d48cb)
+🔹자료실 작성🔹
+![자료실작성](https://github.com/sedoll/team_pro3/assets/132269367/5ca31005-c8a9-46bf-a60d-9d6aaf0586fa)
+🔹뉴스🔹
+![뉴스](https://github.com/sedoll/team_pro3/assets/132269367/86f4a651-a0ae-434c-92f4-23a7bc12e006)
+🔹식단표🔹
+![식단표](https://github.com/sedoll/team_pro3/assets/132269367/ea615241-979a-4c5d-ac54-a1e06d84cbb9)
+🔹성적표🔹
+![성적표](https://github.com/sedoll/team_pro3/assets/132269367/4b96f48f-f0e0-4283-8955-6530ff1b47c9)
+🔹성적표 상세🔹
+![성적표상세](https://github.com/sedoll/team_pro3/assets/132269367/a05f04f4-83a7-43dd-bf62-56ff9b5485db)
+🔹성적표 수정🔹
+![성적표수정](https://github.com/sedoll/team_pro3/assets/132269367/4dcb4bb9-0bd5-483f-a318-a0e0cf9d9995)
+🔹관리자 페이지 메인🔹
+![관리자페이지메인](https://github.com/sedoll/team_pro3/assets/132269367/000135b3-cf47-44e9-843f-e62de0ea93f9)
+🔹회원목록🔹
+![회원목록](https://github.com/sedoll/team_pro3/assets/132269367/2d361abe-3d66-4c4e-a223-2dd0027e3249)
+🔹회원목록 수정🔹
+![회원정보수정](https://github.com/sedoll/team_pro3/assets/132269367/946b61cd-952a-42ad-9dab-53624ef822fd)
+🔹게시판 글 관리🔹
+![게시판글관리](https://github.com/sedoll/team_pro3/assets/132269367/9ea1760e-0bf1-4e09-a731-9a61e6135f06)
+🔹게시판 댓글 관리🔹
+![게시판댓글관리](https://github.com/sedoll/team_pro3/assets/132269367/2af60352-9966-4a79-8587-68a8a0d4fc68)
+🔹게시판 신고 내역🔹
+![게시판신고내역](https://github.com/sedoll/team_pro3/assets/132269367/541d9647-8c79-41b4-9d97-d322f3cd4753)
+<br/>
