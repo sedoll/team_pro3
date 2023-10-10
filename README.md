@@ -151,7 +151,8 @@
 
 ​
 ## 4️⃣ 물리적 설계 － ＥＲＤ
-![erd](https://github.com/kuyejin/chunjae_spring/assets/65212187/b2da6c68-57e5-4d10-b211-ad1b350afda1)
+![erd](https://github.com/sedoll/team_pro3/assets/132269367/a80d4e24-e6a1-457d-8c77-4c3e961b6ba8)
+
 ​
 <br/>
 <br/>
