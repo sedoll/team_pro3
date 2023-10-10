@@ -1,4 +1,4 @@
-![뉴스](https://github.com/sedoll/team_pro3/assets/132269367/966ee551-a36b-44e7-ae6e-aaaf89825fb0)# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 3차 프로젝트 
+# &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;천재교육 풀스택 과정 3차 프로젝트 
 <br/>
 
 
@@ -151,7 +151,7 @@
 
 ​
 ## 4️⃣ 물리적 설계 － ＥＲＤ
-![erd](https://github.com/kuyejin/chunjae_spring/assets/65212187/b2da6c68-57e5-4d10-b211-ad1b350afda1)
+![erd](output/ERD/erd.png)
 ​
 <br/>
 <br/>
@@ -244,8 +244,7 @@
 ![회원가입_page](https://github.com/kuyejin/chunjae_spring/assets/65212187/19f6cfe1-63f7-4de4-b23c-2590fb4f0cd1)
 <br/>
 
-<br/>
-#  결과 이미지
+# 결과 이미지
 🔹메인페이지🔹
 ![메인](https://github.com/sedoll/team_pro3/assets/132269367/050cf1ea-1c1f-4806-893d-9cba0981a0f1)
 🔹term🔹
@@ -307,3 +306,37 @@
 🔹게시판 신고 내역🔹
 ![게시판신고내역](https://github.com/sedoll/team_pro3/assets/132269367/541d9647-8c79-41b4-9d97-d322f3cd4753)
 <br/>
+
+# 결과 gif
+🔹메인🔹
+![메인](output/결과gif/메인.gif)
+🔹FAQ🔹
+![faq](output/결과gif/faq.gif)
+🔹QNA🔹
+![qna](output/결과gif/qna.gif)
+🔹게시글신고🔹
+![게시글신고](output/결과gif/게시글신고.gif)
+🔹공지사항🔹
+![공지사항](output/결과gif/공지사항.gif)
+🔹관리자페이지🔹
+![관리자페이지](output/결과gif/관리자페이지.gif)
+🔹뉴스게시판🔹
+![뉴스게시판](output/결과gif/뉴스게시판.gif)
+🔹로그인🔹
+![로그인](output/결과gif/로그인.gif)
+🔹마이페이지🔹
+![마이페이지](output/결과gif/마이페이지.gif)
+🔹비밀번호변경🔹
+![비밀번호변경](output/결과gif/비밀번호변경.gif)
+🔹성적표🔹
+![성적표](output/결과gif/성적표.gif)
+🔹식단표🔹
+![식단표](output/결과gif/식단표.gif)
+🔹자료실🔹
+![자료실](output/결과gif/자료실.gif)
+🔹정보게시판🔹
+![정보게시판](output/결과gif/정보게시판.gif)
+🔹커뮤니티게시판🔹
+![커뮤니티게시판](output/결과gif/커뮤니티게시판.gif)
+🔹회원가입🔹
+![회원가입](output/결과gif/회원가입.gif)

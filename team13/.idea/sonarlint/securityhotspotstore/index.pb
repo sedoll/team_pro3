@@ -1,12 +1,6 @@
 
 h
 8src/main/java/kr/co/teaspoon/controller/InfoActCtrl.java,7\2\72740624c3ac0dc39e401e9272d5785fbd0a6acc
-^
-.src/main/webapp/WEB-INF/applicationContext.xml,0\9\098550351661f776bec95040b2d50042c4599987
-7
-pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 e
 5src/main/webapp/WEB-INF/views/fileboard/filelist1.jsp,4\9\4915e5e3ebced68c7dd4ae5acded755a0bba563b
 e
@@ -59,8 +53,6 @@ j
 0src/main/java/kr/co/teaspoon/dao/QnaDAOImpl.java,c\4\c403a2f20f6dccfe57a9f8597f80312944f1d7c9
 d
 4src/main/java/kr/co/teaspoon/controller/QnaCtrl.java,e\4\e4d91237e5f15f5810986244b203b17402b79679
-h
-8src/main/java/kr/co/teaspoon/service/QnaServiceImpl.java,6\1\61c07d1d53131e7f75b867a8c2a0f80dbe43bfb9
 c
 3src/main/webapp/WEB-INF/views/board/boardDetail.jsp,f\6\f61f00f3ba1471098fc3f26606e73e5e0d86165e
 f
@@ -75,3 +67,23 @@ d
 4src/main/webapp/WEB-INF/views/infoUni/infoDetail.jsp,3\8\388f0d0ca703d5da57b58dd36fb03591115246db
 [
 +src/main/webapp/WEB-INF/views/qna/qnaPw.jsp,e\c\eccbb20fedbdd8d486a2b2b4e74547f11034203f
+O
+src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+`
+0src/main/java/kr/co/teaspoon/util/MailUtils.java,b\d\bd67d024e5b59fd94af298ba608c80ad8ed1fa7e
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+h
+8src/main/java/kr/co/teaspoon/service/QnaServiceImpl.java,6\1\61c07d1d53131e7f75b867a8c2a0f80dbe43bfb9
+^
+.src/main/webapp/WEB-INF/applicationContext.xml,0\9\098550351661f776bec95040b2d50042c4599987
+g
+7src/main/java/kr/co/teaspoon/controller/MemberCtrl.java,7\5\752e85d3a9945b652e15c2bd334301f0becb40ac
+[
++src/main/webapp/WEB-INF/spring-security.xml,1\c\1c32f00779ff5236a44927df8f30826d3fbdc472
+m
+=src/main/java/kr/co/teaspoon/controller/FileDownLoadView.java,f\a\fa430f29da02669e7a138b6d90634182e8e36319
+k
+;src/main/java/kr/co/teaspoon/controller/FileController.java,8\f\8fd2ae6f56da81bc17b6207d7d199235d9776f49
+^
+.src/main/webapp/WEB-INF/dispatcher-servlet.xml,5\6\5610820762bc3ec47cc9dbd7324c057405172b6d
