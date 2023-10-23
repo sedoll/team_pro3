@@ -116,6 +116,16 @@ public class QnaCtrl {
         return "redirect:list.do";
     }
 
+    @GetMapping("comDelete.do")
+    public String qnaComDelete(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        int par = Integer.parseInt(request.getParameter("par"));
+        Qna dto = new Qna();
+        dto.setPar(par);
+        qnaService.qnaDelete(bno);
+        return "redirect:/qna/detail.do?bno="+dto.getPar();
+    }
+
     @GetMapping("edit.do")
     public String editForm(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
@@ -133,5 +143,27 @@ public class QnaCtrl {
         dto.setContent(request.getParameter("content"));
         qnaService.qnaEdit(dto);
         return "redirect:list.do";
+    }
+
+    @GetMapping("commentEdit.do")
+    public String editCommentForm(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        Qna dto = qnaService.qnaDetail(bno);
+        model.addAttribute("dto", dto);
+        return "/qna/qnaComEdit";
+    }
+
+    @PostMapping("commentEdit.do")
+    public String qnaCommentEdit(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        int par = Integer.parseInt(request.getParameter("par"));
+        Qna dto = new Qna();
+        dto.setBno(bno);
+        dto.setPar(par);
+        dto.setTitle(request.getParameter("title"));
+        dto.setContent(request.getParameter("content"));
+        System.out.println(dto.toString());
+        qnaService.qnaEdit(dto);
+        return "redirect:/qna/detail.do?bno="+dto.getPar();
     }
 }

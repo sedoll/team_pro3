@@ -29,6 +29,7 @@ public class BoardCtrl {
     @Autowired
     HttpSession session; // 세션 생성
 
+    // 게시판 목록
     @GetMapping("list.do")		// board/list.do
     public String getBoardList(Model model) throws Exception {
         List<Board> boardList = boardService.boardList();
@@ -36,6 +37,7 @@ public class BoardCtrl {
         return "/board/boardList";
     }
 
+    // 게시판 상세
     @GetMapping("detail.do")	// board/detail.do?bno=1
     public String getBoardDetail(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
@@ -47,11 +49,13 @@ public class BoardCtrl {
         return "/board/boardDetail";
     }
 
+    // 게시판 추가 폼 이동
     @GetMapping("insert.do")
     public String insertForm(HttpServletRequest request, Model model) throws Exception {
         return "/board/boardInsert";
     }
 
+    // 게시판 추가
     @PostMapping("insert.do")
     public String boardInsert(HttpServletRequest request, Model model) throws Exception {
         Board dto = new Board();
@@ -59,9 +63,10 @@ public class BoardCtrl {
         dto.setContent(request.getParameter("content"));
         dto.setAuthor((String) session.getAttribute("sid"));
         boardService.boardInsert(dto);
-        return "redirect:list.do";
+        return "redirect:/board/list.do";
     }
 
+    // 게시판 댓글 추가
     @PostMapping("commentInsert.do")
     public String commentInsert(HttpServletRequest request, Model model) throws Exception {
         Board dto = new Board();
@@ -69,9 +74,10 @@ public class BoardCtrl {
         dto.setBno(Integer.parseInt(request.getParameter("bno")));
         dto.setContent(request.getParameter("content"));
         boardService.commentInsert(dto);
-        return "redirect:list.do";
+        return "redirect:/board/detail.do?bno="+dto.getBno();
     }
 
+    // 게시판 글 삭제
     @GetMapping("delete.do")
     public String boardDelete(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
@@ -80,6 +86,18 @@ public class BoardCtrl {
         return "redirect:list.do";
     }
 
+    // 게시판 댓글 삭제
+    @GetMapping("comDelete.do")
+    public String ComDelete(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        int par = Integer.parseInt(request.getParameter("par"));
+        Board dto = new Board();
+        dto.setPar(par);
+        boardService.boardDelete(bno);
+        return "redirect:/board/detail.do?bno="+dto.getPar();
+    }
+
+    // 게시판 수정 폼 이동
     @GetMapping("edit.do")
     public String editForm(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
@@ -88,6 +106,7 @@ public class BoardCtrl {
         return "/board/boardEdit";
     }
 
+    // 게시판 수정
     @PostMapping("edit.do")
     public String boardEdit(HttpServletRequest request, Model model) throws Exception {
         int bno = Integer.parseInt(request.getParameter("bno"));
@@ -96,7 +115,31 @@ public class BoardCtrl {
         dto.setTitle(request.getParameter("title"));
         dto.setContent(request.getParameter("content"));
         boardService.boardEdit(dto);
-        return "redirect:list.do";
+        return "redirect:/board/detail.do?bno="+dto.getBno();
+    }
+
+    // 댓글 수정 폼 이동
+    @GetMapping("commentEdit.do")
+    public String editCommentForm(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        Board dto = boardService.boardDetail(bno);
+        model.addAttribute("dto", dto);
+        return "/board/ComEdit";
+    }
+
+    // 댓글 수정
+    @PostMapping("commentEdit.do")
+    public String boardCommentEdit(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        int par = Integer.parseInt(request.getParameter("par"));
+        Board dto = new Board();
+        dto.setBno(bno);
+        dto.setPar(par);
+        dto.setTitle(request.getParameter("title"));
+        dto.setContent(request.getParameter("content"));
+        System.out.println(dto.toString());
+        boardService.boardEdit(dto);
+        return "redirect:/board/detail.do?bno="+dto.getPar();
     }
 
     //게시글 신고 팝업 창
