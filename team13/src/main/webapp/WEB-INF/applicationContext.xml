@@ -19,10 +19,12 @@
         <!-- spring-jdbc-5.3.20.jar 안의 드라이버매니저 연결 -->
         <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
                 <property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
-<!--                <property name="url" value="jdbc:log4jdbc:mariadb://localhost:3306/teaspoon" />-->
-                <property name="url" value="jdbc:log4jdbc:mariadb://10.41.1.198/team13" />
-                <property name="username" value="team13" />
-                <property name="password" value="team13" />
+                <property name="url" value="jdbc:log4jdbc:mariadb://localhost:3306/teaspoon" />
+                <property name="username" value="root" />
+                <property name="password" value="1234" />
+<!--                <property name="url" value="jdbc:log4jdbc:mariadb://10.41.1.198/team13" />-->
+<!--                <property name="username" value="team13" />-->
+<!--                <property name="password" value="team13" />-->
         </bean>
 
         <!-- sql을 대신할 my-batis 설정 : mybatis-spring-1.3.2.jar의 세션팩토리빈클래스 연결 -->
