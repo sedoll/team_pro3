@@ -62,7 +62,16 @@
                                 <td><a href="${path}/qna/detail.do?bno=${board.bno}">${board.title}</a></td>
                             </c:when>
                             <c:otherwise>
-                                <td><a href="${path}/qna/qnapw.do?bno=${board.bno}">[비밀글] ${board.title}</a></td>
+
+                                <c:choose>
+                                    <c:when test="${sid eq 'admin'}">
+                                        <td><a href="${path}/qna/detail.do?bno=${board.bno}">[비밀글] ${board.title}</a></td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td><a href="${path}/qna/qnapw.do?bno=${board.bno}">[비밀글] ${board.title}</a></td>
+                                    </c:otherwise>
+                                </c:choose>
+
                             </c:otherwise>
                         </c:choose>
                         <td>
