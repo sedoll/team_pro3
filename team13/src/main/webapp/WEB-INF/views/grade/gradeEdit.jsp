@@ -34,14 +34,6 @@
             </div>
         </li>
     </ul>
-    <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="#">Bulma</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Components</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-        </ul>
-    </nav>
 </figure>
 <div class="content" id="content">
 <div class="container is-fullhd">
