@@ -66,7 +66,7 @@ public class BoardTeaCtrl {
         dto.setContent(request.getParameter("content"));
         dto.setAuthor((String) session.getAttribute("sid"));
         boardService.boardInsert(dto);
-        return "redirect:list.do";
+        return "redirect:/boardTea/list.do";
     }
 
     @PostMapping("commentInsert.do")
@@ -76,7 +76,7 @@ public class BoardTeaCtrl {
         dto.setBno(Integer.parseInt(request.getParameter("bno")));
         dto.setContent(request.getParameter("content"));
         boardService.commentInsert(dto);
-        return "redirect:list.do";
+        return "redirect:/boardTea/detail.do?bno="+dto.getBno();
     }
 
     @GetMapping("delete.do")
@@ -84,7 +84,18 @@ public class BoardTeaCtrl {
         int bno = Integer.parseInt(request.getParameter("bno"));
         boardService.boardDelete(bno);
         boardService.commentDeleteAll(bno);
-        return "redirect:list.do";
+        return "redirect:/boardTea/list.do";
+    }
+
+    // 게시판 댓글 삭제
+    @GetMapping("comDelete.do")
+    public String ComDelete(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        int par = Integer.parseInt(request.getParameter("par"));
+        Board dto = new Board();
+        dto.setPar(par);
+        boardService.boardDelete(bno);
+        return "redirect:/boardTea/detail.do?bno="+dto.getPar();
     }
 
     @GetMapping("edit.do")
@@ -103,8 +114,33 @@ public class BoardTeaCtrl {
         dto.setTitle(request.getParameter("title"));
         dto.setContent(request.getParameter("content"));
         boardService.boardEdit(dto);
-        return "redirect:list.do";
+        return "redirect:/boardTea/detail.do?bno="+dto.getBno();
     }
+
+    // 댓글 수정 폼 이동
+    @GetMapping("commentEdit.do")
+    public String editCommentForm(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        Board dto = boardService.boardDetail(bno);
+        model.addAttribute("dto", dto);
+        return "/boardTea/ComEdit";
+    }
+
+    // 댓글 수정
+    @PostMapping("commentEdit.do")
+    public String boardCommentEdit(HttpServletRequest request, Model model) throws Exception {
+        int bno = Integer.parseInt(request.getParameter("bno"));
+        int par = Integer.parseInt(request.getParameter("par"));
+        Board dto = new Board();
+        dto.setBno(bno);
+        dto.setPar(par);
+        dto.setTitle(request.getParameter("title"));
+        dto.setContent(request.getParameter("content"));
+        System.out.println(dto.toString());
+        boardService.boardEdit(dto);
+        return "redirect:/boardTea/detail.do?bno="+dto.getPar();
+    }
+
     //게시글 신고 팝업 창
     @RequestMapping("reportPopup.do")
     public String reportPopup(HttpServletRequest request, Model model) throws Exception {

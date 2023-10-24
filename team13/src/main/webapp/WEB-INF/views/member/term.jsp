@@ -141,14 +141,7 @@
             <div class="hero-body has-text-centered">
                 <p class="title is-size-3">회원 유형 선택</p>
             </div>
-            <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
-                <ul>
-                    <li><a href="#">Bulma</a></li>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-                </ul>
-            </nav>
+
         </section>
     <section class="page" id="page1">
         <div class="page_wrap">

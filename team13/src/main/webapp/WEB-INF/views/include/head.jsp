@@ -46,6 +46,9 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.css">
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
 
+<!-- datatables css -->
+<link rel="stylesheet" href="${path1}/resources/css/datatables.css">
+
 <%-- css 초기화 --%>
 <link rel="stylesheet" href="https://yarnpkg.com/en/package/normalize.css">
 
@@ -70,6 +73,7 @@
         font-family: 'NanumSquare' !important;
     }
 </style>
+
 
 
 

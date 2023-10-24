@@ -88,7 +88,7 @@ public class InfoActCtrl {
         dto.setTitle(request.getParameter("title"));
         dto.setContent(request.getParameter("content"));
         infoService.infoEdit(dto);
-        return "redirect:list.do";
+        return "redirect:/infoAct/detail.do?bno="+bno;
     }
 
     //ckeditor를 이용한 이미지 업로드

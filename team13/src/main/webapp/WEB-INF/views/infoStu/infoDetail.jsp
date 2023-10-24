@@ -36,7 +36,7 @@
             background-repeat: no-repeat; background-position: center -250px; }
         .contents::after { content:""; clear:both; display:block; width:100%; }
 
-        .page { clear:both; width: 100vw; height: 100vh; position:relative; }
+        .page { clear:both; width: 100vw; position:relative; }
         .page::after { content:""; display:block; width: 100%; clear:both; }
 
         .page_wrap { clear:both; width: 1200px; height: auto; margin:0 auto; }
@@ -116,8 +116,8 @@
         .tb2 .item1 { width: 10%; }
         .tb2 .item2 { width: 68%;}
         .tb2 .item3 { width: 10%; }
-        .tb2 .item4 { width: 12%;
-        }
+        .tb2 .item4 { width: 12%;}
+
         .tb2 td {
             border-bottom: 1px solid #7e7e7e;
             vertical-align: middle;
@@ -260,12 +260,12 @@
                             <th colspan="5" style="width: 10%">${dto.title}</th>
                         </tr>
                         <tr>
-                            <td style="width: 10%">
+                            <td style="width: 5%">
                                 <c:if test="${dto.author eq sid && not empty sid}">
                                 <a href="${path}/infoStu/edit.do?bno=${dto.bno}" class="button is-link is-outlined">수정</a>
                                 </c:if>
                             </td>
-                            <td style="width: 50%">
+                            <td style="width: 55%">
                                 <c:if test="${not empty sid && (sid eq 'admin' || dto.author eq sid)}">
                                 <a href="${path}/infoStu/delete.do?bno=${dto.bno}" class="button is-danger is-outlined" >삭제</a>
                                </c:if>

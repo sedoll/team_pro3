@@ -22,7 +22,6 @@
 <section class="hero is-white">
     <div class="hero-body has-text-centered">
         <p class="title is-size-3">
-            관리자 페이지
         </p>
         <p class="subtitle">
 
