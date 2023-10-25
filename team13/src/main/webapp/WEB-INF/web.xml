@@ -49,25 +49,25 @@
   </filter-mapping>
 
   <!-- 에러페이지 -->
-<!--  <error-page>-->
-<!--    <error-code>403</error-code>-->
-<!--    <location>/WEB-INF/views/error/error403.jsp</location>-->
-<!--  </error-page>-->
-<!--  <error-page>-->
-<!--    <error-code>404</error-code>-->
-<!--    <location>/WEB-INF/views/error/error404.jsp</location>-->
-<!--  </error-page>-->
-<!--  <error-page>-->
-<!--    <error-code>500</error-code>-->
-<!--    <location>/WEB-INF/views/error/error500.jsp</location>-->
-<!--  </error-page>-->
-<!--  <error-page>-->
-<!--    <error-code>503</error-code>-->
-<!--    <location>/WEB-INF/views/error/error503.jsp</location>-->
-<!--  </error-page>-->
-<!--  <error-page>-->
-<!--    <exception-type>java.lang.Exception</exception-type>-->
-<!--    <location>/WEB-INF/views/error/errorPage.jsp</location>-->
-<!--  </error-page>-->
+  <error-page>
+    <error-code>403</error-code>
+    <location>/WEB-INF/views/error/error403.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/WEB-INF/views/error/error404.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/WEB-INF/views/error/error500.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>503</error-code>
+    <location>/WEB-INF/views/error/error503.jsp</location>
+  </error-page>
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/WEB-INF/views/error/errorPage.jsp</location>
+  </error-page>
 </web-app>
 
