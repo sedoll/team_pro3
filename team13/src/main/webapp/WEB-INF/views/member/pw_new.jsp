@@ -27,8 +27,6 @@
 
 <div class="body_content">
     <div class="main-content">
-
-
         <!-- 오른쪽. 내용이 들어갈 부분 -->
         <div class="content-section">
             <h5 class="font"> 새비밀번호설정</h5>
@@ -51,10 +49,9 @@
                 <input type="hidden" name="email" value=${email}>
             </form>
         </div>
-
-
     </div>
-
-
+</div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>
