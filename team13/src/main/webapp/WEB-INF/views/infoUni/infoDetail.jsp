@@ -286,9 +286,9 @@
             </div>
         </section>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../include/footer.jsp" %>
-    </footer>
 </div>
+<footer class="ft" id="ft">
+    <%@ include file="../include/footer.jsp" %>
+</footer>
 </body>
 </html>

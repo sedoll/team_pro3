@@ -113,9 +113,6 @@
                                 <c:if test="${sid!='admin' }">
                                     <a href="${path }/admin/delete.do?id=${sid }" class="button is-primary">회원 탈퇴</a>
                                 </c:if>
-                                <c:if test="${sid=='admin' }">
-                                    <a href="${path }/admin/memberlist.do" class="button is-primary">회원 목록</a>
-                                </c:if>
                             </td>
                         </tr>
                         </tbody>

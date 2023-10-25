@@ -61,25 +61,6 @@
                             </ul>
                         </div>
                     </div>
-
-                    <p class="my-page__introduction"></p>
-
-                    <div class="my-page__edit-buttons">
-                        <button type="button" class="button is-link is-rounded is-outlined" onclick="location.href='${path14}/member/update.do'">회원 정보 변경
-                        </button>
-                        <button type="button" class="my-info-edit" onclick="location.href='${path14 }/LikeList.do'">
-                            <i class="fas fa-cog my-info-edit__icon"></i>
-                            <span class="my-info-edit__text">내가 쓴 글</span>
-                        </button>
-                    </div>
-
-                    <div class="transaction-history">
-                        <div class="transaction-history__sale">
-                            <a href="${path14}/PaymentList.do">결제정보</a>
-                        </div>
-                        <div class="transaction-history__purchase">
-                            <a href="${path14}/CartList.do">장바구니</a>
-                        </div>
                 </article>
             </main>
         </div>
