@@ -315,8 +315,8 @@
                             <td class="item3">${lev.resdate}</td>
                             <td class="item4">
                                 <c:if test="${sid eq lev.author || sid eq 'admin'}">
-                                    <a href="${path}/boardPar/edit.do?bno=${lev.bno}" class="button is-small is-link is-outlined is-rounded">수정</a>
-                                    <a href="${path}/boardPar/delete.do?bno=${lev.bno}" class="button is-small is-danger is-outlined is-rounded"> 삭제 </a>
+                                    <a href="${path}/boardPar/commentEdit.do?bno=${lev.bno}" class="button is-small is-link is-outlined is-rounded">수정</a>
+                                    <a href="${path}/boardPar/comDelete.do?bno=${lev.bno}&par=${lev.par}" class="button is-small is-danger is-outlined is-rounded"> 삭제 </a>
                                 </c:if>
                             </td>
                         </tr>
@@ -376,9 +376,9 @@
             </div>
         </section>
     </div>
-    <footer class="ft" id="ft">
-        <%@ include file="../include/footer.jsp" %>
-    </footer>
 </div>
+<footer class="ft" id="ft">
+    <%@ include file="../include/footer.jsp" %>
+</footer>
 </body>
 </html>

@@ -24,10 +24,8 @@
 <!-- 헤더 부분 인클루드 -->
 <jsp:include page="../include/header.jsp"></jsp:include>
 <div class ="body_content">
-
     <div class="main-content">
         <div class="content-wrap">
-
             <div class="content-section">
                 <h5 class ="font"> 비밀번호찾기</h5>
                 <form action="pw_set.do" method="post">
@@ -40,17 +38,11 @@
                         <input type="submit" id="check" value="확인">
                     </div>
                 </form>
-
             </div>
-
-
         </div>
-
     </div>
-
-
-
 </div><!-- 바디컨텐트 -->
-
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -1,0 +1,25 @@
+.search_from {
+    text-align: right;
+    font-size: 18px;
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
+}
+.select_filter {
+    padding: 5px; /* 셀렉트 박스 내부 패딩 추가 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px; /* 테두리 둥글게 만듭니다. */
+    margin-right: 10px; /* 셀렉트 박스 오른쪽 여백 추가 */
+    font-size: 16px; /* 폰트 크기 조정 */
+}
+
+.search_filter {
+    padding: 5px; /* 입력 필드 내부 패딩 추가 */
+    border: 1px solid #ccc; /* 테두리 추가 */
+    border-radius: 5px; /* 테두리 둥글게 만듭니다. */
+    font-size: 16px; /* 폰트 크기 조정 */
+}
+
+/* 선택된 셀렉트 박스 옵션 스타일 */
+.select_filter option:checked {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}

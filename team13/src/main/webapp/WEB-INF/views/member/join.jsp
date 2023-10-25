@@ -298,14 +298,7 @@
         <div class="hero-body has-text-centered">
             <p class="title is-size-3">회원 가입</p>
         </div>
-        <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
-            <ul>
-                <li><a href="#">Bulma</a></li>
-                <li><a href="#">Documentation</a></li>
-                <li><a href="#">Components</a></li>
-                <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-            </ul>
-        </nav>
+
     </section>
     <div class="contents" id="contents">
         <div class="container">
@@ -314,7 +307,7 @@
                     <div class="register_info_id">
                         <label>아이디<%--<span>사용할 수 없는 아이디 입니다</span>--%></label>
                         <input type="text" name="id" id="id" class="indata" placeholder="아이디 (6~16자)" pattern="^[a-z0-9]{6,16}" maxlength="16" autofocus required/>
-                        <button type="button" id="ck_btn" class="button has-text-white is-link" onclick="idCheck()">중복확인</button>
+                        <button type="button" id="ck_btn" class="button is-link" onclick="idCheck()" style="border: 1px solid gray">중복확인</button>
                         <%-- <input type="button" id="ck_btn"  class="btn btn-primary" value="중복 확인" onclick="idCheck()"> --%>
                         <input type="hidden" name="idck" id="idck" value="no">
                     </div>
@@ -362,7 +355,7 @@
                     <div class="register_info">
                         <label>주소</label>
                         <input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="form-control" readonly>
-                        <button type="button" id="post_btn" onclick="findAddr()" class="button has-text-black is-link is-size-6">우편번호 검색</button>
+                        <button type="button" id="post_btn" onclick="findAddr()" class="button has-text-black is-link is-size-6" style="border: 1px solid gray">우편번호 검색</button>
                         <input type="text" name="addr1" id="addr1" placeholder="기본 주소 입력" class="form-control" required readonly/><br>
                         <input type="text" name="addr2" id="addr2" placeholder="상세 주소 입력" class="form-control" required /><br>
                     </div>
@@ -637,6 +630,5 @@
     </div>
 </div>
 <jsp:include page="../include/footer.jsp"></jsp:include>
-</div>
 </body>
 </html>

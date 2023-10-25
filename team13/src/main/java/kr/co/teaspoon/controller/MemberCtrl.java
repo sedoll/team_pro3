@@ -300,11 +300,11 @@ public class MemberCtrl {
             model.addAttribute("boardparlist", boardparlist);
         }
 
-        /* 자료실 */
-        List<BoardlistVO> boardfreelist = memberService.getWriteList4(id);
-        if (boardfreelist != null) {
-            model.addAttribute("boardfreelist", boardfreelist);
-        }
+//        /* 자료실 */
+//        List<BoardlistVO> boardfreelist = memberService.getWriteList4(id);
+//        if (boardfreelist != null) {
+//            model.addAttribute("boardfreelist", boardfreelist);
+//        }
 
 
         /* 자유게시판 댓글 */
