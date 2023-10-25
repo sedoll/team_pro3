@@ -20,5 +20,6 @@ public class Grade {
     private int science;
     private String exam;
     private String tname;
+    private String tid;
     private String regdate;
 }
