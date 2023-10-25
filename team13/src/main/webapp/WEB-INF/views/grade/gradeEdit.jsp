@@ -34,18 +34,10 @@
             </div>
         </li>
     </ul>
-    <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="#">Bulma</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Components</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-        </ul>
-    </nav>
 </figure>
 <div class="content" id="content">
-<div class="container is-fullhd">
-    <!-- 헤더 부분 인클루드 -->
+    <div class="container is-fullhd">
+        <!-- 헤더 부분 인클루드 -->
         <div class="row column text-center">
             <div class="container">
                 <form action="${path}/grade/gradeedit.do?no=${grade.no}" method="post">
@@ -80,7 +72,7 @@
                             <tfoot>
                             <tr>
                                 <td colspan="1">
-                                    <input type="submit" class="button is-link is-outlined" value="등록하기">
+                                    <input type="submit" class="button is-link is-outlined" value="수정하기">
                                     <a href="${path }/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적 삭제</a>
                                     <a href="${path }/grade/gradelist.do" class="button is-black is-outlined">회원 목록</a>
                                 </td>
@@ -91,7 +83,9 @@
                 </form>
             </div>
         </div>
-        <!-- 푸터 부분 인클루드 -->
-        <jsp:include page="../include/footer.jsp"></jsp:include>
+    </div>
+</div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>
