@@ -23,7 +23,6 @@
             width: 40px;
             height: 20px;
         }
-
     </style>
 </head>
 <body>
@@ -42,6 +41,15 @@
 <div class="content" id="content">
     <div class="row column text-center">
         <div class="container">
+            <div  class="search_from">
+                <select name="select_filter" class="select_filter">
+                    <option value="0">번호</option>
+                    <option value="1">학생이름</option>
+                    <option value="2">학부모아이디</option>
+                    <option value="3">담임</option>
+                </select>
+                <input type="text" name="search_filter" class="search_filter">
+            </div>
             <table id="myTable">
                 <thead>
                 <tr>
@@ -68,7 +76,7 @@
                             <c:if test="${sid == grade.pid || job == 2 || job == 0}">
                                 <a href="${path}/grade/gradedetail.do?no=${grade.no}" class="button is-black is-outlined">상세보기</a>
                             </c:if>
-                            <c:if test="${job == 2  || job == 0}">
+                            <c:if test="${ (job == 2  || job == 0) && sid == grade.tid}">
                                 <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적삭제</a>
                             </c:if>
                         </td>
@@ -81,42 +89,13 @@
                 <a class="button is-link is-outlined" href="${path}/grade/gradeinsert.do">성적입력</a>
             </div>
             </c:if>
-            <script>
-                $(document).ready( function () {
-                    $('#myTable').DataTable({
-                        pageLength : 10,
-                        order: [[0, 'desc']], // 0번째 컬럼을 기준으로 내림차순 정렬
-                        info: false,
-                        dom: 't<f>p',
-                        language: {
-                            emptyTable: '등록된 글이 없습니다.'
-                        }
-
-                    });
-                } );
-                $(document).ready(function() {
-                    $('.dataTables_paginate').css({
-                        'textAlign':'left',
-                        'float': 'none',
-                        'margin-top':'10px',
-                    });
-                    $('.dataTables_filter').css({
-                        'float': 'left',
-                        'margin-top':'14px',
-                        'margin-right':'280px'
-                    });
-                    $('#myTable_paginate').css({
-                        'margin-right':'120px'
-                    });
-                });
-            </script>
         </div>
-
     </div>
 </div>
 <footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
 </footer>
+<script src="${path}/resources/js/datatables.js"></script>
 </body>
 </html>

@@ -45,14 +45,6 @@
         <p class="subtitle is-size-5">
         </p>
     </div>
-    <nav class="breadcrumb is-small has-bullet-separator is-right" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="#">Bulma</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Components</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
-        </ul>
-    </nav>
 </section>
 
 <!-- content -->
@@ -116,7 +108,6 @@
                 </section>
             </div>
     </div>
-</div>
 </div>
 <!-- 푸터 부분 인클루드 -->
 <jsp:include page="../include/footer.jsp"></jsp:include>

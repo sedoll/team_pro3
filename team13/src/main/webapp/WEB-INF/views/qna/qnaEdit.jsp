@@ -54,9 +54,7 @@
                         <tr>
                             <th style="background-color:#dcdcdc">글 내용</th>
                             <td>
-			      				<textarea name="content" class="textarea" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength="900" required>
-                                    ${dto.content }
-                                </textarea>
+			      				<textarea name="content" class="textarea" id="content" placeholder="내용 입력" rows="8" cols="100" maxlength="900" required>${dto.content}</textarea>
                             </td>
                         </tr>
                         <tr>
@@ -71,8 +69,8 @@
             </div>
         </div>
     </div>
-    <!-- 푸터 부분 인클루드 -->
-    <jsp:include page="../include/footer.jsp"></jsp:include>
 </div>
+<!-- 푸터 부분 인클루드 -->
+<jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
 </html>

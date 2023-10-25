@@ -69,13 +69,13 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach items="${boardlist }" var="boardlist">
+                            <c:forEach items="${boardlist }" var="board">
                                 <tr class="boardlist1">
-                                    <td>${boardlist.num}</td>
+                                    <td>${board.num}</td>
                                     <td><a class="path"
-                                           href="${path13}/board/detail.do?bno=${boardlist.num}">${boardlist.subject}</a>
+                                           href="${path13}/board/detail.do?bno=${board.num}">${board.subject}</a>
                                     </td>
-                                    <td>${boardlist.write_date}</td>
+                                    <td>${board.write_date}</td>
                                 </tr>
                             </c:forEach>
                             </tbody>
@@ -95,13 +95,13 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach items="${boardtealist }" var="boardtealist">
+                                <c:forEach items="${boardtealist }" var="boardtea">
                                     <tr class="boardlist2">
-                                        <td>${boardtealist.num}</td>
+                                        <td>${boardtea.num}</td>
                                         <td><a class="path"
-                                               href="${path13}/boardTea/detail.do?bno=${boardlist.num}">${boardtealist.subject}</a>
+                                               href="${path13}/boardTea/detail.do?bno=${boardtea.num}">${boardtea.subject}</a>
                                         </td>
-                                        <td>${boardtealist.write_date}</td>
+                                        <td>${boardtea.write_date}</td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
@@ -121,13 +121,13 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <c:forEach items="${boardparlist }" var="boardparlist">
+                                <c:forEach items="${boardparlist }" var="boardpar">
                                     <tr class="boardlist3">
-                                        <td>${boardparlist.num}</td>
+                                        <td>${boardpar.num}</td>
                                         <td><a class="path"
-                                               href="${path13}/boardPar/detail.do?bno=${boardparlist.num}">${boardparlist.subject}</a>
+                                               href="${path13}/boardPar/detail.do?bno=${boardpar.num}">${boardpar.subject}</a>
                                         </td>
-                                        <td>${boardparlist.write_date}</td>
+                                        <td>${boardpar.write_date}</td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>
