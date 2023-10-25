@@ -76,7 +76,7 @@
                             <c:if test="${sid == grade.pid || job == 2 || job == 0}">
                                 <a href="${path}/grade/gradedetail.do?no=${grade.no}" class="button is-black is-outlined">상세보기</a>
                             </c:if>
-                            <c:if test="${job == 2  || job == 0}">
+                            <c:if test="${ (job == 2  || job == 0) && sid == grade.tid}">
                                 <a href="${path}/grade/gradedelete.do?no=${grade.no}" class="button is-danger is-outlined">성적삭제</a>
                             </c:if>
                         </td>
