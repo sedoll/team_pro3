@@ -151,3 +151,7 @@ a
 1src/main/webapp/WEB-INF/views/grade/gradeEdit.jsp,7\b\7be2dfc91cc978cbaec91175d7b0e71f6662be01
 c
 3src/main/webapp/WEB-INF/views/grade/gradeInsert.jsp,4\1\410af052a448406d4dddb75cea8edde399ef2ff2
+k
+;src/main/webapp/WEB-INF/views/member/myPage/myPageindex.jsp,a\2\a2b5b2556894202529459d2b5a5560a133e57543
+d
+4src/main/webapp/WEB-INF/views/admin/memberDetail.jsp,9\1\91f317d63dca8570b6b13d6a122fad7d4deade82

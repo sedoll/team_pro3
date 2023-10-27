@@ -53,14 +53,24 @@
             </section>
 
 <%--                    <table class="table" style="width: 100%">--%>
-        <table class="table is-fullwidth" >
+        <div  class="search_from">
+            <select name="select_filter" class="select_filter">
+                <option value="0">번호</option>
+                <option value="1">아이디</option>
+                <option value="2">이름</option>
+                <option value="3">직업</option>
+                <option value="4">가입일</option>
+            </select>
+            <input type="text" name="search_filter" class="search_filter">
+        </div>
+        <table class="table is-fullwidth" id="myTable">
             <thead>
             <tr>
-                <th>No</th>
-                <th>ID</th>
-                <th>Name</th>
-                <th>job</th>
-                <th>RegDate</th>
+                <th>번호</th>
+                <th>아이디</th>
+                <th>이름</th>
+                <th>직업</th>
+                <th>가입일</th>
             </tr>
             </thead>
             <tbody>
@@ -86,7 +96,7 @@
     </div>
 </div>
 
-
+<script src="${path}/resources/js/datatables.js"></script>
 <footer id="footer" class="footer-nav row expanded collapse">
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
