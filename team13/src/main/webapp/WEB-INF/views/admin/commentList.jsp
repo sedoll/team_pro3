@@ -58,12 +58,20 @@
             </section>
 
 <%--                    <table class="table" style="width: 100%">--%>
-        <table class="table is-fullwidth">
+        <div  class="search_from">
+            <select name="select_filter" class="select_filter">
+                <option value="0">번호</option>
+                <option value="1">내용</option>
+                <option value="2">게시일</option>
+            </select>
+            <input type="text" name="search_filter" class="search_filter">
+        </div>
+        <table class="table is-fullwidth" id="myTable">
             <thead>
             <tr>
-                <th width="80">No</th>
+                <th width="80">번호</th>
                 <th>댓글 내용</th>
-                <th width="120">RegDate</th>
+                <th width="120">게시일</th>
                 <th width="100">비고</th>
             </tr>
             </thead>
@@ -80,19 +88,12 @@
                     </tr>
             </c:forEach>
             </tbody>
-
-
-
         </table>
-
-
-
-
         </div>
     </div>
 </div>
 
-
+<script src="${path}/resources/js/datatables.js"></script>
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
 </body>

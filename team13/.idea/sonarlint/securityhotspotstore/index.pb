@@ -151,3 +151,13 @@ a
 1src/main/webapp/WEB-INF/views/grade/gradeEdit.jsp,7\b\7be2dfc91cc978cbaec91175d7b0e71f6662be01
 c
 3src/main/webapp/WEB-INF/views/grade/gradeInsert.jsp,4\1\410af052a448406d4dddb75cea8edde399ef2ff2
+k
+;src/main/webapp/WEB-INF/views/member/myPage/myPageindex.jsp,a\2\a2b5b2556894202529459d2b5a5560a133e57543
+d
+4src/main/webapp/WEB-INF/views/admin/memberDetail.jsp,9\1\91f317d63dca8570b6b13d6a122fad7d4deade82
+a
+1src/main/webapp/WEB-INF/views/admin/boardList.jsp,8\c\8c270eb705a20c2c65cc57b480df5efcac772731
+b
+2src/main/webapp/WEB-INF/views/admin/memberList.jsp,4\a\4ab8704be080a69c9dd222fe3f799315ad34c8cb
+e
+5src/main/java/kr/co/teaspoon/controller/NewsCtrl.java,7\a\7aaf6a879b8443731c517fae2581d96af98f9a05

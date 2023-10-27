@@ -58,13 +58,21 @@
             </section>
 
 <%--                    <table class="table" style="width: 100%">--%>
-        <table class="table is-fullwidth">
+        <div  class="search_from">
+            <select name="select_filter" class="select_filter">
+                <option value="0">번호</option>
+                <option value="1">제목</option>
+                <option value="2">게시일</option>
+            </select>
+            <input type="text" name="search_filter" class="search_filter">
+        </div>
+        <table class="table is-fullwidth" id="myTable">
             <thead>
             <tr>
-                <th width="80">No</th>
-                <th>Title</th>
-                <th width="120">RegDate</th>
-                <th width="100">Visited</th>
+                <th width="80">번호</th>
+                <th>제목</th>
+                <th width="120">게시일</th>
+                <th width="100">조회수</th>
                 <th width="100">비고</th>
             </tr>
             </thead>
@@ -79,23 +87,14 @@
                     </td>
                     <td>${board.cnt }</td>
                     <td><a href="${path}/admin/boardDelete.do?bno=${board.bno}&category=${category}" class=""><button class="button is-danger is-light"> 삭제 </button></a></td>
-
-
                 </tr>
             </c:forEach>
             </tbody>
-
-
-
         </table>
-
-
-
-
         </div>
     </div>
 </div>
-
+<script src="${path}/resources/js/datatables.js"></script>
 
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>

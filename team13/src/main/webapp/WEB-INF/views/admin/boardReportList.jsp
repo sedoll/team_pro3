@@ -64,11 +64,20 @@
             </section>
 
 <%--                    <table class="table" style="width: 100%">--%>
-        <table class="table is-fullwidth">
+        <div  class="search_from">
+            <select name="select_filter" class="select_filter">
+                <option value="0">번호</option>
+                <option value="1">제목</option>
+                <option value="2">작성자</option>
+                <option value="3">사유</option>
+            </select>
+            <input type="text" name="search_filter" class="search_filter">
+        </div>
+        <table class="table is-fullwidth"  id="myTable">
             <thead>
             <tr>
-                <th style="width: 10%">No</th>
-                <th style="width: 30%">Title</th>
+                <th style="width: 10%">번호</th>
+                <th style="width: 30%">제목</th>
                 <th style="width: 10%">작성자</th>
                 <th style="width: 10%">사유</th>
                 <th style="width: 15%">누적 신고수</th>
@@ -89,24 +98,15 @@
                         <fmt:formatDate value="${resdate }" pattern="yyyy-MM-dd HH:mm:ss" />
                     </td>
                     <td><a href="${path}/admin/boardReportDelete.do?bno=${board.bno}&category=${category}" class=""><button class="button is-danger is-light"> 삭제 </button></a></td>
-
-
                 </tr>
             </c:forEach>
             </tbody>
-
-
-
         </table>
-
-
-
-
         </div>
     </div>
 </div>
 
-
+<script src="${path}/resources/js/datatables.js"></script>
     <!-- 푸터 부분 인클루드 -->
     <jsp:include page="../include/footer.jsp"></jsp:include>
 </body>
