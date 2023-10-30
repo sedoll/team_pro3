@@ -30,9 +30,12 @@ public class GradeCtrl {
     @GetMapping("list.do")
     public String gradeList(HttpServletResponse response, HttpServletRequest request ,Model model) throws Exception {
         System.out.println("버튼 클릭");
+
         if(session.getAttribute("sid") != null && !"".equals(session.getAttribute("sid"))) {
             List<Grade> gradeList = gradeService.gradeList();
             model.addAttribute("gradeList", gradeList);
+            model.addAttribute("sid",(String)session.getAttribute("sid"));
+            System.out.println("gradeList : "+gradeList.toString());
             return "/grade/gradeList";
         } else {
             response.setContentType("text/html; charset=UTF-8");
@@ -69,6 +72,10 @@ public class GradeCtrl {
         grade.setScience(Integer.parseInt(request.getParameter("science")));
         grade.setExam(request.getParameter("exam"));
         grade.setTname(request.getParameter("tname"));
+        String id = (String) session.getAttribute("sid");
+        System.out.println(id);
+        grade.setTid(id);
+        System.out.println(grade.toString());
         gradeService.gradeInsert(grade);
         return "redirect:list.do";
     }

@@ -13,7 +13,7 @@
     </select>
     <!-- 성적 입력 -->
     <insert id="gradeInsert">
-        insert into grade(sname, pid, kor, math, eng, social, science, exam, tname) values (#{sname}, #{pid}, #{kor}, #{math}, #{eng}, #{social}, #{science}, #{exam}, #{tname})
+        insert into grade(sname, pid, kor, math, eng, social, science, exam, tname, tid) values (#{sname}, #{pid}, #{kor}, #{math}, #{eng}, #{social}, #{science}, #{exam}, #{tname},#{tid})
     </insert>
     <!-- 성적 삭제 -->
     <delete id="gradeDelete">
